@@ -69,7 +69,7 @@
 - **1.1. React** is one of the most popular and powerful JavaScript libraries for building user interfaces, especially Single Page Applications (SPAs). It provides a component-based architecture, promoting reusability, maintainability, and scalability.
 - **1.2. Vite** is a modern, fast build tool optimized for speed and performance. Unlike older bundlers like Webpack, Vite uses native ES modules in the development environment, resulting in extremely fast hot module replacement (HMR) and faster builds. It's designed to be simple, minimal, and super fast, making it ideal for modern React projects.
 
-##### **1.3. Why it's good:**
+#### **1.3. Why it's good:**
 - **1.3.1. Developer Experience**: Vite's lightning-fast build times and React's component model enhance productivity, making development smoother.
 - **1.3.2. Performance**: Vite's on-demand code loading helps keep initial load times fast, improving the user experience.
 
@@ -80,7 +80,7 @@
 - **2.1. Java** is a time-tested, reliable, and highly scalable programming language with a vast ecosystem and community. It's ideal for building large-scale, enterprise-level applications due to its stability, security features, and performance.
 - **2.2. Spring Boot** is a popular Java framework that simplifies the setup and configuration of Spring applications. It offers out-of-the-box solutions for many common problems, such as REST API development, database connections, and security. It follows the principles of convention over configuration, allowing developers to focus on business logic rather than boilerplate code.
 
-##### **2.3. Why it's good:**
+#### **2.3. Why it's good:**
 - **2.3.1. Scalability**: Java with Spring Boot is perfect for building scalable, high-performance back-end systems. It easily integrates with various databases and third-party services, and Spring Boot's microservices support allows for building complex applications.
 - **2.3.2. Security**: Spring Boot has built-in support for security features, making it easier to protect applications.
 - **2.3.3. Ease of Use**: Spring Boot’s extensive set of pre-configured templates and auto-configuration features makes it quicker to set up and develop applications.
@@ -91,7 +91,7 @@
 
 - **3.1. MySQL** is one of the most popular relational database management systems (RDBMS) in the world. Known for its performance, reliability, and ease of use, MySQL supports ACID-compliant transactions, ensuring data consistency, durability, and integrity — all critical for modern web applications.
 
-##### **3.2. Why it's good:**
+#### **3.2. Why it's good:**
 - **3.2.1. Mature and Reliable**: MySQL is battle-tested in production environments for years and is often the go-to database for various applications, from small startups to large enterprises.
 - **3.2.2. Open-source**: As an open-source database, MySQL offers a robust set of features without the licensing costs of commercial databases.
 - **3.2.3. Good Integration**: MySQL integrates seamlessly with Spring Boot (via Spring Data JPA, for example), streamlining development.
@@ -102,7 +102,7 @@
 
 - **4.1. Ubuntu** is a popular open-source operating system, widely used for cloud deployments. It is known for its ease of use, regular updates, and large community support. Ubuntu is often the preferred choice for cloud servers on platforms like AWS, Azure, and DigitalOcean due to its compatibility with most cloud providers.
 
-##### **4.2. Why it's good:**
+#### **4.2. Why it's good:**
 - **4.2.1. Open Source and Free**: Ubuntu is free to use, making it cost-effective.
 - **4.2.2. Stability and Security**: Ubuntu provides regular updates and strong security features, making it a solid choice for production environments.
 - **4.2.3. Compatibility**: Most cloud environments (including AWS EC2, Google Cloud, etc.) support Ubuntu, and it’s optimized for cloud deployments.
@@ -113,7 +113,7 @@
 
 - **5.1. OAuth2** is the industry standard for authorization and authentication. It allows users to securely authenticate to applications without exposing their credentials, relying instead on tokens (such as access and refresh tokens). OAuth2 can enable single sign-on (SSO) and third-party authentication, like signing in with Google or Facebook.
 
-##### **5.2. Why it's good:**
+#### **5.2. Why it's good:**
 - **5.2.1. Security**: OAuth2 is widely accepted, ensuring secure, token-based access management without needing to store passwords directly.
 - **5.2.2. Flexibility**: It can be integrated with many identity providers, enabling flexibility and easier management of user access across platforms.
 - **5.2.3. Single Sign-On (SSO)**: OAuth2 enables SSO, allowing users to authenticate once and use multiple apps without needing to log in repeatedly.
@@ -124,17 +124,17 @@
 
 - **6.1. Git** is the most widely used version control system in the world. It enables teams to manage code changes efficiently, track history, and collaborate on projects.
 
-##### **6.2. Why it's good:**
+#### **6.2. Why it's good:**
 - **6.2.1. Collaboration**: Git facilitates easy collaboration by allowing branching, merging, and versioning.
 - **6.2.2. Version History**: Git tracks all changes to the codebase, making it easy to roll back to any previous version.
 - **6.2.3. Distributed Nature**: Git's distributed model enables every developer to have their own local copy of the repository, which improves speed and offline work.
 
 
-# Topic: How to Install / Run?
+## Topic: How to Install / Run?
 
-## 1. JDK
+### 1. JDK
 
-### 1.1: What is JDK?
+#### 1.1: What is JDK?
 
 **JDK 17** (Java Development Kit 17) is a major release of the Java platform, released in September 2021 by Oracle. It is a **Long-Term Support (LTS)** version, meaning it will receive extended support and updates for several years, making it a preferred choice for many developers and enterprises for building production-ready applications.
 
@@ -148,7 +148,7 @@ The **JDK** is a software development kit that provides all the tools required f
 
 ---
 
-### 1.2: Why Do We Use JDK 17?
+#### 1.2: Why Do We Use JDK 17?
 
 #### 1.2.1: **Long-Term Support (LTS)**
 
@@ -182,7 +182,7 @@ Some older and less-used features or APIs are removed or deprecated, helping to 
 
 ---
 
-### 1.3: Advantages of JDK 17?
+#### 1.3: Advantages of JDK 17?
 
 #### 1.3.1: **LTS Support**
 
@@ -214,9 +214,9 @@ JDK 17 has optimizations in garbage collection (like the G1 garbage collector), 
 JDK 17 is aligned with modern software development practices and tools, including enhanced support for microservices, cloud-native apps, and containerization (e.g., Docker, Kubernetes).
 
 
-## 1.4: How to Install JDK 17?
+#### 1.4: How to Install JDK 17?
 
-### Step 1: Download JDK 17
+#### Step 1: Download JDK 17
 
 1. Visit the official Oracle website or OpenJDK website for downloading JDK 17:
    - **Oracle JDK 17**: [Oracle Downloads](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html)
@@ -228,7 +228,7 @@ JDK 17 is aligned with modern software development practices and tools, includin
 
 ---
 
-### Step 2: Install JDK 17
+#### Step 2: Install JDK 17
 
 #### For Windows:
 
@@ -249,14 +249,14 @@ Java(TM) SE Runtime Environment (build 17.0.1+12-39)
 
 Java HotSpot(TM) 64-Bit Server VM (build 17.0.1+12-39, mixed mode) 
 ```
-### For macOS:
+#### For macOS:
 
 1. Double-click the downloaded `.dmg` file to mount it and follow the instructions to install JDK 17.
 2. After installation, verify by running the following command in the terminal:
 
    ```bash
    java -version
-### For Linux:
+#### For Linux:
 
 1. For **Ubuntu/Debian-based** distributions, you can use `apt` to install JDK 17:
 
@@ -275,7 +275,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 17.0.1+12-39, mixed mode)
    ```
 # How to Set the Path of the Environment Variable?
 
-### For Windows:
+#### For Windows:
 
 1. **Find the JDK installation path** (usually `C:\Program Files\Java\jdk-17`).
 2. **Set JAVA_HOME**:
@@ -297,7 +297,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 17.0.1+12-39, mixed mode)
 
 ---
 
-### For macOS/Linux:
+#### For macOS/Linux:
 
 1. Open a terminal.
 2. **Set JAVA_HOME** by adding it to your shell profile:
@@ -314,17 +314,17 @@ Java HotSpot(TM) 64-Bit Server VM (build 17.0.1+12-39, mixed mode)
 3. **Add the bin directory to the PATH**:
    ```bash
    export PATH=$JAVA_HOME/bin:$PATH
-### 4. Reload the profile to apply the changes:
+ 4. Reload the profile to apply the changes:
    ```bash
    source ~/.bash_profile  # For Bash
    source ~/.zshrc         # For Zsh
 ```
-### 5. **Verify**: Run the following command to confirm the JDK installation:
+ 5. **Verify**: Run the following command to confirm the JDK installation:
    ```bash
    java -version
 ```
 
-### Conclusion
+#### Conclusion
 
 - **JDK 17** is a major and stable version of Java, ideal for building modern Java applications with improvements in performance, security, and language features.
 - It is an **LTS release**, making it a safe and reliable option for long-term projects.
