@@ -2322,7 +2322,7 @@ Complete front end, summary of workflow of both frontend and backend
 
 ### **Compatibility: Software/Hardware**
 
-#### Application Compatibility Documentation
+#### Application Compatibility
 
 This document provides the compatibility requirements for the application in terms of software, hardware, and other key specifications.
 
