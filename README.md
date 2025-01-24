@@ -14,10 +14,10 @@
   <tbody>
     <tr>
       <td><b>Purpose</b></td>
-      <td><a href = " ">Comprehensive Solutions<a/></td>
-      <td><a href = " ">Comprehensive Solutions<a/></td>
-      <td><a href = " ">Comprehensive Solutions<a/></td>
-      <td><a href = " ">Comprehensive Solutions<a/></td>
+      <td> - [PURPOSE](#purpose) </td>
+      <td>[Comprehensive Solutions](#purpose)</td>
+      <td>[Comprehensive Solutions](#purpose)</td>
+      <td>[Comprehensive Solutions](#purpose)</td>
     </tr>
     <tr>
       <td><b>Target Audience</b></td>
