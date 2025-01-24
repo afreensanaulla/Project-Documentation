@@ -132,6 +132,197 @@
 
 ## Topic: How to Install / Run?
 
+### Front-End:
+
+#### Node.js and React with Vite: Overview and Setup
+
+#### Latest Node.js Versions (As of January 22, 2025)
+
+- **Current Version:** Node.js v23.6.1  
+- **Long-Term Support (LTS) Version:** Node.js v22.13.1 (Jod)
+
+The Current version includes the latest features and improvements, suitable for testing and development environments. The LTS version is recommended for production applications due to its stability and extended support.
+
+#### Checking Your Node.js Version
+To check your installed Node.js version, run the following command:
+```bash
+node -v
+```
+
+---
+
+#### **What is Node.js Used For?**
+
+Node.js is a powerful, open-source runtime environment that allows you to execute JavaScript code on the server side. It enables developers to build scalable, high-performance web applications and tools. Below is a breakdown of its uses:
+
+#### 1. Server-Side Web Applications
+- Build dynamic, fast, and scalable server-side applications.
+- Handle multiple client requests efficiently using its non-blocking, event-driven architecture.
+- **Example:** RESTful APIs for web and mobile applications.
+
+#### 2. Real-Time Applications
+- Ideal for apps requiring real-time interaction, such as:
+  - Chat applications
+  - Online gaming platforms
+  - Collaboration tools (e.g., Google Docs-like apps)
+- Technologies like Web Sockets enable real-time communication.
+
+#### 3. API Development
+- Create lightweight and efficient REST APIs or GraphQL APIs.
+- Popular frameworks like **Express.js** simplify API development.
+
+#### 4. Microservices
+- Well-suited for a microservices architecture where applications are split into smaller, independently deployable services.
+- Improves scalability and maintainability.
+
+#### 5. Command-Line Tools
+- Build CLI tools to automate tasks or simplify workflows.
+- **Example:** Tools like ESLint or npm itself are built with Node.js.
+
+#### 6. Static File Servers
+- Serve static files such as images, HTML, and CSS without needing a separate web server like Apache or Nginx.
+
+#### 7. Streaming Applications
+- Handle data streams efficiently, making Node.js great for video and audio streaming platforms.
+- **Example:** Implementing file uploads or media streaming services.
+
+#### 8. IoT Applications
+- Manage real-time data processing for Internet of Things (IoT) devices.
+- Asynchronous nature helps handle data from numerous devices simultaneously.
+
+#### 9. Data-Intensive Applications
+- Process large volumes of data in real-time, such as stock trading apps or analytics platforms.
+
+---
+
+#### **Why Use Node.js**?
+
+1. **Performance:** Built on Chrome’s V8 engine, Node.js offers exceptional speed.
+2. **Non-Blocking I/O:** Handles multiple requests simultaneously without waiting for processes to complete.
+3. **Scalability:** Ideal for handling large-scale, high-traffic applications.
+4. **Rich Ecosystem:** npm provides access to a vast library of open-source packages.
+5. **JavaScript Everywhere:** Enables full-stack development using a single language (JavaScript) for both client and server sides.
+
+#### **Key Points:**
+
+1. **Environment Variables:** Use `process.env.PORT` so the port can be configured dynamically, especially in production environments like cloud platforms.
+2. **Default Port:** If no environment variable is provided, set a default port like 3000 or any other suitable number.
+3. **Common Ports:**
+   - 3000, 8080, and 5000 are commonly used for development servers.
+   - Ensure the port you choose is not already in use by another service.
+
+---
+
+#### **Why Use React with Vite**?
+
+1. **Blazing Fast Development:** Vite leverages native ES modules and modern tooling for near-instant dev server startup.
+2. **Optimized Builds:** Vite ensures optimized production builds with minimal configuration.
+3. **Hot Module Replacement (HMR):** Changes in your code reflect instantly in the browser without a full reload.
+4. **Minimal Boilerplate:** Setting up a React app with Vite is fast and straightforward.
+
+---
+
+#### **Setting Up React with Vite**
+
+1. **Install Vite**
+   Run the following command to create a Vite-powered React project:
+   ```bash
+   npm create vite@latest my-react-app --template react
+   ```
+   Alternatively, for TypeScript:
+   ```bash
+   npm create vite@latest my-react-app --template react-ts
+   ```
+
+2. **Navigate to Your Project**
+   ```bash
+   cd my-react-app
+   ```
+
+3. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+4. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
+
+---
+
+#### **How To Install React.js On Windows?**
+
+#### **Step 1: Install Node.js And npm**
+
+Start by installing the Node.js installer for Windows. Visit the [Node.js official website](https://nodejs.org/) and download the LTS version. Once the installer is downloaded, run it, and follow the prompts, ensuring you don’t change any default settings. Click “Next” until the installation is complete. 
+![Npm](https://github.com/user-attachments/assets/8fdafbc8-4499-4ebc-bd4d-17189d8803d1)
+
+
+#### **Step 2: Verify that Node.js npm are installed.**
+
+After the installation is complete, you can verify that Node.js and npm are installed by opening a command prompt and running the following commands:
+
+```bash
+node --version
+```
+
+If the installation is successful, the terminal will display the installed version of Node.js.
+
+```bash
+npm --version
+```
+If the installation is successful, the terminal will display the installed version of npm.
+
+![Version](https://github.com/user-attachments/assets/01ce4967-1297-463c-8d23-ef489ffba116)
+
+These commands should display the version numbers for Node.js and npm, respectively.
+
+#### **3. How To Run Project?**
+
+#### **Step 1: Open Your Project in an IDE**
+
+Open your preferred IDE (e.g., Visual Studio Code) and navigate to the folder where your React app was installed.
+
+![IDE](https://github.com/user-attachments/assets/01d2c8dc-5cd2-419f-b9c1-dc4856cad775)
+
+#### **Step 2: Create a New React Project**
+
+Now that you have Create React App installed, you can use it to create a new React project. To do this, open a command prompt, go to the directory where you want the project to live, and run the following command:
+
+```bash
+npm create vite@latest atsfrontend
+```
+![Npm command](https://github.com/user-attachments/assets/6c035137-3e0b-4ba4-a01c-0262f702b654)
+
+Replace “atsfrontend” with the desired name for your project. Create React App will create a new directory with the specified name and generate a new React project with a recommended project structure and configuration.
+
+#### **Step 3: Start The Development Server**
+
+Once the project is created, head over to the project directory by running the following command in the command prompt:
+
+```bash
+cd atsfrontend
+```
+Replace “atsfrontend” with the name of your project directory. Now, start the development server by running the following command:
+
+```bash
+npm install
+```
+![Start server](https://github.com/user-attachments/assets/da0327d2-85df-4724-ad0d-e0d32ea2a71c)
+
+```bash
+npm run dev
+```
+This command launches the development server, which watches for changes to your project files and automatically reloads the browser when changes are detected.
+<br/>
+
+![Page](https://github.com/user-attachments/assets/a3b4ebd5-0952-48a8-afd2-278e10c3934a)
+
+---
+
+### Back-End:
+
 ### 1. JDK
 
 #### 1.1: What is JDK?
@@ -510,6 +701,1125 @@ Spring Initializr also supports generating projects with specific versions of Sp
 - [Spring Initializr Documentation](https://docs.spring.io/initializr/docs/current/reference/html/)
 - [Spring Boot Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/)
 - [Spring Initializr GitHub Repository](https://github.com/spring-io/initializr)
+
+---
+
+## **Project Structure**
+
+### **Front-End Project Structure:**
+
+```
+atsfrontend
+│
+├── atsfronted
+│     ├── public
+│     │     ├── files
+│     │     │        ├── calling_Tracker_format.xlsx
+│     │     │        ├── Lineup_Tracker_format.xlsx
+│     ├── src
+│     │     ├── AddCandidate
+│     │     │        ├── CallingTrackerForm.jsx
+│     │     │        ├── employeeMasterSheet.jsx
+│     │     │        ├── UpdateSelfCalling.jsx
+│     │     ├── App.css
+│     │     ├── App.jsx
+│     │     ├── index.css
+│     │     ├── main.jsx
+│     ├── .eslintrc.cjs
+│     ├── .gitignore
+│     ├── index.html
+│     ├── package-lock.json
+│     ├── postcss.config.js
+│     ├── README.md
+│     ├── tailwind.config.js
+│     ├── vite.config.js
+│     ├── vite.config.js.timestamp-1724634013512-4fb99d3a1e7c6.mjs
+│     ├── vite.config.js.timestamp-1724634013512-6473bf87f809d.mjs
+│
+└── README.md
+```
+
+---
+
+### Front-End Dependencies:
+
+### Dependencies
+
+<table>
+  <thead>
+    <tr>
+      <th>Package Name</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr>
+     <tr id="ant-designicons">
+      <td><a href="https://www.npmjs.com/package/@ant-design/icons" target="_blank">@ant-design/icons</a></td>
+      <td>^5.5.2</td> 
+    </tr>
+   <tr id="emotionreact">
+     <td><a href="https://www.npmjs.com/package/@emotion/react" target="_blank">@emotion/react</a></td>
+      <td>^11.13.3</td>
+    </tr>
+    <tr id="emotionstyled">
+       <td><a href="https://www.npmjs.com/package/@emotion/styled" target="_blank">@emotion/styled</a></td>
+      <td>^11.13.3</td>
+    </tr>
+     <tr id="fortawesome">
+       <td><a href="https://www.npmjs.com/package/@fortawesome/fontawesome-svg-core" target="_blank">@fortawesome/fontawesome-svg-core</a></td>
+      <td>^11.13.0</td>   
+    </tr>
+    <tr><td><a href="https://www.npmjs.com/package/@fortawesome/free-regular-svg-icons" target="_blank">@fortawesome/free-regular-svg-icons</a></td><td>^6.5.2</td>
+   </tr>
+    <tr></tr><td><a href="https://www.npmjs.com/package/@fortawesome/free-solid-svg-icons" target="_blank">@fortawesome/free-solid-svg-icons</a></td>><td>^6.5.2</td>
+     </tr>
+    <tr><td><a href="https://www.npmjs.com/package/@fortawesome/react-fontawesome" target="_blank">@fortawesome/react-fontawesome</a></td><td>^0.2.2</td>
+    </tr>
+   <tr id="muimaterial">
+     <td><a href="https://www.npmjs.com/package/@mui/material" target="_blank">@mui/material</a></td>
+      <td>^6.1.5</td>  
+    </tr>
+    <tr><td><a href="https://www.npmjs.com/package/@mui/x-date-pickers" target="_blank">@mui/x-date-pickers</a></td><td>^7.21.0</td>  
+    </tr>
+    <tr><td><a href="https://www.npmjs.com/package/@popperjs/core" target="_blank">@popperjs/core</a></td><td>^2.11.8</td>
+    </tr>
+    <tr id="reactpdfviewer">
+      <td><a href="https://www.npmjs.com/package/@popperjs/core" target="_blank">@react-pdf-viewer/core</a></td>
+      <td>^3.12.0</td>   
+    </tr>
+    <tr id="reactpdfviewerdefaultlayout">
+      <td><a href="https://www.npmjs.com/package/@react-pdf-viewer/default-layout" target="_blank">@react-pdf-viewer/default-layout</a></td>
+      <td>^3.12.0</td> 
+    </tr>
+    <tr>  <td><a href="https://www.npmjs.com/package/@react-pdf/renderer" target="_blank">@react-pdf/renderer</a></td><td>^3.4.5</td>
+    </tr>
+    <tr id="reduxjstoolkit">
+      <td><a href="https://www.npmjs.com/package/@reduxjs/toolkit" target="_blank">@reduxjs/toolkit</a></td>
+      <td>^2.5.0</td>  
+    </tr>
+    <tr><td><a href="https://www.npmjs.com/package/@stomp/stompjs" target="_blank">@stomp/stompjs</a></td><td>^7.0.0</td>
+      </tr>
+    <tr><td><a href="https://www.npmjs.com/package/antd" target="_blank">Antd</a></td><td>^5.21.5</td>
+    </tr>
+    <tr><td><a href="https://www.npmjs.com/package/aos" target="_blank">Aos</a></td><td>^2.3.4</td>
+    </tr>
+    <tr id="axios">
+      <td><a href="https://www.npmjs.com/package/axios" target="_blank">Axios</a></td>
+      <td>^1.6.8</td> 
+    </tr>
+    <tr><td><a href="https://getbootstrap.com/" target="_blank">Bootstrap Documentation</a></td><td>^5.3.3</td></tr>
+    <tr><td><a href="https://github.com/catdad/canvas-confetti" target="_blank">canvas-confetti on GitHub</a></td><td>^1.9.3</td></tr>
+    <tr><td><a href="https://www.chartjs.org/" target="_blank">Chart.js Documentation</a></td><td>^4.4.7</td></tr>
+    <tr><td><a href="https://gka.github.io/chroma.js/" target="_blank">Chroma.js Documentation</a></td><td>^3.1.1</td></tr>
+    <tr><td><a href="https://github.com/indigojs/colormap" target="_blank">Colormap on GitHub</a></td><td>^2.3.2</td></tr>
+    <tr><td><a href="https://cryptojs.googlecode.com/svn/tags/crypto-js-3.1.9-1/build/crypto-js.js" target="_blank">crypto-js Documentation</a></td><td>^4.2.0</td></tr>
+    <tr><td><a href="https://date-fns.org/" target="_blank">date-fns Documentation</a></td><td>^2.30.0</td></tr>
+    <tr><td><a href="https://day.js.org/" target="_blank">Day.js Documentation</a></td><td>^1.11.13</td></tr>
+    <tr><td><a href="https://formik.org/" target="_blank">Formik Documentation</a> </td><td>^2.4.6</td></tr>
+    <tr><td><a href="https://github.com/FortAwesome/Font-Awesome" target="_blank">Fortawesome on GitHub</a></td><td>^0.0.1-security</td></tr>
+    <tr><td><a href="https://html2canvas.hertzen.com/" target="_blank">html2canvas Documentation</a></td><td>^1.4.1</td></tr>
+    <tr><td><a href="https://github.com/eKoopmans/html2pdf" target="_blank">html2pdf.js on GitHub</a></td><td>^0.10.2</td></tr>
+    <tr><td><a href="https://github.com/ianstormtaylor/io" target="_blank">Io on GitHub</a></td><td>1.5.0</td></tr>
+    <tr><td><a href="https://github.com/parallax/jsPDF" target="_blank">jsPDF Documentation</a></td><td>^2.5.1</td></tr>
+    <tr><td><a href="https://github.com/eKoopmans/html2pdf" target="_blank">jspdf-autotable on GitHub</a></td><td>^3.8.2</td></tr>
+    <tr><td><a href="https://github.com/Hopding/pdf-lib" target="_blank">pdf-lib Documentation</a></td><td>^1.17.1</td></tr>
+    <tr><td><a href="https://pdfmake.github.io/pdfmake/" target="_blank">Pdfmake Documentation</a></td><td>^0.2.10</td></tr>
+     <tr id="react">
+      <td> <a href="https://reactjs.org/" target="_blank">React</a></td>
+      <td>^18.2.0</td>
+    </tr>
+    <tr><td><a href="https://github.com/jquense/react-big-calendar" target="_blank">react-big-calendar on GitHub</a></td><td>^1.12.1</td></tr>
+    <tr><td><a href="https://react-bootstrap.github.io/" target="_blank">react-bootstrap Documentation</a></td><td>^2.10.2</td></tr>
+    <tr><td><a href="https://github.com/wojtekmaj/react-calendar" target="_blank">react-calendar on GitHub</a> r</td><td>^5.0.0</td></tr>
+    <tr><td><a href="https://github.com/reactchartjs/react-chartjs-2" target="_blank">react-chartjs-2 on GitHub</a></td><td>^5.2.0</td></tr>
+    <tr><td> <a href="https://github.com/reactjs/react-color" target="_blank">react-color on GitHub</a></td><td>^2.19.3</td></tr>
+    <tr><td><a href="https://github.com/alampros/react-confetti" target="_blank">react-confetti on GitHub</a></td><td>^6.1.0</td></tr>
+    <tr><td><a href="https://reactdatepicker.com/" target="_blank">react-datepicker Documentation</a></td><td>^6.9.0</td></tr>
+    <tr><td><a href="https://reactjs.org/docs/react-dom.html" target="_blank">react-dom Documentation</a></td><td>^18.2.0</td></tr>
+    <tr><td><a href="https://github.com/Mosha/react-flatpickr" target="_blank">react-flatpickr on GitHub</a></td><td>^3.10.13</td></tr>
+    <tr><td> <a href="https://github.com/FortAwesome/react-fontawesome" target="_blank">react-fontawesome on GitHub</a></td><td>^1.7.1</td></tr>
+    <tr><td><a href="https://react-hook-form.com/" target="_blank">react-hook-form Documentation</a></td><td>^7.52.1</td></tr>
+    <tr><td><a href="https://github.com/ReactIcons/react-icons" target="_blank">react-icon on GitHub</a></td><td>^1.0.0</td></tr>
+    <tr><td><a href="https://react-icons.github.io/react-icons/" target="_blank">react-icons Documentation</a></td><td>^5.2.1</td></tr>
+    <tr><td> <a href="https://reactcommunity.org/react-modal/" target="_blank">react-modal Documentation</a></td><td>^3.16.1</td></tr>
+    <tr><td> <a href="https://react-pdf.org/" target="_blank">react-pdf Documentation</a</td><td>^9.1.0</td></tr>
+    <tr><td> <a href="https://github.com/islamsultan/react-phone-number-input" target="_blank">react-phone-number-input on GitHub</a></td><td>^3.4.3</td></tr>
+    <tr><td><a href="https://github.com/jorenvanhee/react-qr-code" target="_blank">react-qr-code on GitHub</a></td><td>^2.0.15</td></tr>
+    <tr><td><a href="https://react-redux.js.org/" target="_blank">react-redux Documentation</a></td><td>^9.2.0</td></tr>
+     <tr id="reactrouterdom">
+      <td><a href="https://reactrouter.com/" target="_blank">react-router-dom Documentation</a></td>
+      <td>^6.23.1</td>
+    </tr>
+    <tr><td> <a href="https://github.com/kolodny/react-spinner" target="_blank">react-spinner on GitHub</a></td><td>^0.2.7</td></tr>
+    <tr><td> <a href="https://react-spinners.github.io/react-spinners/" target="_blank">react-spinners Documentation</a></td><td>^0.13.8</td></tr>
+    <tr><td><a href="https://github.com/jmesnil/stomp-websocket" target="_blank">react-stomp on GitHub</a></td><td>^5.1.0</td></tr>
+    <tr><td> <a href="https://github.com/wojtekmaj/react-time-picker" target="_blank">react-time-picker on GitHub</a></td><td>^7.0.0</td></tr>
+    <tr><td><a href="https://github.com/gregnb/react-to-print" target="_blank">react-to-print on GitHub</a> </td><td>^2.15.1</td></tr>
+   <tr id="reacttoastify">
+      <td><a href="https://github.com/fkhadra/react-toastify" target="_blank">react-toastify on GitHub</a></td>
+      <td>^10.0.5</td>
+    </tr>
+    <tr><td><a href="https://react-tooltip.com/" target="_blank">react-tooltip Documentation</a></td><td>^5.27.1</td></tr>
+    <tr><td><a href="https://github.com/ogozu/react-web-share" target="_blank">react-web-share on GitHub</a></td><td>^2.0.2</td></tr>
+    <tr><td><a href="https://recharts.org/en-US/" target="_blank">Recharts Documentation</a></td><td>^2.12.6</td></tr>
+   <tr id="socketioclient">
+      <td> <a href="https://socket.io/docs/v4/client-api/" target="_blank">socket.io-client Documentation</a></td>
+      <td>^4.8.1</td>
+    </tr>
+    <tr><td> <a href="https://github.com/sockjs/sockjs-client" target="_blank">Sockjs on GitHub</a></td><td>^0.3.24</td></tr>
+    <tr><td><a href="https://github.com/sockjs/sockjs-client" target="_blank">sockjs-client on GitHub</a> </td><td>^1.6.1</td></tr>
+    <tr><td><a href="https://github.com/stomp-js/stompjs" target="_blank">Stompjs on GitHub</a></td><td>^2.3.3</td></tr>
+    <tr><td><a href="https://github.com/jeremydmiller/svg-to-img" target="_blank">svg-to-img on GitHub</a></td><td>^2.0.9</td></tr>
+    <tr><td><a href="https://github.com/andrejuan/theme-change" target="_blank">theme-change on GitHub</a></td><td>^2.5.0</td></tr>
+    <tr><td> <a href="https://github.com/SheetJS/js-xlsx" target="_blank">Xlsx Documentation</a></td><td>^0.18.5</td></tr>
+    <tr><td> <a href="https://github.com/jquense/yup" target="_blank">Yup Documentation</a></td><td>^1.4.0</td></tr>
+  </tbody>
+</table>
+
+### DevDependencies
+
+<table>
+  <thead>
+    <tr>
+      <th>Package Name</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="eslint">
+      <td><a href="https://eslint.org/" target="_blank">eslint Documentation</a></td>
+      <td>^8.57.0</td>
+    </tr>
+    <tr id="vite">
+      <td><a href="https://vitejs.dev/" target="_blank">Vite Documentation</a></td>
+      <td>^5.3.3</td>
+    </tr>
+    <tr id="autoprefixer">
+      <td><a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer Documentation</a></td>
+      <td>^10.4.19</td>
+    </tr>
+    <tr id="typescript">
+      <td><a href="https://www.typescriptlang.org/" target="_blank">TypeScript Documentation</a> </td>
+      <td>^4.7.4</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react" target="_blank">@types/react on GitHub</a></td>
+      <td>^18.2.66</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-dom" target="_blank">@types/react-dom on GitHub</a></td>
+      <td>^18.2.22</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/vitejs/vite/tree/main/packages/plugin-react" target="_blank">@vitejs/plugin-react on GitHub</a></td>
+      <td>^4.2.1</td>
+    </tr>
+    <tr>
+      <td> <a href="https://github.com/yannickcr/eslint-plugin-react" target="_blank">eslint-plugin-react on GitHub</a></td>
+      <td>^8.57.0</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks" target="_blank">eslint-plugin-react-hooks on GitHub</a></td>
+      <td>^4.6.0</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-refresh" target="_blank">eslint-plugin-react-refresh on GitHub</a> </td>
+      <td>^0.4.6</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/postcss/postcss" target="_blank">Postcss Documentation</a></td>
+      <td>^8.4.39</td>
+    </tr>
+    <tr id="tailwindcss">
+      <td><a href="https://tailwindcss.com/" target="_blank">Tailwind CSS Documentation</a></td>
+      <td>^2.1.2</td>
+    </tr>
+  </tbody>
+</table>
+
+
+```bash
+npm install
+```
+
+#### Dependencies Overview
+
+#### Core Dependencies
+
+-  **[@ant-design/icons](#ant-designicons)**: Provides Ant Design icons for UI components.
+- **[@emotion/react](#emotionreact) & [@emotion/styled](#emotionstyled)**: Used for CSS-in-JS styling, allowing you to style React components directly.
+- **[@fortawesome](#fortawesome)**: Font Awesome icon library for React, offering scalable vector icons.
+-  **[@mui/material](#muimaterial)**: Material UI framework components, enabling easy and consistent design patterns for React apps.
+- **[@react-pdf-viewer/core](#reactpdfviewer) & [default-layout](#reactpdfviewerdefaultlayout)**: Libraries for rendering and displaying PDF documents in React.
+- **[@reduxjs/toolkit](#reduxjstoolkit)**: Simplifies Redux development, providing utilities and a standard approach for managing state.
+- **[axios](#axios)**: Promise-based HTTP client for making API requests to communicate with external services.
+- **[react](#react)**: Main React library for building user interfaces with reusable components.
+- **[react-router-dom](#reactrouterdom)**: For handling routing in the app, allowing users to navigate between different views.
+- **[react-toastify](#reacttoastify)**: Toast notifications for easy feedback to users.
+- **[socket.io-client](#socketioclient)**: Used for real-time WebSocket communication between the client and server.
+- **[tailwindcss](#tailwindcss)**: Utility-first CSS framework for building custom designs with minimal effort.
+
+---
+
+#### DevDependencies
+
+- **[eslint](#eslint)**: A linter for identifying and fixing JavaScript issues in the code.
+- **[vite](#vite)**: A fast build tool that serves the app with hot-reloading, improving the development experience.
+- **[autoprefixer](#autoprefixer)**: Automatically adds vendor prefixes to CSS rules for compatibility across different browsers.
+- **[typescript](#typescript)**: Adds TypeScript support, providing static type checking and improved development experience.
+
+---
+
+### About `package.json`:
+
+A `package.json` file is a fundamental component in Node.js projects. It serves as a metadata file for the project and contains important information about the project, including dependencies, scripts, and other configurations.
+
+### Key Uses of `package.json`
+
+1. **Project Metadata:**
+   - **Name:** The name of your project or application.
+   - **Version:** The version number of your project.
+   - **Description:** A short description of your project.
+   - **Author:** The person or organization responsible for the project.
+   - **License:** Specifies the license under which the project is released.
+
+2. **Dependencies:**
+   - **Dependencies:** External libraries or packages required to run the application.
+   - **DevDependencies:** Libraries needed only for development (e.g., testing frameworks, bundlers).
+   - **PeerDependencies:** Specifies versions of other packages your package is compatible with.
+
+3. **Scripts:**
+   Define custom scripts that can be run using `npm run <script-name>`. Examples:
+   ```json
+   "scripts": {
+     "start": "node server.js",
+     "test": "jest"
+   }
+   ```
+
+4. **Package Management:**
+   - Running `npm install` uses the `package.json` file to install the listed dependencies.
+   - Ensures consistency of dependencies across environments.
+
+5. **Version Control:**
+   - Tracks versions of dependencies, ensuring consistency across environments.
+
+#### **Key Commands Involving `package.json`:**
+- `npm init`: Initializes a new Node.js project and creates a `package.json` file.
+- `npm install`: Installs dependencies listed in the `package.json` file.
+- `npm run <script>`: Executes the script defined in `package.json`.
+
+---
+
+### Front-End Portnumber
+
+#### 1. Purpose of the Port Configuration
+The frontend of this project is built using React. By default, React runs on port 3000 during development. This documentation provides guidelines for developers to ensure that the React development server consistently uses port 3000, even if other processes might attempt to occupy this port.
+
+#### 2. Project Port Requirements
+This project is designed to run only on port 3000 during development. React's development server will be configured to always use port 3000, and developers should ensure no other services are using this port. If the port is already occupied, React will throw an error, and you will need to free up the port.
+
+`http://localhost:3000`
+
+- **Port Conflict:** If port 3000 is already in use by another application, you will need to free up the port or modify the configuration to use a different one.
+- **Firewall Issues:** Ensure that your firewall or network settings are configured to allow traffic on port 3000 for local development.
+
+This command launches the development server, which watches for changes to your project files and automatically reloads the browser when changes are detected.
+
+---
+
+### CSS - Tailwind, Bootstrap
+
+#### 7.1 Tailwind CSS
+<a href="https://tailwindcss.com/" target="_blank" >Tailwind</a> CSS offers a utility-first approach to styling, which can greatly speed up the development process. It allows you to apply styles directly in your JSX, reducing the need to switch between CSS and JavaScript files.
+
+#### The Tailwind CSS configuration file (`tailwind.config.js`)
+
+```js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/*/.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        primary: 'var(--primary-color)', // Use CSS variable for the primary color
+      },
+    },
+  },
+  plugins: [],
+};
+```
+
+#### Key Features of Tailwind CSS:
+
+- **Utility-First:** Use pre-made classes in HTML/JSX for styling (e.g., padding, colors) instead of custom CSS.
+- **Customizability:** Easily adjust Tailwind settings to fit your project's unique design.
+- **Responsive Design:** Simplifies creating designs that work on different screen sizes using classes like `sm:`, `md:`, `lg:`.
+- **No Pre-made UI:** Gives you full control to design your UI without predefined components.
+  
+#### Example
+
+```js
+import React from 'react';
+
+function Button() {
+  return (
+    <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700">
+      Click Me
+    </button>
+  );
+}
+
+export default Button;
+```
+
+#### In this example:
+
+- `px-4` adds padding to the left and right of the button.
+- `py-2` adds padding to the top and bottom.
+- `bg-blue-500` sets the background color.
+- `text-white` makes the text color white.
+- `rounded-lg` applies rounded corners.
+- `hover:bg-blue-700` changes the background color on hover.
+  
+#### 7.2 Bootstrap
+
+[Bootstrap](https://getbootstrap.com/) is a popular open-source front-end framework that provides a collection of CSS and JavaScript tools for building responsive, mobile-first websites. It was originally developed by Twitter and is now one of the most widely used frameworks in web development.
+
+The following two lines of code are used to import Bootstrap styles and JavaScript functionality into a React project:
+
+```js
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+```
+#### Example
+
+```js
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+
+function App() {
+  return (
+    <div className="container">
+      <h1 className="text-center text-primary">Hello, Bootstrap!</h1>
+      <p className="text-muted">This is a simple example of Bootstrap styling in React.</p>
+      <button className="btn btn-success">Click Me</button>
+    </div>
+  );
+}
+
+export default App;
+```
+#### Component Use:
+
+- `container`: Centers the content with padding.
+- `text-center`: Centers the text.
+- `text-primary`: Makes the text color blue (Bootstrap's primary color).
+- `text-muted`: Makes the text color gray.
+- `btn btn-success`: Styles the button with a green background.
+
+---
+
+### App.jsx 
+
+In a React application, `App.jsx` is a central component file that typically serves as the entry point for rendering the main application. It acts as the root component of your React app and often contains the core structure and layout of the application.
+
+#### Key Points about App.jsx in React:
+
+#### 1. Default Component:
+
+In React apps created with Create React App, `App.jsx` is automatically included as the main component. It is usually rendered by `index.js` and acts as the parent component for other components.
+
+#### 2. Component Structure:
+
+`App.jsx` is a functional or class-based React component. It defines the primary structure of your app and integrates other components.
+
+#### 3. Purpose:
+
+`App.jsx` is typically used to:
+
+- Define the layout and structure of the app.
+- Integrate and manage state (often using tools like React's `useState` or `useReducer`).
+- Serve as the central hub to load and nest other child components.
+- Implement routing using tools like `react-router`.
+
+---
+
+### Front-End: Component Information
+
+#### 1. Component Purpose and Overview:
+The purpose of this component is to manage the Calling Tracker Form functionality. It is responsible for fetching data, submitting new data, and updating the calling tracker. The component also integrates with APIs, handles socket transmissions, and shows success/error notifications to the user.
+
+#### Example Code:
+
+```jsx
+// App.jsx
+import CallingTrackerForm from "./CallingTrackerForm";
+export default function App() {
+  return (
+    <div>
+      <CallingTrackerForm/> 
+    </div>
+  );
+}
+```
+
+
+#### CallingTrackerForm.jsx
+
+```javascript
+try {
+     
+      
+    axios.post(
+        ${API_BASE_URL}/calling-tracker/${employeeId}/${userType},
+        dataToUpdate,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+
+```
+<img src="https://github.com/user-attachments/assets/17b629ae-9bfe-43f4-a034-79875c882f4a" width="900">
+
+#### Dependencies:
+
+1. <a href="https://www.npmjs.com/package/axios" target="_blank">Axios</a>: A popular promise-based HTTP client for the browser and Node.js.
+
+#### Request Body:
+
+2. **dataToUpdate** (Object): This object contains the data to be sent in the request body. The data is typically in JSON format and can include various fields related to the calling tracker (e.g., call count, duration, etc.).
+
+---
+
+### API Fetching in React
+
+API fetching in React means getting data from an external source, like a server or database, using an API (a way to communicate between systems). When you make a request to an API, you ask for information, and the API sends it back to your React app.
+
+#### Why use API fetching in React?
+
+1. **Get Dynamic Data**: Your app can show real-time data, like the latest news, weather, or user information, by fetching it from an API.
+   
+2. **Organize Code Better**: The app gets data from a backend (like a server), while React focuses on showing it to users. This keeps your code clean.
+
+3. **Save Data**: You can send or receive data to/from a server. For example, if a user fills out a form, you can send that data to be saved.
+
+4. **Load Data in the Background**: React can fetch data without freezing the page, so users can still interact with the app while the data loads.
+   
+#### Example of API Fetching
+
+```javascript
+const response = await fetch(
+  `${API_BASE_URL}/calling-lineup/${employeeId}/${userType}?searchTerm=${searchTerm}&page=${page}&size=${size}`
+);
+if (!response.ok) {
+  throw new Error(`HTTP error! Status: ${response.status}`);
+}
+```
+![Api](https://github.com/user-attachments/assets/3113931a-1d56-4148-a084-57b9ed51466b)
+
+#### Method
+
+- **fetch**: A native JavaScript function to make HTTP requests. It returns a `Promise` that resolves to the response of the request.
+
+#### Request Format
+
+- The request is made to the calling lineup API endpoint with dynamic segments (`employeeId` and `userType`) as part of the URL.
+- Query parameters (`searchTerm`, `page`, `size`) are appended to the URL to provide filtering and pagination capabilities.
+
+---
+
+### **Back-End Project Structure:**
+
+```
+ATS_Backend
+│
+├── ATS_Project_01
+│     ├── src
+│     │     ├── main
+│     │     │        ├── java
+│     │     │        │       └── 🔽 ATS_01.ATS_Project_01
+│     │     │        │                    📦 config
+│     │     │        │                       📄 Configuration
+│     │     │        │                    📦 controller
+│     │     │        │                       📄 ApplicantController
+│     │     │        │                    📦 dto
+│     │     │        │                       📄 ApplicantDto
+│     │     │        │                    📦 exception
+│     │     │        │                       📄 ApplicantExceptionHandler
+│     │     │        │                    📦 model
+│     │     │        │                       📄 Applicant
+│     │     │        │                    📦 repository
+│     │     │        │                       📄 ApplicantRepository
+│     │     │        │                    📦 security
+│     │     │        │                       📄 Security
+│     │     │        │                    📦 SocketEmitEvents
+│     │     │        │                       📄 Socket
+│     │     │        │                    📦 Util
+│     │     │        │                       📄 ApplicantUtil
+│     │     │        │                    📦 mailSender
+│     │     │        │                       📄 ApplicantMailSender
+│     │     │        │                    📦 helper
+│     │     │        │                       📄 ApplicantHelper
+│     │     │        │                    📦 service
+│     │     │        │                       📄 ApplicantService
+│     │     │        │                    🚀 AtsProject01Application
+│     │     │        └── 🔽 📁 resources
+│     │     │                     🔽 📁 META-INF
+│     │     │                                 📄 MANIFEST.FM
+│     │     │                           ⚙️ application.properties
+│     │     └── static
+│     │     └── 🔽 📁 test
+│     │     └──     🔽 📁 java
+│     │     └──        🔽 📁 ATS_01.ATS_Project_01
+│     │     └── AtsProject01ApplicationTests.java
+│     ├──🔽 target
+│     │           📄 mvnw
+│     │           📄 mvnw.cmd
+│     │           📄 .gitignore
+│     │           📄 pom.xml
+│     │     ├── 🔽 📁 Out
+│     │             ├── 🔽 📁 artifacts
+│     │     │                    ├── 📁 ATS_Project_01_jar
+│     │     │                       └──           📄 ATS_Project_01.jar
+│     │     └── other_compiled_files
+│     │    
+│     ├── External Libraries
+│     │                   📄 <17> C:\Programs Files\Java\jdk-17
+│     │    
+│     │    
+│
+├── 🔽 📁 .idea
+│                    📜 misc.xml
+│                    📄.gitignore
+│                    📄 ATS_Backend.iml
+│                    📜 compiler.xml
+│                    📜 encodings.xml
+│                    📜 jarRepositories.xml
+│                    📜 material_theme_project_new.xml
+│                    📜 misc.xml
+│                    📜 modules.xml
+│                    📜 workspace.xml
+│                    📜 uiDesigner.xml
+│
+└── README.md
+```
+
+---
+
+### **Back-End Dependencies used in Project:**
+
+<p><b> 1) spring-boot-starter-data-jpa</b></p>
+
+```
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+```
+<p> <dependency> with the group ID org.springframework.boot and artifact ID spring-boot-starter-data-jpa is a Spring Boot starter that  simplifies the integration of Spring Data JPA into your application. It provides all the necessary libraries and tools required for working  with relational databases using JPA (Java Persistence API) and Hibernate.</p>
+<h4>Key Features:</h4>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JPA Integration: Enables the use of JPA for object-relational mapping (ORM) to map Java objects to database tables.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Hibernate Support: Includes Hibernate as the default JPA implementation, providing advanced ORM capabilities.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Repository Support: Provides repository interfaces (like JpaRepository) to perform CRUD operations and custom queries without writing boilerplate code.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Transaction Management: Simplifies declarative transaction management using @Transactional.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Database Schema Generation: Automatically generates or updates database schemas based on your JPA entity mappings.</p>
+
+<p><b>2) spring-boot-starter-web</b></p>
+
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+```
+<p>This starter is used to create web applications, including RESTful web services, in Spring Boot. It comes with pre-configured settings for Spring MVC, embedded servers like Tomcat (default), Jackson for JSON binding, and more.</p>
+<h4>Key Features:</h4>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Spring MVC: Supports building web applications using the Model-View-Controller architecture.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Embedded Tomcat: Includes the Tomcat server by default (you can also choose other embedded servers like Jetty or Undertow).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Jackson: Automatically includes the Jackson library to handle JSON data binding (for REST APIs).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Spring WebSocket: Provides support for WebSocket communication.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Common Usage: This dependency is typically used in web applications or microservices that need to expose REST APIs  or serve web pages.</p>
+
+<p><b>3) spring-boot-devtools</b> </p>
+
+```
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-devtools</artifactId>
+		<scope>runtime</scope>
+	<optional>true</optional>
+</dependency>
+```
+<p>This dependency is used to improve the development workflow by providing features such as automatic restarts, live reload, and remote debugging for Spring Boot applications. It’s meant for use during the development phase only.</p>
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Automatic Restart: When you make changes to your application, it automatically restarts the application without needing a manual restart, which speeds up the development process.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Live Reload: Integrates with tools like LiveReload to automatically refresh the browser when the code is modified, improving the user experience while testing.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Configuration for Development Only: It is typically included with the runtime scope to ensure it is only included in the development environment, not in production.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Common Usage: This dependency is added during the development phase to make the application development faster and easier. It is not meant to be included in production.</p>
+
+<p><b>4) mysql-connector-j</b> </p>
+
+```
+<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+    <scope>runtime</scope>
+</dependency>
+```
+<p> This dependency provides the JDBC driver necessary for connecting Java applications to a MySQL database. It acts as a bridge to allow your Spring Boot (or other Java) applications to send queries to and retrieve data from MySQL databases</p>
+<h4>Key Features:</h4>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JDBC Driver: Implements the Java Database Connectivity (JDBC) API, allowing Java application.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Database Connection: Facilitates establishing a connection to the MySQL database and performing CRUD (Create, Read, Update, Delete) operations.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Runtime Scope: Since it’s used at runtime to interact with the database, it is declared with a <scope>runtime</scope>. This ensures the dependency is only included during the execution of the application and not during the compilation.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Common Usage: This dependency is used when a Spring Boot application needs to interact with a MySQL database. It is included in the pom.xml file to configure the connection between the Java application and MySQL.</p>
+
+<p><b>5) lombok </b></p>
+
+```
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <optional>true</optional>
+</dependency>
+```
+<p>Lombok is a Java library that helps reduce boilerplate code by generating common methods like getters, setters, constructors, and more at compile-time using annotations. This simplifies your code and makes it more readable and maintainable.</p>
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Automatic Getter and Setter Methods: Lombok automatically generates getters and setters for fields with annotations like @Getter and @Setter.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • @ToString, @EqualsAndHashCode: Automatically generates toString(), equals(), and hashCode() methods.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • @AllArgsConstructor, @NoArgsConstructor, @RequiredArgsConstructor: Automatically generates constructors based on the parameters in the class.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • @Builder: Allows you to implement the builder pattern, enabling an easy and readable way to construct objects.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Compile-Time Code Generation: Lombok generates code during compilation, so it doesn’t affect runtime performance.</p>
+
+<p><b>6) pdfbox </b></p>
+
+```
+<dependency>
+    <groupId>org.apache.pdfbox</groupId>
+    <artifactId>pdfbox</artifactId>
+    <version>2.0.27</version>
+</dependency>
+```
+<p>Apache PDFBox is a Java library that provides capabilities to create, manipulate, and extract data from PDF documents. It is commonly used for tasks like reading PDF files, writing data into PDFs, extracting text, and handling other PDF-related operations.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Create PDF: You can generate PDF documents programmatically, adding text, images, and other content. </p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Read PDF: PDFBox allows extracting text and other elements from existing PDF files, making it useful for parsing PDF content.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Manipulate PDFs: You can manipulate existing PDF documents, such as merging, splitting, and rotating pages.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Fill Forms: You can fill in PDF forms dynamically and even generate reports in PDF format.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Signature Support: Supports adding digital signatures to PDF files.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Common Usage: This dependency is often used in Java applications that need to generate or manipulate PDF files. It's useful in scenarios where reports, invoices, or documents need to be created or processed in PDF format.</p>
+
+<p><b>7) spring-boot-starter-test</b> </p>
+
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+</dependency>
+```
+<p>This dependency provides the necessary tools to perform unit tests, integration tests, and other kinds of tests within a Spring Boot application. It includes a range of popular testing libraries and utilities such as JUnit, Mockito, and Spring TestContext Framework.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JUnit: The most widely used testing framework in Java for writing and running tests. Spring Boot Starter Test includes JUnit 5 by default. </p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Mockito: A mocking framework used to create mock objects for unit testing. Mockito helps simulate behaviors of dependencies and ensures that tests remain isolated. </p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Spring TestContext Framework: Provides support for integration testing with Spring’s TestContext framework. This allows for setting up application contexts and running tests in a Spring-managed environment.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Spring Boot Test: Provides annotations like @SpringBootTest to set up an application context for testing, ensuring tests run in a full Spring Boot environment. </p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Hamcrest: A library for writing declarative assertions in tests (e.g., assertThat statements).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JSON and XML testing: Provides support for validating JSON and XML responses in integration tests.</p>
+
+<p><b>8) socket.io-client</b></p>
+
+```
+<dependency>
+    <groupId>com.corundumstudio.socketio</groupId>
+    <artifactId>netty-socketio</artifactId>
+    <version>2.0.12</version>
+</dependency>
+
+```
+<p>The netty-socketio library is a Java implementation of Socket.IO that uses Netty for handling network connections. It allows Java-based applications to support real-time, event-driven communication between clients and servers via WebSockets or other fallback protocols.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Real-time Communication: Enables low-latency, bidirectional communication between a client and a server using WebSockets or long polling.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Socket.IO Protocol: Implements the Socket.IO protocol, allowing Java applications to communicate with Socket.IO clients (e.g., JavaScript clients).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Built on Netty: Uses Netty, a non-blocking I/O framework, to handle incoming requests, enabling scalability and efficiency in handling many concurrent connections.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Event-driven Model: Allows the server to emit and listen for events, enabling real-time functionality like chat, notifications, and live updates.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Compatibility with Socket.IO Clients: Supports communication with Socket.IO clients written in JavaScript, making it ideal for full-stack real-time applications.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Live data applications: Suitable for applications that require real-time data updates, such as sports scores, financial data, and stock prices.</p>
+
+<p><b>9) spring-boot-starter-validation </b></p>
+
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+```
+<p>The <dependency> with the group ID org.springframework.boot and artifact ID spring-boot-starter-validation provides support for validating user input in Spring Boot applications. It integrates the Java Bean Validation API (JSR 380) with Spring Boot and uses Hibernate Validator as the default implementation.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Input Validation: Allows you to validate user input in request payloads (e.g., @RequestBody or @ModelAttribute). </p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Built-in Annotations: Provides standard validation annotations like @NotNull, @Size, @Email, @Pattern, etc.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Custom Validation: Supports custom validation logic using custom constraint annotations.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Error Handling: Automatically generates meaningful error messages for invalid inputs, which can be customized.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Validation Groups: Supports grouping of validation rules for different scenarios.</p>
+
+<p><b>10) jackson-databind </b></p>
+
+```
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+</dependency>
+```
+<p>The <dependency> with the group ID com.fasterxml.jackson.core and artifact ID jackson-databind is a key component of the Jackson library. Jackson is a widely used Java library for converting Java objects to JSON and vice versa. Specifically, jackson-databind is used for data binding, allowing you to map Java objects to JSON and back, supporting both serialization and deserialization.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Serialization and Deserialization: Converts Java objects to JSON (serialization) and JSON to Java objects(deserialization). </p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Supports Various Data Types: Handles collections, lists, maps, and other custom types seamlessly.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Custom Serialization/Deserialization: Supports custom serializers and deserializers for complex or non-standard Java types. </p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Configuration Flexibility: Allows customization of JSON processing, including handling of null values, pretty printing, etc.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Annotation Support: Integrates with Jackson annotations like @JsonProperty, @JsonIgnore, @JsonFormat, etc., to control how Java objects are converted to JSON.</p>
+
+<p><b>11) jackson-annotations </b></p>
+
+```
+<dependency>
+     <groupId>com.fasterxml.jackson.core</groupId>
+     <artifactId>jackson-annotations</artifactId>
+</dependency>
+```
+<p>The <dependency> with the group ID com.fasterxml.jackson.core and artifact ID jackson-annotations is part of the Jackson library. This dependency provides annotations that allow developers to customize how Java objects are serialized (converted to JSON) and deserialized (converted from JSON) using Jackson.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Customization of JSON Mapping: Allows fine-grained control over how Java object fields and methods are mapped to JSON properties and vice versa. </p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Improved Serialization/Deserialization: Helps configure how specific fields are included, excluded, renamed, or formatted when converting between Java objects and JSON. </p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Reduction of Boilerplate Code:Simplifies the JSON processing by adding annotations directly to your Java classes, avoiding manual configuration in code.  </p>
+
+<p><b>12) spring-boot-starter-websocket </b></p>
+
+```
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-websocket</artifactId>
+</dependency>
+```
+<p>The <dependency> with the group ID org.springframework.boot and artifact ID spring-boot-starter-websocket is used to enable WebSocket support in a Spring Boot application.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Real-Time Communication: Enables continuous two-way communication between the client and the server.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Reduced Latency: Unlike HTTP, WebSocket connections remain open, removing the need for repeated requests.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Event-Driven Architecture: Suitable for event-based use cases where updates need to be pushed to the client in real-time.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Chat Applications: Sending and receiving messages instantly between clients.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Real-Time Dashboards: Live stock market data, user activity tracking, etc.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Gaming: Multiplayer games that require instant communication between players.</p>
+
+<p><b>13) jakarta.validation-api </b></p>
+
+```
+<dependency>
+    <groupId>jakarta.validation</groupId>
+    <artifactId>jakarta.validation-api</artifactId>
+    <version>3.0.2</version>
+</dependency>
+```
+<p>The jakarta.validation-api is the standard for Java Bean Validation and allows you to validate the constraints on:
+
+Class fields. 
+Method parameters.
+Return values.
+It is often used in conjunction with Hibernate Validator, which is the reference implementation of the Jakarta Bean Validation API.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Declarative Validation with Annotations: Validate fields, methods, or parameters using annotations such as @NotNull, @Size, @Min, etc. </p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Custom Constraints: Create your own validation logic with custom annotations.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Integration with Frameworks: Supported out-of-the-box in frameworks like Spring Boot, where validations are automatically triggered.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Cross-Parameter Validation: Validate parameters across method calls or fields in a class.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp •@NotNull: Ensures the value is not null. </p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp •@Size: Validates the size of a collection, array, or string.</p>
+
+<p><b>14) modelmapper </b></p>
+
+```
+<dependency>
+    <groupId>org.modelmapper</groupId>
+    <artifactId>modelmapper</artifactId>
+    <version>3.1.1</version>
+</dependency>
+```
+<p>The <dependency> with the group ID org.modelmapper and artifact ID modelmapper provides a library for object mapping in Java. It simplifies the process of transferring data between objects, especially when working with layers like DTOs (Data Transfer Objects) and entities in applications.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Automated Mapping: Automatically maps fields with matching names and compatible types between two objects.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Customizable Mapping: Supports defining custom mapping logic for specific scenarios.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Property Mapping: Maps fields even if their names don't match, by using configuration or explicit mapping rules.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Bidirectional Mapping: Supports mapping in both directions (e.g., Entity → DTO and DTO → Entity).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Collections Mapping: Handles mapping between collections (e.g., List of entities to List of DTOs).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Deep Mapping: Maps nested objects and complex structures.</p>
+
+<p><b>15) commons-io </b></p>
+
+```
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.11.0</version>
+</dependency>
+```
+<p>The Apache Commons IO library is used to:
+
+Simplify file and stream manipulation.
+Perform operations like copying files, reading/writing text, monitoring directories, etc.
+Handle advanced I/O tasks such as dealing with file filters, byte arrays, and file comparisons.
+</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • File Utilities: Simplifies file operations like copying, deleting, moving, and comparing files.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Stream Utilities: Makes it easier to work with InputStream and OutputStream.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • IO Monitoring: Supports monitoring changes in directories (e.g., file creation, deletion, or modification).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • File Filters: Provides ready-to-use filters to select files based on conditions (e.g., by extension or size).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Filename Utilities: Handles filename manipulation like extracting extensions or normalizing paths.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Endian Support: Provides utilities to work with big-endian and little-endian data.</p> 
+
+<p><b>16) netty-codec-http </b></p>
+
+```
+<dependency>
+     <groupId>io.netty</groupId>
+     <artifactId>netty-codec-http</artifactId>
+     <version>4.1.107.Final</version> <!-- You can choose the appropriate version -->
+</dependency>
+```
+<p>The <dependency> with the group ID io.netty and artifact ID netty-codec-http is part of the Netty framework, which is a popular library for building network applications in Java. Specifically, this module provides support for working with HTTP and HTTP/2 protocols.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • HTTP Encoding/Decoding: Automatically encodes/decodes HTTP messages (requests and responses).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • HTTP/2 Support: Provides tools to handle HTTP/2 frames and multiplexing.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Lightweight and Efficient: Built for performance and scalability, suitable for high-throughput applications.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Custom Protocol Handling: Allows customization of HTTP handling logic for specific use cases.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Integration with Other Netty Modules: Works seamlessly with other Netty modules like netty-handler and netty-buffer.</p>
+
+<p><b>17) jakarta.mail:jakarta.mail-api </b></p>
+
+```
+<dependency>
+     <groupId>jakarta.mail</groupId>
+     <artifactId>jakarta.mail-api</artifactId>
+     <version>2.1.1</version>
+</dependency>
+```
+<p>The <dependency> with groupId as jakarta.mail and artifactId as jakarta.mail-api provides the Jakarta Mail API (previously known as JavaMail). This dependency is used for building email functionality in Java applications, such as sending and receiving emails via SMTP, POP3, or IMAP protocols.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • SMTP Support: Send emails using Simple Mail Transfer Protocol (SMTP).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • POP3/IMAP Support: Retrieve emails from mail servers.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Attachments: Add file attachments or inline images to emails.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Authentication: Supports authentication for secure email communication.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Rich Content: Send emails with HTML content and multimedia.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Custom Headers: Add custom headers to email messages.</p>
+
+<p><b>18) spring-boot-starter-mail </b></p>
+
+```
+<dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-mail</artifactId>
+</dependency>
+```
+<p>This dependency provides the necessary components to easily integrate email sending functionality into your Spring Boot applications.
+It simplifies the process of configuring and sending emails using JavaMailSender interface.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Easy Integration: Seamlessly integrates with Spring Boot's auto-configuration mechanism.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JavaMailSender: Provides a convenient interface for sending emails with various configurations (e.g., SMTP, Gmail).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Supports various protocols: Works with SMTP, IMAP, POP3, and other mail protocols.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Flexible Configuration: Easily configure email settings (host, port, credentials, etc.) through application properties or configuration files.</p>
+
+<p><b>19) byte-buddy </b></p>
+
+```
+<dependency>
+    <groupId>net.bytebuddy</groupId>
+    <artifactId>byte-buddy</artifactId>
+    <version>1.14.16</version>
+</dependency>
+```
+<p>The byte-buddy dependency provides you with the tools to dynamically work with Java bytecode. This is a powerful technique with various applications, especially in scenarios where you need to customize the behavior of classes or implement advanced features like AOP.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Code Generation: Create new classes or modify existing ones without needing to write or compile Java source code directly. This is incredibly useful for: </p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • AOP (Aspect-Oriented Programming): Implement cross-cutting concerns (like logging, security) by dynamically weaving in behavior at runtime.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Dynamic Proxies: Create proxies for objects to intercept method calls and add custom logic.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Class Transformation: Modify existing classes to enhance their behavior or adapt them to specific needs.</p>
+
+<p><b>20) twilio </b></p>
+
+```
+ <dependency>
+    <groupId>com.twilio.sdk</groupId>
+    <artifactId>twilio</artifactId>
+   <version>8.23.0</version>
+</dependency>
+```
+<p>The twilio dependency allows you to leverage the power of the Twilio platform within your Java applications. It provides a convenient and efficient way to implement communication features like SMS, voice calls, and more.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Simplified API Interactions: The SDK abstracts away the complexities of interacting with Twilio's REST API.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Language Support: Available for various programming languages (Java, Python, Node.js, etc.).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Easy Integration: Easily integrate Twilio functionality into your applications.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Well-Documented: Extensive documentation and examples are available to help you get started.</p>
+
+<p><b>21) javax.mail </b></p>
+
+```
+<dependency>
+    <groupId>com.sun.mail</groupId>
+    <artifactId>javax.mail</artifactId>
+    <version>1.6.2</version>
+</dependency>
+```
+<p>The javax.mail dependency provides you with the necessary tools to work with email in your Java applications. It offers a standardized and robust way to handle email-related tasks.
+
+Note: While com.sun.mail is a common implementation of the JavaMail API, other implementations might be available.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Platform-Independent: Works across different operating systems and Java platforms.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Protocol Support: Supports various email protocols like SMTP, IMAP, POP3, and more.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Flexible: Allows you to customize email messages with attachments, headers, and other properties.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Well-Established: A widely used and well-supported standard API for email operations.</p>
+
+<p><b>22) poi-ooxml </b></p>
+
+```
+<dependency>
+    <groupId>org.apache.poi</groupId>
+   <artifactId>poi-ooxml</artifactId>
+   <version>5.2.3</version>
+</dependency>
+```
+<p>The poi-ooxml dependency provides you with the tools to work with OOXML files (Excel, Word, PowerPoint) programmatically in Java. It's a powerful library for a wide range of use cases involving data processing and document generation.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Data Processing: Read and manipulate data from Excel files for analysis, reporting, and other tasks.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Report Generation: Create dynamic reports in Excel format.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Document Automation: Generate customized Word documents or PowerPoint presentations.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • File Conversion: Convert between different file formats (e.g., Excel to CSV).</p>
+
+<p><b>22) java-jwt </b></p>
+
+```
+<dependency>
+     <groupId>com.auth0</groupId>
+     <artifactId>java-jwt</artifactId>
+     <version>3.18.1</version>
+</dependency>
+```
+<p>The java-jwt dependency provides you with the necessary tools to work with JWTs in your Java applications. It simplifies the process of implementing secure and reliable authentication and authorization mechanisms.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JWT Creation: Easily create signed JWTs with claims (e.g., user ID, roles, expiration time).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JWT Verification: Verify the authenticity and integrity of received JWTs.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Algorithm Support: Supports various JWT signing algorithms (e.g., HS256, RS256, RSA).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Claim Extraction: Extract claims from a JWT for use within your application.</p>
+
+<p><b>23) tika-core </b></p>
+
+```
+<dependency>
+    <groupId>org.apache.tika</groupId>
+    <artifactId>tika-core</artifactId>
+    <version>2.8.0</version>
+</dependency>
+```
+<p>The tika-core dependency provides you with a robust and versatile toolkit for working with various file formats. It simplifies the process of detecting file types, extracting metadata, and extracting text content, making it a valuable tool for many data-related tasks.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Supports a Wide Range of File Formats: Handles a vast number of file formats, including common office documents, images, archives, and more.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Extensible: Easily extend Tika to support new file formats through custom parsers.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Efficient: Leverages efficient parsing techniques for fast and accurate results.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Open Source: A community-driven project with a large and active user base.</p>
+
+<p><b>24) spring-boot-starter-security </b></p>
+
+```
+<dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+```
+<p>The spring-boot-starter-security dependency is essential for building secure Spring Boot applications. It provides a solid foundation for implementing authentication and authorization features, making it easier to protect your application from unauthorized access and data breaches.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Spring Security Integration: Leverages the powerful Spring Security framework, providing a robust and flexible security solution.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Easy Configuration: Simplifies the process of setting up security by providing default configurations and allowing for customization.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Support for Various Authentication Mechanisms: Supports various authentication methods, including:
+Username/Password: Traditional username and password-based authentication.
+OAuth2: Integrate with popular OAuth2 providers (e.g., Google, Facebook, GitHub).
+JWT: Implement token-based authentication using JSON Web Tokens.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Support for Authorization: Implement role-based access control (RBAC), attribute-based access control (ABAC), and other authorization mechanisms.</p>
+
+<p><b>25) tika-parsers-standard-package </b></p>
+
+```
+<dependency>
+    <groupId>org.apache.tika</groupId>
+    <artifactId>tika-parsers-standard-package</artifactId>
+    <version>2.8.0</version>
+</dependency>
+```
+<p>The tika-parsers-standard-package dependency enhances the capabilities of the Apache Tika library by providing a collection of pre-built parsers for common file formats. This simplifies the process of working with various file types and improves the overall efficiency of your Tika-based applications.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Enhanced Functionality: Adds support for a large number of file formats beyond the basic capabilities of the tika-core library.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Convenience: Provides ready-to-use parsers, saving you the effort of developing custom parsers for common file types.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Improved Performance: Often includes optimized parsers for specific file formats, leading to faster processing.</p>
+
+<p><b>26) jjwt </b></p>
+
+```
+<dependency>
+     <groupId>io.jsonwebtoken</groupId>
+     <artifactId>jjwt</artifactId>
+     <version>0.9.1</version>
+</dependency>
+```
+<p>The jjwt dependency provides you with the necessary tools to work with JWTs in your Java applications. It simplifies the process of implementing secure and reliable authentication and authorization mechanisms.</p>
+
+<h4>Key Features:</h4>
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JWT Creation: Easily create signed JWTs with claims (e.g., user ID, roles, expiration time).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JWT Verification: Verify the authenticity and integrity of received JWTs.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Algorithm Support: Supports various JWT signing algorithms (e.g., HS256, RS256, RSA).</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Claim Extraction: Extract claims from a JWT for use within your application.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Easy to Use: Provides a simple and intuitive API for working with JWTs.</p>
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Authentication: Implement user authentication and authorization within your applications.</p>
 
 ---
 
@@ -1090,6 +2400,389 @@ This configuration file is typically found in the `application.properties` file 
 #### 12. `spring.servlet.multipart.max-request-size=10MB`
 - **Purpose**: This property sets the maximum size for an entire HTTP request, including the uploaded file(s). It’s also set to `10MB` in this case.
 - **Why it's necessary**: It’s essential to have a limit on the total size of the request to avoid issues when dealing with multiple or very large files. Without this, users could upload very large files, potentially affecting the server’s memory and performance.
+
+---
+
+### Development Workflow: Full-Stack
+
+#### Front-End Interaction:
+
+- The user interacts with the front-end of the application, built using HTML, CSS, and JavaScript.
+- The front-end, powered by ReactJS library, renders the user interface and handles user inputs.
+- When the user performs an action (e.g., clicking a button, submitting a form), the front-end sends a request to the API.
+
+#### API Processing:
+
+- The API receives the request from the front-end.
+- It processes the request, which may involve:
+  - Validating the input data
+  - Fetching data from the database
+  - Performing business logic operations
+  - Creating or updating data in the database
+
+#### Back-End Processing:
+
+- The API interacts with the back-end, which is built using Java and the Spring Boot framework.
+- The back-end handles the API request, executes the necessary logic, and communicates with the database using the JDBC connector.
+
+#### Database Interaction:
+
+- The back-end interacts with the MySQL database through the JDBC connector.
+- It retrieves or stores data as per the API request.
+
+#### API Response:
+
+- Once the back-end processes the request and interacts with the database, it sends a response back to the API.
+
+#### Front-End Update:
+
+- The API receives the response from the back-end.
+- It sends the response to the front-end.
+- The front-end updates the user interface based on the received data, providing feedback to the user.
+
+#### DevOps:
+
+- After development, the application is deployed using DevOps practices.
+- Nginx server is used to handle incoming requests and route them to the appropriate backend services.
+- Hostinger provides the infrastructure for hosting the application and managing the database.
+
+#### Workflow Summary:
+
+1. User interaction on the front-end.
+2. Communication between the front-end, API, and back-end.
+3. Database interaction for data storage and retrieval.
+4. Deployment and maintenance using DevOps tools.
+
+This workflow ensures that user actions are processed efficiently, data is managed securely, and the application is available to users.
+
+![WhatsApp Image 2025-01-24 at 12 23 48 PM](https://github.com/user-attachments/assets/cbd3f4da-afb5-439d-8b45-8c3f285fb2f9)
+
+---
+
+### Fron-End Code flow:
+
+#### Request Body:
+```json
+{
+  "employeeId": "127",
+  "userType": "Recruiters",
+  "employeeName": "Sahil Karnekar",
+  "dateOfJoining": "Date: 23-1-2025, Time: 3:54 PM",
+  "userName": "sahilkarnekarnewrecruiter",
+  "aadhaarNo": "",
+  "alternateContactNo": "",
+  "anniversaryDate": "",
+  "bloodGroup": "",
+  "companyMobileNumber": "",
+  "confirmPassword": "",
+  "dateOfBirth": "",
+  "department": "",
+  "designation": "",
+  "document": null,
+  "editDeleteAuthority": "",
+  "educationalQualification": "",
+  "emergencyContactNumber": "",
+  "emergencyContactPerson": "",
+  "emergencyPersonRelation": "",
+  "employeeAddress": "",
+  "employeeEmail": "",
+  "employeeExperience": "",
+  "employeeNumber": "",
+  "employeePassword": "",
+  "employeePresentAddress": "",
+  "employeeStatus": "",
+  "entrySource": "",
+  "esIcNo": "",
+  "faceBookURL": "",
+  "gender": "",
+  "inductionComment": "",
+  "inductionYesOrNo": "",
+  "insuranceNumber": "",
+  "interviewTakenPerson": "",
+  "jobRole": "Recruiters",
+  "lastCompany": "",
+  "lastWorkingDate": "",
+  "linkedInURl": "",
+  "maritalStatus": "",
+  "offeredSalary": "",
+  "officialContactNumber": "",
+  "officialMail": "",
+  "panNo": "",
+  "performanceIndicator": "",
+  "perks": "",
+  "pfNo": "",
+  "professionalPtNo": "",
+  "profileImage": null,
+  "reasonForLeaving": "",
+  "reportingMangerDesignation": "",
+  "reportingMangerName": "",
+  "resumeFile": null,
+  "roundsOfInterview": "",
+  "teamLeaderMsg": "Swapnil Rokade",
+  "trainingCompletedYesOrNo": "",
+  "trainingSource": "",
+  "trainingTakenCount": "",
+  "tshirtSize": "",
+  "twitterURl": "",
+  "warningComments": "",
+  "whatsAppNumber": "",
+  "workLocation": ""
+}
+```
+#### Add Employee Post Operation: 
+
+```javascript
+try {    
+  const response = await fetch(
+    `${API_BASE_URL}/add-employee/${employeeId}/${userType}`,
+    {
+      method: "POST",
+      body: formDataToSend,
+    }
+  );
+  ```
+
+
+#### Add Employee Put Operation:
+```javascript
+const response = await fetch(`${API_BASE_URL}/update-employee/${employeeId}`, {
+  method: "PUT",
+  body: formDataToSend,
+});
+
+```
+#### Add Employee Delete Operation:
+```javascript
+const response = await fetch(`${API_BASE_URL}/delete-employee/${employeeId}`, {
+  method: "DELETE",
+});
+
+```
+#### Add Employee Get Operation:
+```javascript
+const response = await fetch(`${API_BASE_URL}/get-employee/${employeeId}`);
+const data = await response.json();
+
+```
+<img src="https://github.com/user-attachments/assets/a55a03e3-7ea0-4eb8-8cdf-e4d7e377e69a" width="1000" height="auto" />
+
+```
+```
+
+#### **Employee Management API Explanation:**
+
+
+This API defines endpoints for managing employee data in a system. It supports operations like adding, updating, deleting, and retrieving employee details.
+
+#### 1. POST (Add Employee)
+**Purpose:** To add a new employee to the system.  
+**Request:**  
+It makes a POST request to a URL that includes the `employeeId` and `userType` (e.g., role of the employee, like "manager", "staff", etc.). These are dynamic values, meaning they are replaced by actual data when the request is made.  
+**Body:**  
+The body of the request contains `formDataToSend`, which is the data of the new employee (e.g., name, email, department, etc.).  
+**Example URL:**  
+`/add-employee/123/manager`  
+(Where `123` is the `employeeId` and `manager` is the `userType`).  
+**Outcome:**  
+The server processes this data and adds the new employee to the system.
+
+#### 2. PUT (Update Employee)
+**Purpose:** To update an existing employee's details.  
+**Request:**  
+It makes a PUT request to a URL that includes the `employeeId` to specify which employee to update.  
+**Body:**  
+The request body contains `formDataToSend`, which includes the updated employee details (e.g., updated name, email, etc.).  
+**Example URL:**  
+`/update-employee/123`  
+(Where `123` is the `employeeId` of the employee to be updated).  
+**Outcome:**  
+The server updates the employee's data with the new information provided in the request body.
+
+#### 3. DELETE (Delete Employee)
+**Purpose:** To delete an existing employee from the system.  
+**Request:**  
+It makes a DELETE request to a URL that includes the `employeeId` of the employee to be deleted.  
+**Example URL:**  
+`/delete-employee/123`  
+(Where `123` is the `employeeId` of the employee to be deleted).  
+**Outcome:**  
+The server removes the employee's data from the system.
+
+#### 4. GET (Get Employee)
+**Purpose:** To retrieve the details of a specific employee.  
+**Request:**  
+It makes a GET request to a URL that includes the `employeeId` of the employee whose details are to be fetched.  
+
+```
+
+```
+#### Fetch Employee Team Details with `useEffect`
+
+This code demonstrates how to use the `useEffect` hook in React to fetch employee team details from a backend API whenever certain state variables (`currentPage` or `pageSize`) change.
+
+#### Code Example
+
+```javascript
+useEffect(() => {
+  const fetchData = async (page, size) => {
+    try {
+      const response = await axios.get(
+        `${API_BASE_URL}/fetch-Team-details/${employeeId}/${userType}?page=${page}&size=${size}`
+      );
+      setEmployeeData(response.data.content);
+      setLoading(false);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setLoading(false);
+    }
+  };
+
+  fetchData(currentPage, pageSize);
+}, [currentPage, pageSize]);
+
+```
+
+### Understanding the `useEffect` Hook in React
+
+The following code demonstrates the use of the `useEffect` hook to handle side effects in a React component, specifically fetching data from an API.
+
+#### Code Example
+
+```javascript
+useEffect(() => {
+  // fetchData function and API call inside the useEffect
+}, [currentPage, pageSize]);
+```
+
+
+
+#### 1. **Purpose of `useEffect`**
+- `useEffect` allows you to run side effects in your components.
+- In this example, the side effect is **fetching data from an API**.
+
+#### 2. **Arguments of `useEffect`**
+The `useEffect` hook takes **two arguments**:
+1. **Callback Function**:
+   - Contains the logic for the side effect. 
+   - For example, the API fetching logic would go inside this callback.
+2. **Dependency Array**:
+   - Specifies when the effect should re-run.
+   - In this case, the dependency array is `[currentPage, pageSize]`.
+   - **Effect Behavior**: 
+     - The effect will run whenever either `currentPage` or `pageSize` changes.
+
+#### 3. **When Does `useEffect` Run?**
+- **Initial Render**: The `useEffect` runs after the first render.
+- **Dependency Changes**: It re-runs whenever a value in the dependency array changes.
+- **No Dependencies**: If the array is empty (`[]`), the effect runs only once, after the component mounts.
+
+```
+```
+# API Response: Employee Data
+
+This document explains the structure and details of the API response for fetching employee data.
+
+```
+```
+
+## Sample JSON Response
+
+```json
+{
+    "content": [
+        {
+            "id": 5,
+            "contact": 9244055548,
+            "email": null,
+            "joinDate": "2024-06-10",
+            "designation": "HR Consultant",
+            "jobRole": "Recruiters",
+            "department": "IT ",
+            "reportingManger": "Nisha Singh",
+            "resume": null,
+            "status": "Active",
+            "name": "Arshad Attar R"
+        },
+        {
+            "id": 15,
+            "contact": 0,
+            "email": null,
+            "joinDate": "",
+            "designation": "",
+            "jobRole": "",
+            "department": "",
+            "reportingManger": "",
+            "resume": null,
+            "status": "",
+            "name": ""
+        },
+        {
+            "id": 16,
+            "contact": 0,
+            "email": null,
+            "joinDate": "NA",
+            "designation": "Recruiter",
+            "jobRole": "NA",
+            "department": "NA",
+            "reportingManger": "NA",
+            "resume": null,
+            "status": "NA",
+            "name": "r1"
+        },
+        {
+            "id": 17,
+            "contact": 0,
+            "email": null,
+            "joinDate": "NA",
+            "designation": "Recruiter",
+            "jobRole": "NA",
+            "department": "NA",
+            "reportingManger": "NA",
+            "resume": null,
+            "status": "NA",
+            "name": "r2"
+        },
+        {
+            "id": 18,
+            "contact": 0,
+            "email": null,
+            "joinDate": "NA",
+            "designation": "Recruiter",
+            "jobRole": "NA",
+            "department": "NA",
+            "reportingManger": "NA",
+            "resume": null,
+            "status": "NA",
+            "name": "r3"
+        }
+    ],
+    "pageable": {
+        "pageNumber": 0,
+        "pageSize": 5,
+        "sort": {
+            "sorted": false,
+            "empty": true,
+            "unsorted": true
+        },
+        "offset": 0,
+        "paged": true,
+        "unpaged": false
+    },
+    "totalPages": 22,
+    "totalElements": 106,
+    "last": false,
+    "size": 5,
+    "number": 0,
+    "sort": {
+        "sorted": false,
+        "empty": true,
+        "unsorted": true
+    },
+    "numberOfElements": 5,
+    "first": true,
+    "empty": false
+}
+```
 
 ---
 
@@ -2207,3 +3900,255 @@ For billing-related support, please contact our customer service team at **billi
 #### Conclusion
 
 Our subscription-based ATS offers flexible plans to suit businesses of all sizes. Whether you're a small startup or a large enterprise, you can choose the plan that meets your needs. Enjoy all the features you need for efficient recruitment and candidate management, with transparent pricing, easy subscription management, and dedicated support.
+
+---
+
+### Testing Report
+
+#### **Manual Testing:**
+---
+
+#### **Manual Testing** is the process of manually executing test cases without the use of automation tools to ensure that software behaves as expected. It involves a tester following a set of predefined test scenarios to identify bugs or issues in the software.
+
+#### Key Points:
+
+1. **Human Involvement:** A tester performs actions on the application, verifies outputs, and checks for defects.
+2. **Test Case Execution:** Testers execute tests based on written test cases or use cases, which describe the inputs, actions, and expected results.
+3. **Exploratory Testing:** Testers may also perform exploratory testing, where they use the software freely to identify unexpected issues.
+4. **Bug Reporting:** Any issues found during testing are documented and reported to the development team for resolution.
+5. **Use Cases:** It includes functional, integration, UI, and user acceptance testing.
+
+#### Advantages:
+
+- **Flexibility:** Testers can adapt test cases based on real-time observations.
+- **No Setup Required:** It doesn't require automation tools or scripts.
+- **Usability Testing:** Effective for checking the user experience and interface issues.
+
+#### Disadvantages:
+
+- **Time-Consuming:** Manual testing can be slower compared to automated testing.
+- **Human Error:** Test results may be affected by tester's experience and attention to detail.
+- **Repetitiveness:** The same test cases must be run multiple times for different software versions.
+
+In short, **manual testing** is a critical quality assurance process that ensures the software is working as expected from the user’s perspective, but it’s generally slower and more prone to human error compared to automated testing.
+
+#### **Test-Cases:**
+
+![WhatsApp Image 2025-01-24 at 2 27 09 PM](https://github.com/user-attachments/assets/0d90a2d2-a8e8-45c3-9519-bc18c0955b6e)
+
+
+#### **Automation Testing:**
+---
+
+An **Automation Report** generated from tests run using **Selenium** provides detailed insights into the outcomes of automated test executions. Selenium is an open-source tool for automating web applications across different browsers. After running tests, an automation report summarizes key information such as test success, failure, and errors, which helps in tracking the quality of the application.
+
+#### Key Components of a Selenium Automation Report:
+
+1. **Test Execution Summary:**
+   
+   - **Total Tests Run:** The number of test cases that were executed.
+   - **Passed:** How many tests passed successfully.
+   - **Failed:** The number of tests that failed.
+   - **Skipped/Not Executed:** Tests that were not executed or skipped.
+   - **Execution Time:** Total time taken for the tests to execute.
+
+3. **Test Details:**
+   
+   - **Test Case Name:** Descriptions or IDs for each test case.
+   - **Step-by-Step Execution:** Logs of actions performed in each step of the test (e.g., clicking buttons, entering text).
+   - **Assertions Results:** Outcomes of assertions made during the test (e.g., validating page elements, verifying UI text).
+   
+5. **Screenshots:**
+   
+   - Selenium WebDriver can capture screenshots at the moment of failure, which are often included in the report to help with debugging.
+
+7. **Error Logs/Stack Traces:**
+   
+   - If a test fails, the report may include detailed logs with stack traces that help identify the root cause of the failure.
+
+9. **Browsers and Environments Tested:**
+    
+   - Reports may indicate which browsers (e.g., Chrome, Firefox, Safari) and environments (e.g., operating systems) were used for testing.
+
+#### Common Tools for Selenium Test Reporting:
+
+- **TestNG:** A popular testing framework that integrates with Selenium and generates HTML reports.
+- **JUnit:** Another testing framework that can be used with Selenium to create detailed reports.
+- **Allure Report:** A powerful tool for generating visually rich, interactive reports.
+- **Extent Reports:** A commonly used framework for Selenium that provides detailed, customizable reports with screenshots, logs, and a clean, user-friendly interface.
+
+#### Example of a Simple TestNG HTML Report:
+
+After running a test suite with **TestNG**, you would typically find an **HTML report** that includes:
+- Test execution statistics.
+- Pass/fail status of each test.
+- Test duration.
+- Logs of each step of the test.
+
+#### Advantages of Selenium Automation Reports:
+
+- **Quick Analysis:** Helps in quickly identifying failed tests and understanding the reasons.
+- **Documentation:** Serves as documentation for test results that can be shared with stakeholders.
+- **Debugging:** Provides detailed information that assists developers in fixing issues efficiently.
+
+In summary, an **automation report** from Selenium provides valuable insights into the health of an application by summarizing the results of the automated tests, making it easier to track progress, detect failures, and improve overall software quality.
+
+#### **Test-Report:**
+
+![Image 1-24-25 at 12 40 PM](https://github.com/user-attachments/assets/0920a4eb-3407-4adc-bc06-b698a271770d)
+
+
+#### **Performance Testing:**
+---
+
+**Performance Testing** using **Apache JMeter** is a widely-used approach for testing the performance, scalability, and stability of web applications and services. JMeter is an open-source tool designed for load testing and measuring the performance of various services, including web servers, databases, and applications.
+
+#### Key Features of JMeter for Performance Testing:
+
+1. **Load Testing:**
+   
+   - Simulates multiple users (virtual users) accessing the system simultaneously to test how it performs under heavy load.
+   - Helps identify system bottlenecks, response time issues, and capacity limits.
+
+3. **Stress Testing:**
+   
+   - Pushes the system beyond its capacity to determine how it behaves under extreme conditions (e.g., excessive load, high traffic).
+   - Helps identify how the application fails and recovers under stress.
+
+5. **Scalability Testing:**
+   
+   - Assesses how well the application scales with increased load or data.
+   - Useful for planning resource allocation and identifying points where performance degrades.
+
+7. **Functional Testing:**
+   
+   - Verifies the application's basic functionality under load conditions to ensure the business-critical features are not affected by performance issues.
+
+9. **Distributed Testing:**
+   - JMeter allows the distribution of test loads across multiple machines, simulating high traffic scenarios that can’t be replicated on a single machine.
+
+---
+
+#### Steps for Performance Testing with JMeter:
+
+1. **Install and Set Up JMeter:**
+   
+   - Download and install Apache JMeter.
+   - Set up the necessary environment (Java, JMeter, etc.).
+
+3. **Create a Test Plan:**
+   
+   - Define the **Test Plan** in JMeter, which outlines the test's execution flow, including thread groups (simulated users), HTTP requests, and listeners.
+   - **Thread Group**: Defines the number of virtual users and the behavior (e.g., ramp-up time, loops).
+   - **Samplers**: Used to simulate HTTP requests, database queries, etc.
+
+5. **Define HTTP Requests:**
+   
+   - Set up requests for the resources you want to test, such as GET, POST, PUT, etc.
+   - Specify the server URL, parameters, and headers.
+
+7. **Add Listeners:**
+   
+   - Listeners capture and display results from the test, such as response times, throughput, and error rates.
+   - Common listeners include **Graph Results**, **Summary Report**, and **View Results Tree**.
+
+9. **Run the Test:**
+    
+   - Execute the test plan, simulating the desired load.
+   - JMeter will send requests and capture the responses during the test.
+
+11. **Analyze Results:**
+    
+   - Review the performance metrics like **response times**, **throughput**, **error rates**, and **latency**.
+   - Identify performance bottlenecks, issues with server capacity, or resource limitations.
+
+---
+
+#### Key Performance Metrics in JMeter:
+
+- **Response Time:** The time taken for the server to respond to a request.
+- **Throughput:** The number of requests processed per unit of time (requests/sec).
+- **Error Rate:** Percentage of failed requests during the test.
+- **Latency:** The time taken for a request to travel from the client to the server and back.
+
+---
+
+#### Advantages of Using JMeter for Performance Testing:
+
+- **Open-Source:** JMeter is free to use, making it an accessible tool for performance testing.
+- **Extensibility:** It supports plugins and can integrate with other tools.
+- **User-Friendly Interface:** Provides a graphical interface for designing test plans and visualizing results.
+- **Supports Multiple Protocols:** Can test not only HTTP but also FTP, JDBC, JMS, and more.
+- **Scalability:** Can handle large-scale load tests, especially with distributed testing.
+
+---
+
+#### Example Use Cases:
+
+1. **Website Load Testing:** Simulate multiple users accessing a website to measure how it performs under load.
+2. **API Performance Testing:** Test the performance of RESTful APIs or SOAP web services under stress.
+3. **Database Load Testing:** Simulate database queries and measure the response times under varying loads.
+
+#### Conclusion:
+
+**Apache JMeter** is a powerful tool for performance testing that helps you assess how well your application performs under various load conditions. It provides insights into performance bottlenecks, scalability, and the overall user experience under stress, enabling teams to improve the application’s reliability and performance before production deployment.
+
+#### **Performance Testing Reports:**
+
+![Image 1-24-25 at 12 46 PM](https://github.com/user-attachments/assets/54616444-9e59-4fca-bc37-7a68134521bb)
+
+![Image 1-24-25 at 12 47 PM](https://github.com/user-attachments/assets/057f2d8a-f20a-41c7-bc1f-f4a1887c69f1)
+
+![Image 1-24-25 at 12 49 PM](https://github.com/user-attachments/assets/5253c313-d8fd-44ed-8461-41de0ef2323e)
+
+
+#### **Security Testing:**
+---
+
+**Security Testing** with tools like **OWASP ZAP (Zed Attack Proxy)** and **Burp Suite** helps identify vulnerabilities in web applications, ensuring they are secure from potential attacks like SQL injection, cross-site scripting (XSS), and more.
+
+#### 1. **OWASP ZAP (Zed Attack Proxy)**
+
+**OWASP ZAP** is an open-source security testing tool designed for finding vulnerabilities in web applications. It is widely used by developers and security professionals for **penetration testing** and **vulnerability scanning**.
+
+#### Key Features:
+
+- **Automated Scanning:** ZAP can automatically scan for common vulnerabilities like SQL injection, XSS, and more.
+- **Passive Scanning:** It can analyze traffic between the browser and web server without actively modifying the requests.
+- **Active Scanning:** It actively tests for vulnerabilities by sending malicious payloads to the target application.
+- **Spidering:** Crawls through the web application to map out all accessible URLs.
+- **Fuzzing:** Sends a wide range of unexpected or malformed inputs to the system to identify vulnerabilities.
+- **API Testing:** ZAP can test the security of APIs with its built-in features.
+
+#### Common Use Cases:
+
+- Penetration testing.
+- Detecting and preventing security flaws early in the development cycle.
+- Validating security during continuous integration (CI) or DevOps pipelines.
+
+---
+
+#### 2. **Burp Suite**
+
+**Burp Suite** is a popular and comprehensive tool for web application security testing, used by security professionals for detecting vulnerabilities and performing detailed penetration testing.
+
+#### Key Features:
+
+- **Interception Proxy:** Allows users to intercept, inspect, and modify HTTP/HTTPS requests and responses between the browser and the web server.
+- **Scanner:** Automated scanner for detecting vulnerabilities such as XSS, SQL injection, and security misconfigurations.
+- **Spider:** Crawls web applications to discover hidden content and functionality.
+- **Intruder:** Allows automated brute-force attacks, fuzzing, and dictionary-based attacks.
+- **Repeater:** Used to send requests repeatedly with minor modifications, useful for manual testing of vulnerabilities.
+- **Extensibility:** Burp Suite has a robust plugin system, enabling the integration of third-party extensions.
+
+#### Common Use Cases:
+
+- **Vulnerability scanning** for web applications and APIs.
+- **Penetration testing** with advanced techniques like attack vectors, brute-force, and session hijacking.
+- **Security auditing** for compliance with security standards and frameworks.
+
+---
+
+#### Conclusion:
+
+Both **OWASP ZAP** and **Burp Suite** are essential tools in security testing for identifying vulnerabilities in web applications. ZAP is great for quick scans and open-source use, while Burp Suite offers more robust and professional penetration testing features, making it ideal for comprehensive security assessments.
