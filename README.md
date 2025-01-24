@@ -1321,11 +1321,16 @@ ATS_Backend
 ```
 <p> <dependency> with the group ID org.springframework.boot and artifact ID spring-boot-starter-data-jpa is a Spring Boot starter that  simplifies the integration of Spring Data JPA into your application. It provides all the necessary libraries and tools required for working  with relational databases using JPA (Java Persistence API) and Hibernate.</p>
 <h4>Key Features:</h4>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JPA Integration: Enables the use of JPA for object-relational mapping (ORM) to map Java objects to database tables.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Hibernate Support: Includes Hibernate as the default JPA implementation, providing advanced ORM capabilities.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Repository Support: Provides repository interfaces (like JpaRepository) to perform CRUD operations and custom queries without writing boilerplate code.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Transaction Management: Simplifies declarative transaction management using @Transactional.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Database Schema Generation: Automatically generates or updates database schemas based on your JPA entity mappings.</p>
+	
+- **JPA Integration**: Enables the use of JPA for object-relational mapping (ORM) to map Java objects to database tables.
+
+- **Hibernate Support**: Includes Hibernate as the default JPA implementation, providing advanced ORM capabilities.
+
+- **Repository Support**: Provides repository interfaces (like `JpaRepository`) to perform CRUD operations and custom queries without writing boilerplate code.
+
+- **Transaction Management**: Simplifies declarative transaction management using `@Transactional`.
+
+- **Database Schema Generation**: Automatically generates or updates database schemas based on your JPA entity mappings.
 
 <p><b>2) spring-boot-starter-web</b></p>
 
@@ -1337,11 +1342,16 @@ ATS_Backend
 ```
 <p>This starter is used to create web applications, including RESTful web services, in Spring Boot. It comes with pre-configured settings for Spring MVC, embedded servers like Tomcat (default), Jackson for JSON binding, and more.</p>
 <h4>Key Features:</h4>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Spring MVC: Supports building web applications using the Model-View-Controller architecture.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Embedded Tomcat: Includes the Tomcat server by default (you can also choose other embedded servers like Jetty or Undertow).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Jackson: Automatically includes the Jackson library to handle JSON data binding (for REST APIs).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Spring WebSocket: Provides support for WebSocket communication.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Common Usage: This dependency is typically used in web applications or microservices that need to expose REST APIs  or serve web pages.</p>
+
+- **Spring MVC**: Supports building web applications using the Model-View-Controller architecture.
+
+- **Embedded Tomcat**: Includes the Tomcat server by default (you can also choose other embedded servers like Jetty or Undertow).
+
+- **Jackson**: Automatically includes the Jackson library to handle JSON data binding (for REST APIs).
+
+- **Spring WebSocket**: Provides support for WebSocket communication.
+
+- **Common Usage**: This dependency is typically used in web applications or microservices that need to expose REST APIs or serve web pages.
 
 <p><b>3) spring-boot-devtools</b> </p>
 
@@ -1356,10 +1366,13 @@ ATS_Backend
 <p>This dependency is used to improve the development workflow by providing features such as automatic restarts, live reload, and remote debugging for Spring Boot applications. It’s meant for use during the development phase only.</p>
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Automatic Restart: When you make changes to your application, it automatically restarts the application without needing a manual restart, which speeds up the development process.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Live Reload: Integrates with tools like LiveReload to automatically refresh the browser when the code is modified, improving the user experience while testing.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Configuration for Development Only: It is typically included with the runtime scope to ensure it is only included in the development environment, not in production.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Common Usage: This dependency is added during the development phase to make the application development faster and easier. It is not meant to be included in production.</p>
+- **Automatic Restart**: When you make changes to your application, it automatically restarts the application without needing a manual restart, which speeds up the development process.
+
+- **Live Reload**: Integrates with tools like LiveReload to automatically refresh the browser when the code is modified, improving the user experience while testing.
+
+- **Configuration for Development Only**: It is typically included with the runtime scope to ensure it is only included in the development environment, not in production.
+
+- **Common Usage**: This dependency is added during the development phase to make the application development faster and easier. It is not meant to be included in production.
 
 <p><b>4) mysql-connector-j</b> </p>
 
@@ -1372,10 +1385,15 @@ ATS_Backend
 ```
 <p> This dependency provides the JDBC driver necessary for connecting Java applications to a MySQL database. It acts as a bridge to allow your Spring Boot (or other Java) applications to send queries to and retrieve data from MySQL databases</p>
 <h4>Key Features:</h4>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JDBC Driver: Implements the Java Database Connectivity (JDBC) API, allowing Java application.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Database Connection: Facilitates establishing a connection to the MySQL database and performing CRUD (Create, Read, Update, Delete) operations.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Runtime Scope: Since it’s used at runtime to interact with the database, it is declared with a <scope>runtime</scope>. This ensures the dependency is only included during the execution of the application and not during the compilation.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Common Usage: This dependency is used when a Spring Boot application needs to interact with a MySQL database. It is included in the pom.xml file to configure the connection between the Java application and MySQL.</p>
+
+- **JDBC Driver**: Implements the Java Database Connectivity (JDBC) API, allowing Java applications to interact with relational databases.
+  
+- **Database Connection**: Facilitates establishing a connection to the MySQL database and performing CRUD (Create, Read, Update, Delete) operations.
+  
+- **Runtime Scope**: Since it’s used at runtime to interact with the database, it is declared with a `<scope>runtime</scope>`. This ensures the dependency is only included during the execution of the application and not during the compilation.
+  
+- **Common Usage**: This dependency is used when a Spring Boot application needs to interact with a MySQL database. It is included in the `pom.xml` file to configure the connection between the Java application and MySQL.
+
 
 <p><b>5) lombok </b></p>
 
@@ -1389,11 +1407,15 @@ ATS_Backend
 <p>Lombok is a Java library that helps reduce boilerplate code by generating common methods like getters, setters, constructors, and more at compile-time using annotations. This simplifies your code and makes it more readable and maintainable.</p>
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Automatic Getter and Setter Methods: Lombok automatically generates getters and setters for fields with annotations like @Getter and @Setter.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • @ToString, @EqualsAndHashCode: Automatically generates toString(), equals(), and hashCode() methods.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • @AllArgsConstructor, @NoArgsConstructor, @RequiredArgsConstructor: Automatically generates constructors based on the parameters in the class.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • @Builder: Allows you to implement the builder pattern, enabling an easy and readable way to construct objects.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Compile-Time Code Generation: Lombok generates code during compilation, so it doesn’t affect runtime performance.</p>
+- **Automatic Getter and Setter Methods**: Lombok automatically generates getters and setters for fields with annotations like `@Getter` and `@Setter`.
+
+- **@ToString, @EqualsAndHashCode**: Automatically generates `toString()`, `equals()`, and `hashCode()` methods.
+
+- **@AllArgsConstructor, @NoArgsConstructor, @RequiredArgsConstructor**: Automatically generates constructors based on the parameters in the class.
+
+- **@Builder**: Allows you to implement the builder pattern, enabling an easy and readable way to construct objects.
+
+- **Compile-Time Code Generation**: Lombok generates code during compilation, so it doesn’t affect runtime performance.
 
 <p><b>6) pdfbox </b></p>
 
@@ -1408,12 +1430,18 @@ ATS_Backend
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Create PDF: You can generate PDF documents programmatically, adding text, images, and other content. </p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Read PDF: PDFBox allows extracting text and other elements from existing PDF files, making it useful for parsing PDF content.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Manipulate PDFs: You can manipulate existing PDF documents, such as merging, splitting, and rotating pages.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Fill Forms: You can fill in PDF forms dynamically and even generate reports in PDF format.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Signature Support: Supports adding digital signatures to PDF files.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Common Usage: This dependency is often used in Java applications that need to generate or manipulate PDF files. It's useful in scenarios where reports, invoices, or documents need to be created or processed in PDF format.</p>
+- **Create PDF**: You can generate PDF documents programmatically, adding text, images, and other content.
+
+- **Read PDF**: PDFBox allows extracting text and other elements from existing PDF files, making it useful for parsing PDF content.
+
+- **Manipulate PDFs**: You can manipulate existing PDF documents, such as merging, splitting, and rotating pages.
+
+- **Fill Forms**: You can fill in PDF forms dynamically and even generate reports in PDF format.
+
+- **Signature Support**: Supports adding digital signatures to PDF files.
+
+- **Common Usage**: This dependency is often used in Java applications that need to generate or manipulate PDF files. It's useful in scenarios where reports, invoices, or documents need to be created or processed in PDF format.
+
 
 <p><b>7) spring-boot-starter-test</b> </p>
 
@@ -1428,12 +1456,18 @@ ATS_Backend
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JUnit: The most widely used testing framework in Java for writing and running tests. Spring Boot Starter Test includes JUnit 5 by default. </p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Mockito: A mocking framework used to create mock objects for unit testing. Mockito helps simulate behaviors of dependencies and ensures that tests remain isolated. </p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Spring TestContext Framework: Provides support for integration testing with Spring’s TestContext framework. This allows for setting up application contexts and running tests in a Spring-managed environment.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Spring Boot Test: Provides annotations like @SpringBootTest to set up an application context for testing, ensuring tests run in a full Spring Boot environment. </p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Hamcrest: A library for writing declarative assertions in tests (e.g., assertThat statements).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JSON and XML testing: Provides support for validating JSON and XML responses in integration tests.</p>
+- **JUnit**: The most widely used testing framework in Java for writing and running tests. Spring Boot Starter Test includes JUnit 5 by default.
+
+- **Mockito**: A mocking framework used to create mock objects for unit testing. Mockito helps simulate behaviors of dependencies and ensures that tests remain isolated.
+
+- **Spring TestContext Framework**: Provides support for integration testing with Spring’s TestContext framework. This allows for setting up application contexts and running tests in a Spring-managed environment.
+
+- **Spring Boot Test**: Provides annotations like `@SpringBootTest` to set up an application context for testing, ensuring tests run in a full Spring Boot environment.
+
+- **Hamcrest**: A library for writing declarative assertions in tests (e.g., `assertThat` statements).
+
+- **JSON and XML testing**: Provides support for validating JSON and XML responses in integration tests.
+
 
 <p><b>8) socket.io-client</b></p>
 
@@ -1449,12 +1483,18 @@ ATS_Backend
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Real-time Communication: Enables low-latency, bidirectional communication between a client and a server using WebSockets or long polling.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Socket.IO Protocol: Implements the Socket.IO protocol, allowing Java applications to communicate with Socket.IO clients (e.g., JavaScript clients).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Built on Netty: Uses Netty, a non-blocking I/O framework, to handle incoming requests, enabling scalability and efficiency in handling many concurrent connections.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Event-driven Model: Allows the server to emit and listen for events, enabling real-time functionality like chat, notifications, and live updates.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Compatibility with Socket.IO Clients: Supports communication with Socket.IO clients written in JavaScript, making it ideal for full-stack real-time applications.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Live data applications: Suitable for applications that require real-time data updates, such as sports scores, financial data, and stock prices.</p>
+- **Real-time Communication**: Enables low-latency, bidirectional communication between a client and a server using WebSockets or long polling.
+
+- **Socket.IO Protocol**: Implements the Socket.IO protocol, allowing Java applications to communicate with Socket.IO clients (e.g., JavaScript clients).
+
+- **Built on Netty**: Uses Netty, a non-blocking I/O framework, to handle incoming requests, enabling scalability and efficiency in handling many concurrent connections.
+
+- **Event-driven Model**: Allows the server to emit and listen for events, enabling real-time functionality like chat, notifications, and live updates.
+
+- **Compatibility with Socket.IO Clients**: Supports communication with Socket.IO clients written in JavaScript, making it ideal for full-stack real-time applications.
+
+- **Live data applications**: Suitable for applications that require real-time data updates, such as sports scores, financial data, and stock prices.
+
 
 <p><b>9) spring-boot-starter-validation </b></p>
 
@@ -1468,11 +1508,16 @@ ATS_Backend
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Input Validation: Allows you to validate user input in request payloads (e.g., @RequestBody or @ModelAttribute). </p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Built-in Annotations: Provides standard validation annotations like @NotNull, @Size, @Email, @Pattern, etc.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Custom Validation: Supports custom validation logic using custom constraint annotations.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Error Handling: Automatically generates meaningful error messages for invalid inputs, which can be customized.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Validation Groups: Supports grouping of validation rules for different scenarios.</p>
+- **Input Validation**: Allows you to validate user input in request payloads (e.g., @RequestBody or @ModelAttribute).
+
+- **Built-in Annotations**: Provides standard validation annotations like @NotNull, @Size, @Email, @Pattern, etc.
+
+- **Custom Validation**: Supports custom validation logic using custom constraint annotations.
+
+- **Error Handling**: Automatically generates meaningful error messages for invalid inputs, which can be customized.
+
+- **Validation Groups**: Supports grouping of validation rules for different scenarios.
+
 
 <p><b>10) jackson-databind </b></p>
 
@@ -1486,11 +1531,16 @@ ATS_Backend
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Serialization and Deserialization: Converts Java objects to JSON (serialization) and JSON to Java objects(deserialization). </p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Supports Various Data Types: Handles collections, lists, maps, and other custom types seamlessly.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Custom Serialization/Deserialization: Supports custom serializers and deserializers for complex or non-standard Java types. </p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Configuration Flexibility: Allows customization of JSON processing, including handling of null values, pretty printing, etc.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Annotation Support: Integrates with Jackson annotations like @JsonProperty, @JsonIgnore, @JsonFormat, etc., to control how Java objects are converted to JSON.</p>
+- **Serialization and Deserialization**: Converts Java objects to JSON (serialization) and JSON to Java objects (deserialization).
+
+- **Supports Various Data Types**: Handles collections, lists, maps, and other custom types seamlessly.
+
+- **Custom Serialization/Deserialization**: Supports custom serializers and deserializers for complex or non-standard Java types.
+
+- **Configuration Flexibility**: Allows customization of JSON processing, including handling of null values, pretty printing, etc.
+
+- **Annotation Support**: Integrates with Jackson annotations like @JsonProperty, @JsonIgnore, @JsonFormat, etc., to control how Java objects are converted to JSON.
+
 
 <p><b>11) jackson-annotations </b></p>
 
@@ -1504,9 +1554,12 @@ ATS_Backend
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Customization of JSON Mapping: Allows fine-grained control over how Java object fields and methods are mapped to JSON properties and vice versa. </p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Improved Serialization/Deserialization: Helps configure how specific fields are included, excluded, renamed, or formatted when converting between Java objects and JSON. </p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Reduction of Boilerplate Code:Simplifies the JSON processing by adding annotations directly to your Java classes, avoiding manual configuration in code.  </p>
+- **Customization of JSON Mapping**: Allows fine-grained control over how Java object fields and methods are mapped to JSON properties and vice versa.
+
+- **Improved Serialization/Deserialization**: Helps configure how specific fields are included, excluded, renamed, or formatted when converting between Java objects and JSON.
+
+- **Reduction of Boilerplate Code**: Simplifies the JSON processing by adding annotations directly to your Java classes, avoiding manual configuration in code.
+
 
 <p><b>12) spring-boot-starter-websocket </b></p>
 
@@ -1520,12 +1573,18 @@ ATS_Backend
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Real-Time Communication: Enables continuous two-way communication between the client and the server.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Reduced Latency: Unlike HTTP, WebSocket connections remain open, removing the need for repeated requests.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Event-Driven Architecture: Suitable for event-based use cases where updates need to be pushed to the client in real-time.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Chat Applications: Sending and receiving messages instantly between clients.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Real-Time Dashboards: Live stock market data, user activity tracking, etc.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Gaming: Multiplayer games that require instant communication between players.</p>
+- **Real-Time Communication**: Enables continuous two-way communication between the client and the server.
+
+- **Reduced Latency**: Unlike HTTP, WebSocket connections remain open, removing the need for repeated requests.
+
+- **Event-Driven Architecture**: Suitable for event-based use cases where updates need to be pushed to the client in real-time.
+
+- **Chat Applications**: Sending and receiving messages instantly between clients.
+
+- **Real-Time Dashboards**: Live stock market data, user activity tracking, etc.
+
+- **Gaming**: Multiplayer games that require instant communication between players.
+
 
 <p><b>13) jakarta.validation-api </b></p>
 
@@ -1545,12 +1604,17 @@ It is often used in conjunction with Hibernate Validator, which is the reference
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Declarative Validation with Annotations: Validate fields, methods, or parameters using annotations such as @NotNull, @Size, @Min, etc. </p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Custom Constraints: Create your own validation logic with custom annotations.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Integration with Frameworks: Supported out-of-the-box in frameworks like Spring Boot, where validations are automatically triggered.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Cross-Parameter Validation: Validate parameters across method calls or fields in a class.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp •@NotNull: Ensures the value is not null. </p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp •@Size: Validates the size of a collection, array, or string.</p>
+- **Declarative Validation with Annotations**: Validate fields, methods, or parameters using annotations such as `@NotNull`, `@Size`, `@Min`, etc.
+
+- **Custom Constraints**: Create your own validation logic with custom annotations.
+
+- **Integration with Frameworks**: Supported out-of-the-box in frameworks like Spring Boot, where validations are automatically triggered.
+
+- **Cross-Parameter Validation**: Validate parameters across method calls or fields in a class.
+
+- **@NotNull**: Ensures the value is not null.
+
+- **@Size**: Validates the size of a collection, array, or string.
 
 <p><b>14) modelmapper </b></p>
 
@@ -1565,12 +1629,18 @@ It is often used in conjunction with Hibernate Validator, which is the reference
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Automated Mapping: Automatically maps fields with matching names and compatible types between two objects.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Customizable Mapping: Supports defining custom mapping logic for specific scenarios.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Property Mapping: Maps fields even if their names don't match, by using configuration or explicit mapping rules.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Bidirectional Mapping: Supports mapping in both directions (e.g., Entity → DTO and DTO → Entity).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Collections Mapping: Handles mapping between collections (e.g., List of entities to List of DTOs).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Deep Mapping: Maps nested objects and complex structures.</p>
+- **Automated Mapping**: Automatically maps fields with matching names and compatible types between two objects.
+
+- **Customizable Mapping**: Supports defining custom mapping logic for specific scenarios.
+
+- **Property Mapping**: Maps fields even if their names don't match, by using configuration or explicit mapping rules.
+
+- **Bidirectional Mapping**: Supports mapping in both directions (e.g., Entity → DTO and DTO → Entity).
+
+- **Collections Mapping**: Handles mapping between collections (e.g., List of entities to List of DTOs).
+
+- **Deep Mapping**: Maps nested objects and complex structures.
+
 
 <p><b>15) commons-io </b></p>
 
@@ -1590,12 +1660,18 @@ Handle advanced I/O tasks such as dealing with file filters, byte arrays, and fi
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • File Utilities: Simplifies file operations like copying, deleting, moving, and comparing files.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Stream Utilities: Makes it easier to work with InputStream and OutputStream.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • IO Monitoring: Supports monitoring changes in directories (e.g., file creation, deletion, or modification).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • File Filters: Provides ready-to-use filters to select files based on conditions (e.g., by extension or size).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Filename Utilities: Handles filename manipulation like extracting extensions or normalizing paths.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Endian Support: Provides utilities to work with big-endian and little-endian data.</p> 
+- **File Utilities**: Simplifies file operations like copying, deleting, moving, and comparing files.
+
+- **Stream Utilities**: Makes it easier to work with InputStream and OutputStream.
+
+- **IO Monitoring**: Supports monitoring changes in directories (e.g., file creation, deletion, or modification).
+
+- **File Filters**: Provides ready-to-use filters to select files based on conditions (e.g., by extension or size).
+
+- **Filename Utilities**: Handles filename manipulation like extracting extensions or normalizing paths.
+
+- **Endian Support**: Provides utilities to work with big-endian and little-endian data.
+
 
 <p><b>16) netty-codec-http </b></p>
 
@@ -1609,12 +1685,16 @@ Handle advanced I/O tasks such as dealing with file filters, byte arrays, and fi
 <p>The <dependency> with the group ID io.netty and artifact ID netty-codec-http is part of the Netty framework, which is a popular library for building network applications in Java. Specifically, this module provides support for working with HTTP and HTTP/2 protocols.</p>
 
 <h4>Key Features:</h4>
+- **HTTP Encoding/Decoding**: Automatically encodes/decodes HTTP messages (requests and responses).
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • HTTP Encoding/Decoding: Automatically encodes/decodes HTTP messages (requests and responses).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • HTTP/2 Support: Provides tools to handle HTTP/2 frames and multiplexing.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Lightweight and Efficient: Built for performance and scalability, suitable for high-throughput applications.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Custom Protocol Handling: Allows customization of HTTP handling logic for specific use cases.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Integration with Other Netty Modules: Works seamlessly with other Netty modules like netty-handler and netty-buffer.</p>
+- **HTTP/2 Support**: Provides tools to handle HTTP/2 frames and multiplexing.
+
+- **Lightweight and Efficient**: Built for performance and scalability, suitable for high-throughput applications.
+
+- **Custom Protocol Handling**: Allows customization of HTTP handling logic for specific use cases.
+
+- **Integration with Other Netty Modules**: Works seamlessly with other Netty modules like netty-handler and netty-buffer.
+
 
 <p><b>17) jakarta.mail:jakarta.mail-api </b></p>
 
@@ -1629,12 +1709,18 @@ Handle advanced I/O tasks such as dealing with file filters, byte arrays, and fi
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • SMTP Support: Send emails using Simple Mail Transfer Protocol (SMTP).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • POP3/IMAP Support: Retrieve emails from mail servers.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Attachments: Add file attachments or inline images to emails.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Authentication: Supports authentication for secure email communication.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Rich Content: Send emails with HTML content and multimedia.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Custom Headers: Add custom headers to email messages.</p>
+- **SMTP Support**: Send emails using Simple Mail Transfer Protocol (SMTP).
+
+- **POP3/IMAP Support**: Retrieve emails from mail servers.
+
+- **Attachments**: Add file attachments or inline images to emails.
+
+- **Authentication**: Supports authentication for secure email communication.
+
+- **Rich Content**: Send emails with HTML content and multimedia.
+
+- **Custom Headers**: Add custom headers to email messages.
+
 
 <p><b>18) spring-boot-starter-mail </b></p>
 
@@ -1649,10 +1735,14 @@ It simplifies the process of configuring and sending emails using JavaMailSender
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Easy Integration: Seamlessly integrates with Spring Boot's auto-configuration mechanism.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JavaMailSender: Provides a convenient interface for sending emails with various configurations (e.g., SMTP, Gmail).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Supports various protocols: Works with SMTP, IMAP, POP3, and other mail protocols.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Flexible Configuration: Easily configure email settings (host, port, credentials, etc.) through application properties or configuration files.</p>
+- **Easy Integration**: Seamlessly integrates with Spring Boot's auto-configuration mechanism.
+
+- **JavaMailSender**: Provides a convenient interface for sending emails with various configurations (e.g., SMTP, Gmail).
+
+- **Supports various protocols**: Works with SMTP, IMAP, POP3, and other mail protocols.
+
+- **Flexible Configuration**: Easily configure email settings (host, port, credentials, etc.) through application properties or configuration files.
+
 
 <p><b>19) byte-buddy </b></p>
 
@@ -1667,10 +1757,14 @@ It simplifies the process of configuring and sending emails using JavaMailSender
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Code Generation: Create new classes or modify existing ones without needing to write or compile Java source code directly. This is incredibly useful for: </p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • AOP (Aspect-Oriented Programming): Implement cross-cutting concerns (like logging, security) by dynamically weaving in behavior at runtime.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Dynamic Proxies: Create proxies for objects to intercept method calls and add custom logic.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Class Transformation: Modify existing classes to enhance their behavior or adapt them to specific needs.</p>
+- **Code Generation**: Create new classes or modify existing ones without needing to write or compile Java source code directly. This is incredibly useful for:
+
+- **AOP (Aspect-Oriented Programming)**: Implement cross-cutting concerns (like logging, security) by dynamically weaving in behavior at runtime.
+
+- **Dynamic Proxies**: Create proxies for objects to intercept method calls and add custom logic.
+
+- **Class Transformation**: Modify existing classes to enhance their behavior or adapt them to specific needs.
+
 
 <p><b>20) twilio </b></p>
 
@@ -1685,10 +1779,14 @@ It simplifies the process of configuring and sending emails using JavaMailSender
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Simplified API Interactions: The SDK abstracts away the complexities of interacting with Twilio's REST API.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Language Support: Available for various programming languages (Java, Python, Node.js, etc.).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Easy Integration: Easily integrate Twilio functionality into your applications.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Well-Documented: Extensive documentation and examples are available to help you get started.</p>
+- **Simplified API Interactions**: The SDK abstracts away the complexities of interacting with Twilio's REST API.
+
+- **Language Support**: Available for various programming languages (Java, Python, Node.js, etc.).
+
+- **Easy Integration**: Easily integrate Twilio functionality into your applications.
+
+- **Well-Documented**: Extensive documentation and examples are available to help you get started.
+
 
 <p><b>21) javax.mail </b></p>
 
@@ -1705,10 +1803,14 @@ Note: While com.sun.mail is a common implementation of the JavaMail API, other i
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Platform-Independent: Works across different operating systems and Java platforms.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Protocol Support: Supports various email protocols like SMTP, IMAP, POP3, and more.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Flexible: Allows you to customize email messages with attachments, headers, and other properties.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Well-Established: A widely used and well-supported standard API for email operations.</p>
+- **Platform-Independent**: Works across different operating systems and Java platforms.
+
+- **Protocol Support**: Supports various email protocols like SMTP, IMAP, POP3, and more.
+
+- **Flexible**: Allows you to customize email messages with attachments, headers, and other properties.
+
+- **Well-Established**: A widely used and well-supported standard API for email operations.
+
 
 <p><b>22) poi-ooxml </b></p>
 
@@ -1723,10 +1825,14 @@ Note: While com.sun.mail is a common implementation of the JavaMail API, other i
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Data Processing: Read and manipulate data from Excel files for analysis, reporting, and other tasks.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Report Generation: Create dynamic reports in Excel format.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Document Automation: Generate customized Word documents or PowerPoint presentations.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • File Conversion: Convert between different file formats (e.g., Excel to CSV).</p>
+- **Data Processing**: Read and manipulate data from Excel files for analysis, reporting, and other tasks.
+
+- **Report Generation**: Create dynamic reports in Excel format.
+
+- **Document Automation**: Generate customized Word documents or PowerPoint presentations.
+
+- **File Conversion**: Convert between different file formats (e.g., Excel to CSV).
+
 
 <p><b>22) java-jwt </b></p>
 
@@ -1740,11 +1846,13 @@ Note: While com.sun.mail is a common implementation of the JavaMail API, other i
 <p>The java-jwt dependency provides you with the necessary tools to work with JWTs in your Java applications. It simplifies the process of implementing secure and reliable authentication and authorization mechanisms.</p>
 
 <h4>Key Features:</h4>
+- **JWT Creation**: Easily create signed JWTs with claims (e.g., user ID, roles, expiration time).
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JWT Creation: Easily create signed JWTs with claims (e.g., user ID, roles, expiration time).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JWT Verification: Verify the authenticity and integrity of received JWTs.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Algorithm Support: Supports various JWT signing algorithms (e.g., HS256, RS256, RSA).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Claim Extraction: Extract claims from a JWT for use within your application.</p>
+- **JWT Verification**: Verify the authenticity and integrity of received JWTs.
+
+- **Algorithm Support**: Supports various JWT signing algorithms (e.g., HS256, RS256, RSA).
+
+- **Claim Extraction**: Extract claims from a JWT for use within your application.
 
 <p><b>23) tika-core </b></p>
 
@@ -1759,10 +1867,14 @@ Note: While com.sun.mail is a common implementation of the JavaMail API, other i
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Supports a Wide Range of File Formats: Handles a vast number of file formats, including common office documents, images, archives, and more.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Extensible: Easily extend Tika to support new file formats through custom parsers.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Efficient: Leverages efficient parsing techniques for fast and accurate results.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Open Source: A community-driven project with a large and active user base.</p>
+- **Supports a Wide Range of File Formats**: Handles a vast number of file formats, including common office documents, images, archives, and more.
+
+- **Extensible**: Easily extend Tika to support new file formats through custom parsers.
+
+- **Efficient**: Leverages efficient parsing techniques for fast and accurate results.
+
+- **Open Source**: A community-driven project with a large and active user base.
+
 
 <p><b>24) spring-boot-starter-security </b></p>
 
@@ -1776,13 +1888,17 @@ Note: While com.sun.mail is a common implementation of the JavaMail API, other i
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Spring Security Integration: Leverages the powerful Spring Security framework, providing a robust and flexible security solution.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Easy Configuration: Simplifies the process of setting up security by providing default configurations and allowing for customization.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Support for Various Authentication Mechanisms: Supports various authentication methods, including:
-Username/Password: Traditional username and password-based authentication.
-OAuth2: Integrate with popular OAuth2 providers (e.g., Google, Facebook, GitHub).
-JWT: Implement token-based authentication using JSON Web Tokens.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Support for Authorization: Implement role-based access control (RBAC), attribute-based access control (ABAC), and other authorization mechanisms.</p>
+- **Spring Security Integration**: Leverages the powerful Spring Security framework, providing a robust and flexible security solution.
+
+- **Easy Configuration**: Simplifies the process of setting up security by providing default configurations and allowing for customization.
+
+- **Support for Various Authentication Mechanisms**: Supports various authentication methods, including:
+  - **Username/Password**: Traditional username and password-based authentication.
+  - **OAuth2**: Integrate with popular OAuth2 providers (e.g., Google, Facebook, GitHub).
+  - **JWT**: Implement token-based authentication using JSON Web Tokens.
+
+- **Support for Authorization**: Implement role-based access control (RBAC), attribute-based access control (ABAC), and other authorization mechanisms.
+
 
 <p><b>25) tika-parsers-standard-package </b></p>
 
@@ -1797,9 +1913,12 @@ JWT: Implement token-based authentication using JSON Web Tokens.</p>
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Enhanced Functionality: Adds support for a large number of file formats beyond the basic capabilities of the tika-core library.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Convenience: Provides ready-to-use parsers, saving you the effort of developing custom parsers for common file types.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Improved Performance: Often includes optimized parsers for specific file formats, leading to faster processing.</p>
+- **Enhanced Functionality**: Adds support for a large number of file formats beyond the basic capabilities of the tika-core library.
+
+- **Convenience**: Provides ready-to-use parsers, saving you the effort of developing custom parsers for common file types.
+
+- **Improved Performance**: Often includes optimized parsers for specific file formats, leading to faster processing.
+
 
 <p><b>26) jjwt </b></p>
 
@@ -1814,12 +1933,17 @@ JWT: Implement token-based authentication using JSON Web Tokens.</p>
 
 <h4>Key Features:</h4>
 
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JWT Creation: Easily create signed JWTs with claims (e.g., user ID, roles, expiration time).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • JWT Verification: Verify the authenticity and integrity of received JWTs.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Algorithm Support: Supports various JWT signing algorithms (e.g., HS256, RS256, RSA).</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Claim Extraction: Extract claims from a JWT for use within your application.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Easy to Use: Provides a simple and intuitive API for working with JWTs.</p>
-<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp • Authentication: Implement user authentication and authorization within your applications.</p>
+- **JWT Creation**: Easily create signed JWTs with claims (e.g., user ID, roles, expiration time).
+  
+- **JWT Verification**: Verify the authenticity and integrity of received JWTs
+  
+- **Algorithm Support**: Supports various JWT signing algorithms (e.g., HS256, RS256, RSA).
+  
+- **Claim Extraction**: Extract claims from a JWT for use within your application.
+  
+- **Easy to Use**: Provides a simple and intuitive API for working with JWTs.
+  
+- **Authentication**: Implement user authentication and authorization within your applications.
 
 ---
 
