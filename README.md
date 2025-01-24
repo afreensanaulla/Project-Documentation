@@ -2315,3 +2315,69 @@ This method is responsible for adding a calling tracker and a lineup for an empl
 - The controller communicates with the service layer (`EmployeeService` and `CallingTrackerService`) to perform business logic.
 - Responses are wrapped in `ResponseEntity`, which allows custom HTTP status codes and headers.
 - This controller serves as the entry point for client requests related to employee and calling tracker data.
+
+Complete front end, summary of workflow of both frontend and backend
+
+---
+
+### **Compatibility: Software/Hardware**
+
+#### Application Compatibility Documentation
+
+This document provides the compatibility requirements for the application in terms of software, hardware, and other key specifications.
+
+---
+
+#### 1. Software Compatibility
+
+The application is **OS independent**, meaning it can be run on any operating system that supports the required software dependencies.
+
+#### Supported Browsers
+The application is compatible with the following browsers:
+- **Google Chrome**
+- **Microsoft Edge**
+- **Safari**
+
+> **Note:** The application can be used with any other browser that supports JavaScript, but performance and experience may vary depending on the browser.
+
+---
+
+#### 2. Hardware Compatibility
+
+To ensure optimal performance and smooth usage of the application, the following hardware specifications are recommended:
+
+- **Minimum RAM:** 4 GB
+- **Minimum ROM:** 16 GB
+
+---
+
+#### 3. Screen Size Compatibility
+
+This application is designed for **desktop-only** usage. Below is the range of screen sizes that are supported:
+
+- **Minimum Screen Size:** 1366 x 768 pixels
+- **Maximum Screen Size:** 3840 x 2160 pixels (4K resolution)
+
+> **Note:** The application has been optimized for various desktop screen resolutions within the specified range.
+
+---
+
+#### 4. Network (Internet) Requirements
+
+For an optimal experience, the following internet connection speed is recommended:
+
+- **Minimum Network Speed:** 10 Mbps
+
+> **Note:** The application may still work with slower speeds, but certain features may not perform as expected or could be slower.
+
+---
+
+#### 5. Colour Compatibility
+
+The application's colour display is dependent on the resolution of your laptop or desktop monitor. It is recommended to use a display that supports at least **16.7 million colours** for the best visual experience.
+
+---
+
+#### Conclusion
+
+To summarize, the application is compatible with desktop devices and does not rely on any specific operating system. It is designed to work with commonly used browsers and requires a stable internet connection and certain hardware specifications for optimal performance.
