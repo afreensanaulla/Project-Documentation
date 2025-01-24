@@ -1,6 +1,6 @@
 <h1><a href="http://rg.157careers.in/" target="_blank"> Recruiter's Gear Documentation</a></h1>
 
-- [JDK](#jdk)
+
 <Table>
   <thead>
     <tr>
@@ -14,10 +14,10 @@
   <tbody>
     <tr>
       <td><b>Purpose</b></td>
-       - [COM](#purpose)
-      <td>[Comprehensive Solutions](#purpose)</td>
-      <td>[Comprehensive Solutions](#purpose)</td>
-      <td>[Comprehensive Solutions](#purpose)</td>
+        <td><a href " ">Comprehensive Solutions</a></td>
+        <td><a href " ">Comprehensive Solutions</a></td>
+        <td><a href " ">Comprehensive Solutions</a></td>
+	 <td><a href " ">Comprehensive Solutions</a></td>
     </tr>
     <tr>
       <td><b>Target Audience</b></td>
@@ -4262,7 +4262,7 @@ To summarize, the application is compatible with desktop devices and does not re
 
 ---
 
-## Purpose
+#### **Purpose**
 
 #### Application Purpose Overview
 
