@@ -16,9 +16,9 @@
   <tbody>
     <tr>
       <td><b>Purpose</b></td>
-        - [JDK](#jdk)
+        <td><a href = "#comprehensive">Comprehensive Solutions</a></td>
         <td><a href " ">Comprehensive Solutions</a></td>
-        <td><a href " ">Comprehensive Solutions</a></td>
+	<td><a href " ">Comprehensive Solutions</a></td>
         <td><a href " ">Comprehensive Solutions</a></td>
     </tr>
     <tr>
