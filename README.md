@@ -1,6 +1,5 @@
 <h1><a href="http://rg.157careers.in/" target="_blank"> Recruiter's Gear Documentation</a></h1>
 
-- [JDK](#jdk)
 
 - [Comprehensive](#comprehensive)
   
@@ -17,7 +16,7 @@
   <tbody>
     <tr>
       <td><b>Purpose</b></td>
-        <td><a href "#purpose">Comprehensive Solutions</a></td>
+        - [JDK](#jdk)
         <td><a href " ">Comprehensive Solutions</a></td>
         <td><a href " ">Comprehensive Solutions</a></td>
         <td><a href " ">Comprehensive Solutions</a></td>
