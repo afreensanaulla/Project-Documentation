@@ -213,6 +213,7 @@ JDK 17 has optimizations in garbage collection (like the G1 garbage collector), 
 
 JDK 17 is aligned with modern software development practices and tools, including enhanced support for microservices, cloud-native apps, and containerization (e.g., Docker, Kubernetes).
 
+---
 
 #### 1.4: How to Install JDK 17?
 
@@ -614,7 +615,7 @@ public SocketIOServer socketIOServer() {
 
 - **public SocketIOServer socketIOServer()**: This is the method definition that returns a `SocketIOServer` bean. This method creates and configures a `SocketIOServer` instance, which is the core of your Socket.IO server.
 
- 
+ ---
 
 #### 3.3. **Creating and Configuring the Socket.IO Server:** 
 
@@ -688,9 +689,13 @@ socketIOServer.getBroadcastOperations().sendEvent("newMessage", data);
 - **Socket.IO Server**: A server that manages real-time communication using WebSockets or other protocols and is integrated into a Spring Boot application.
 - **Event-driven Architecture**: Using Socket.IO to send and receive events, enabling real-time bidirectional communication between server and client.
 
+---
+
 #### 3.7 **Conclusion**:
 
 This configuration class sets up a **Socket.IO server** that listens for WebSocket connections on a Spring Boot backend. By doing so, it enables your application to support **real-time communication** with clients. Using **Spring's dependency injection** and **Socket.IO's real-time capabilities**, your app can handle events, broadcast updates, and communicate with clients instantly.
+
+---
 
 #### 3.8 **Set up of Socket.IO using ReactJS (with Vite) on the Front End and Spring Boot on the Back End for Real-Time Communication**
 
@@ -992,6 +997,7 @@ npm run dev
 This setup demonstrates how to use **Socket.IO** for real-time communication between a **React frontend** and a **Spring Boot backend**. By combining the power of **Socket.IO** for event-driven, bi-directional communication with **Spring Boot** and **ReactJS**, you can easily build interactive real-time web applications.
 
 ---
+
 ### 4. Configuration of application.properties
 
 #### 3.1. what is application.properties?
@@ -1008,6 +1014,8 @@ It can be used to configure properties related to:
 - **Spring-specific configuration properties** (such as cache, session management, etc.)
 
 You can use `application.properties` to configure your Spring Boot application in a **centralized** and **externalized** way, so the application can be easily customized without having to modify the source code.
+
+---
 
 ##How has the application.properties file been configured in the application?
 ```java
@@ -1140,7 +1148,6 @@ This is the main entry point of a Spring Boot application. Let's break it down:
 This structure is standard for a Spring Boot application, and it's often referred to as the **"Spring Boot Bootstrap"** because it initializes the Spring context and enables all auto-configured components.
 
 ---
-
 
 #### **Entity Class code:**
 ```java
@@ -1394,6 +1401,7 @@ The class includes **getters and setters** for all fields. These methods are gen
 - The class handles **binary data** (like profile images and documents) using `@Lob`, indicating these fields store large binary objects.
 - The class facilitates interaction with a database by storing employee details, possibly using **EntityManager** or **JpaRepository** for persistence operations.
 
+---
 
 #### **Repository code:**
 ```java
