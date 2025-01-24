@@ -688,7 +688,7 @@ socketIOServer.getBroadcastOperations().sendEvent("newMessage", data);
 
 This configuration class sets up a **Socket.IO server** that listens for WebSocket connections on a Spring Boot backend. By doing so, it enables your application to support **real-time communication** with clients. Using **Spring's dependency injection** and **Socket.IO's real-time capabilities**, your app can handle events, broadcast updates, and communicate with clients instantly.
 
-## 3.8 **Set up of Socket.IO using ReactJS (with Vite) on the Front End and Spring Boot on the Back End for Real-Time Communication**
+#### 3.8 **Set up of Socket.IO using ReactJS (with Vite) on the Front End and Spring Boot on the Back End for Real-Time Communication**
 
 #### **Overview**
 
@@ -1085,7 +1085,7 @@ This configuration file is typically found in the `application.properties` file 
 
 #### 3.1. Add Employee
 
-#### Main class
+#### **Main class code:
 ```java
 package _7.project1;
 
@@ -1101,7 +1101,7 @@ public class Application {
 
 }
 ```
-Explantion of code:
+#### **Explantion of code:
 #### Spring Boot Application: `Application.java`
 
 This is the main entry point of a Spring Boot application. Let's break it down:
@@ -1138,7 +1138,7 @@ This structure is standard for a Spring Boot application, and it's often referre
 ---
 
 
-#### Entity Code
+#### **Entity Code
 ```java
 package _7.project1.Entity;
 
@@ -1837,7 +1837,7 @@ public class Employee {
 }
 
 ```
-Explanation of code
+#### **Explanation of code:
 ### Employee Entity Class (JPA Model)
 
 This Java class represents an **Employee** entity in a database using **JPA (Java Persistence API)**. It is annotated with **Jakarta Persistence** annotations and **Lombok** annotations to simplify the code.
@@ -1883,7 +1883,7 @@ The class includes **getters and setters** for all fields. These methods are gen
 - The class facilitates interaction with a database by storing employee details, possibly using **EntityManager** or **JpaRepository** for persistence operations.
 
 
-Repository code:
+#### **Repository code:
 ```java
 package _7.project1.Repository;
 
@@ -1898,7 +1898,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     Optional<Employee> findById(Long id);
 }
 ```
-Explanation of code:
+#### **Explanation of code:
 #### Spring Boot Application: `Application.java`
 
 This is the main entry point of a Spring Boot application. Let's break it down:
@@ -1934,7 +1934,7 @@ This structure is standard for a Spring Boot application, and it's often referre
 
 ---
 
-Service code:
+#### **Service code:
 ```java
 package _7.project1.Service;
 
@@ -2036,7 +2036,7 @@ public class EmployeeService {
 
 ```
 
-Explanation of code:
+#### **Explanation of code:
 ## EmployeeService Class
 
 This code defines the `EmployeeService` class, which is part of a Spring Boot application. The purpose of this service is to manage `Employee` entities in the system. It handles adding and updating employee information and interacts with two repositories: `EmployeeRepository` (for managing employee data) and `CallingTrackerRepository` (although the latter is not used in this code).
@@ -2140,7 +2140,7 @@ It uses the `findByUserName` method in the `EmployeeRepository` to fetch the emp
 
 ---
 
-Controller Class code
+#### **Controller Class code
 ```java
 package _7.project1.Controller;
 
@@ -2186,7 +2186,7 @@ public class EmployeeController {
 
 ```
 
-Explanation of code
+#### **Explanation of code
 #### This code defines a Spring Boot `EmployeeController` class that handles HTTP requests related to employee and calling tracker data. It serves as an interface between the frontend (or client) and the service layer, allowing clients to add employees and calling tracker data.
 
 #### Let’s break down the code in detail:
