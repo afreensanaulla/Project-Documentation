@@ -16,10 +16,10 @@
   <tbody>
     <tr>
       <td><b>Purpose</b></td>
-        <td><a href = "#comprehensive">Comprehensive Solutions</a></td>
-        <td><a href " ">Comprehensive Solutions</a></td>
-	<td><a href " ">Comprehensive Solutions</a></td>
-        <td><a href " ">Comprehensive Solutions</a></td>
+        <td><a href = "#comprehensive-solutions">Comprehensive Solutions</a></td>
+        <td><a href = "#comprehensive-solutions">Comprehensive Solutions</a></td>
+	<td><a href = "#comprehensive-solutions ">Comprehensive Solutions</a></td>
+        <td><a href = "#comprehensive-solutions ">Comprehensive Solutions</a></td>
     </tr>
     <tr>
       <td><b>Target Audience</b></td>
@@ -4264,7 +4264,7 @@ To summarize, the application is compatible with desktop devices and does not re
 
 ---
 
-## Comprehensive
+### Comprehensive Solutions
 
 #### Application Purpose Overview
 
