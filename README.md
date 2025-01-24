@@ -221,6 +221,10 @@ JDK 17 is aligned with modern software development practices and tools, includin
 1. Visit the official Oracle website or OpenJDK website for downloading JDK 17:
    - **Oracle JDK 17**: [Oracle Downloads](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html)
    - **OpenJDK 17** (Open source version): [OpenJDK Downloads](https://openjdk.java.net/projects/jdk/17/)
+     #### **Note:** While links in this application may open in the same tab by default, users can easily open them in a new tab by using the following keyboard shortcuts:
+       - **Windows/Linux:** Hold the `CTRL` key and click the link.
+       - **MacOS:** Hold the `CMD` key and click the link.
+       These shortcuts allow users to open links in a new tab, providing greater flexibility in navigating the application.
 
 2. Choose the appropriate version based on your operating system (Windows, macOS, or Linux). You can download either the Oracle JDK (commercial version) or OpenJDK (open-source, free to use).
 
@@ -1951,7 +1955,7 @@ User experience plays a crucial role in system adoption and productivity. We pri
 
 ---
 
-## 4. Support and Maintenance
+#### 4. Support and Maintenance
 
 #### Description:
 Ongoing support and maintenance are critical for ensuring the continuous availability and reliability of IT systems. Our application is designed with support and easy maintenance in mind.
@@ -2039,3 +2043,159 @@ With increasing concerns about data security and regulatory compliance, we prior
 #### Conclusion
 
 Our application is built to address the most common IT challenges, providing solutions that improve performance, streamline integration, enhance user experience, and reduce costs. By utilizing our features, you can overcome key pain points and ensure smooth, secure, and efficient system operations.
+
+---
+
+### Subscription
+This document outlines the subscription plans, pricing, features, and management of subscriptions for our Applicant Tracking System (ATS) application. Our subscription-based model offers flexibility and scalability to meet the needs of various organizations.
+
+---
+
+#### 1. Overview
+
+Our Applicant Tracking System (ATS) is designed to streamline the recruitment process for companies of all sizes. We offer a flexible subscription model that scales with your organization’s needs. Choose the plan that fits your recruitment requirements and start managing candidates more efficiently today.
+
+---
+
+#### 2. Subscription Plans
+
+We offer three main subscription plans, each catering to different business needs:
+
+#### **Basic Plan**
+- **Ideal for:** Small teams or startups with simple hiring needs.
+- **Key Features:**
+  - Job posting management
+  - Basic candidate tracking
+  - Interview scheduling
+  - Reporting tools
+  - 1 User Account
+- **Support:** Email support during business hours
+
+#### **Professional Plan**
+- **Ideal for:** Growing businesses requiring advanced recruitment tools and more collaboration.
+- **Key Features:**
+  - All features of the Basic Plan
+  - Advanced candidate filtering
+  - Team collaboration tools
+  - Automated email templates
+  - Customizable workflows
+  - 5 User Accounts
+  - Priority support
+- **Support:** Email and live chat support
+
+#### **Enterprise Plan**
+- **Ideal for:** Large enterprises with complex hiring needs and integrations.
+- **Key Features:**
+  - All features of the Professional Plan
+  - Unlimited user accounts
+  - Advanced analytics and reporting
+  - Custom integrations (HRIS, job boards, etc.)
+  - Dedicated account manager
+  - Priority customer support
+- **Support:** 24/7 dedicated support via email, phone, and live chat
+
+---
+
+#### 3. Pricing
+
+Our pricing is designed to be simple and transparent. Below is the breakdown of each plan’s cost:
+
+| Plan               | Monthly Price | Annual Price (Save 20%) |
+|--------------------|---------------|-------------------------|
+| Basic Plan         | $19/month     | $228/year               |
+| Professional Plan  | $49/month     | $588/year               |
+| Enterprise Plan    | Custom Pricing| Custom Pricing          |
+
+> **Note:** Prices are subject to change. Discounts and promotions may apply. For custom pricing on the Enterprise Plan, please contact us.
+
+---
+
+#### 4. Subscription Features
+
+Each plan offers a set of core features, but they scale with more advanced functionalities as you move up the tiers. Here's an overview of the key features available in each plan:
+
+- **Job Posting Management:** Manage, publish, and track job postings.
+- **Candidate Tracking:** Track candidates through the hiring pipeline with status updates and notes.
+- **Interview Scheduling:** Easily schedule and manage interviews with candidates.
+- **Team Collaboration:** Share candidate profiles, feedback, and interview notes across your team.
+- **Reporting & Analytics:** Gain insights into your recruitment metrics, such as time-to-hire, candidate sources, and more.
+- **Customizable Workflows:** Tailor your hiring process to fit your unique business needs.
+- **Priority Support:** Faster response times for troubleshooting and inquiries.
+
+---
+
+#### 5. Managing Your Subscription
+
+#### How to Access Subscription Settings
+- Log into your ATS account.
+- Navigate to the **Settings** tab.
+- Select **Subscription** to view your current plan, billing details, and other options.
+
+#### Upgrading/Downgrading Your Plan
+To upgrade or downgrade your plan:
+- Go to **Subscription** under **Settings**.
+- Choose the **Change Plan** option.
+- Select your desired plan and confirm the changes.
+- If upgrading, the new plan will take effect immediately; if downgrading, the new plan will be applied at the start of the next billing cycle.
+
+---
+
+#### 6. Upgrading/Downgrading Your Plan
+
+- **Upgrading:** If you need more features, you can upgrade your plan at any time. The new plan will take effect immediately, and your next billing will reflect the new plan’s price.
+- **Downgrading:** If you no longer need certain features, you can downgrade your plan. Downgrades will take effect at the start of the next billing cycle, and no refunds will be issued for the unused portion of the current billing period.
+
+---
+
+#### 7. Billing and Payment
+
+We offer secure billing and payment through our trusted payment gateway. Here's what you need to know:
+
+#### Payment Methods
+We accept the following payment methods:
+- Credit/Debit cards (Visa, MasterCard, American Express)
+- PayPal
+- Bank Transfers (for Enterprise plans)
+
+#### Billing Cycle
+You can choose between a **monthly** or **annual** billing cycle. Annual subscriptions come with a discount.
+
+#### Invoices
+Invoices are generated and sent to your registered email address at the beginning of each billing cycle. You can also download invoices from the **Billing** section of your account.
+
+---
+
+#### 8. Cancellation and Refund Policy
+
+We want you to be satisfied with our ATS. If you decide to cancel your subscription, you can do so at any time.
+
+#### How to Cancel Your Subscription
+- Log into your ATS account.
+- Navigate to the **Subscription** section under **Settings**.
+- Click on **Cancel Subscription** and follow the prompts.
+
+#### Refund Policy
+- Monthly subscribers: Refunds are not provided for cancellations mid-cycle, but your subscription will continue until the end of the current billing period.
+- Annual subscribers: We offer a **30-day money-back guarantee** for annual subscriptions. If you cancel within the first 30 days, you will receive a full refund. After 30 days, no refunds are issued.
+
+---
+
+#### 9. FAQ
+
+#### Can I change my plan at any time?
+Yes, you can upgrade or downgrade your plan at any time through the **Subscription** settings.
+
+#### Do you offer discounts for non-profits or educational institutions?
+Yes, we offer discounts for eligible non-profits and educational institutions. Please contact us for more details.
+
+#### What happens if I exceed the number of users allowed on my plan?
+If you exceed the number of users included in your plan, you will be prompted to upgrade to the next plan tier or purchase additional user slots.
+
+#### How do I get support for billing issues?
+For billing-related support, please contact our customer service team at **billing@atsapp.com**.
+
+---
+
+#### Conclusion
+
+Our subscription-based ATS offers flexible plans to suit businesses of all sizes. Whether you're a small startup or a large enterprise, you can choose the plan that meets your needs. Enjoy all the features you need for efficient recruitment and candidate management, with transparent pricing, easy subscription management, and dedicated support.
