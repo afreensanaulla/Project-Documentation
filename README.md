@@ -263,6 +263,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 17.0.1+12-39, mixed mode)
    ```bash
    sudo apt update
    sudo apt install openjdk-17-jdk
+   ```
 2. For **Red Hat/CentOS-based** distributions, you can use `yum` or `dnf`:
 
    ```bash
@@ -334,9 +335,9 @@ JDK 17 offers a good balance of new features, performance improvements, and long
 
 ---
 
-## 2. Spring Initializr
+### 2. Spring Initializr
 
-## **2. What is Spring Initializr?**
+#### **2. What is Spring Initializr?**
 
 **Spring Initializr** is an online tool that simplifies the creation of new **Spring Boot** projects by generating a basic scaffold with minimal configuration. It provides developers with a quick way to bootstrap a Spring-based application, offering options like project metadata, dependencies, and build tool configurations.
 
@@ -344,7 +345,7 @@ The generated project includes the necessary configurations for the selected bui
 
 ---
 
-### **2.1. How to Access Spring Initializr**
+#### **2.1. How to Access Spring Initializr**
 
 You can use **Spring Initializr** in two main ways:
 
@@ -357,7 +358,7 @@ You can use **Spring Initializr** in two main ways:
 
 ---
 
-### **2.2. Creating a New Spring Boot Project**
+#### **2.2. Creating a New Spring Boot Project**
 
 #### **2.2.1. Steps to create a Spring Boot project:**
 
@@ -379,7 +380,7 @@ You can use **Spring Initializr** in two main ways:
 
 ---
 
-### **2.3. Spring Initializr Options**
+#### **2.3. Spring Initializr Options**
 
 #### **2.3.1. Project Metadata**
 
@@ -418,27 +419,27 @@ The following fields define the basic setup for your Spring Boot project:
 
 Spring Initializr provides a wide range of dependencies to add to your project. Below are descriptions of some common dependencies you may choose:
 
-##### **2.3.2.1. Spring Web**
+#### **2.3.2.1. Spring Web**
 - **Description**: This dependency is used for building web applications and RESTful web services. It includes Spring MVC and embedded servers such as Tomcat, Jetty, or Undertow. You’ll typically include this in applications that need web support (e.g., a REST API, a server-side web app, etc.).
 
-##### **2.3.2.2. Spring Data JPA**
+#### **2.3.2.2. Spring Data JPA**
 - **Description**: This dependency provides support for integrating with relational databases using Java Persistence API (JPA). It simplifies database operations and makes it easier to interact with relational databases using repository patterns. Typically used in applications where you need to perform CRUD operations on relational databases.
 
-##### **2.3.2.3. MySQL Driver**
+#### **2.3.2.3. MySQL Driver**
 - **Description**: The MySQL Driver dependency provides the necessary drivers to connect your Spring Boot application to a MySQL database. If you're using MySQL for your application's data storage, you'll need this driver to facilitate database communication.
 
-##### **2.3.2.4. Spring Boot DevTools**
+#### **2.3.2.4. Spring Boot DevTools**
 - **Description**: Spring Boot DevTools enhances the development experience by providing additional features like automatic restarts, live reload, and debugging tools. It is specifically useful during the development phase as it speeds up the testing and debugging cycle by reloading your application upon changes.
 
-##### **2.3.2.5. Lombok**
+#### **2.3.2.5. Lombok**
 - **Description**: Lombok is a library that automatically generates commonly used code, such as getters, setters, `toString()`, `equals()`, and `hashCode()` methods, constructors, etc., by annotating your classes with special annotations. This helps reduce boilerplate code and improves the readability of your application, especially when working with POJOs (Plain Old Java Objects).
 
-##### **2.3.2.6. Spring Boot**
+#### **2.3.2.6. Spring Boot**
 - **Description**: This is the core dependency for Spring Boot applications. It includes essential features such as auto-configuration, embedded servers (like Tomcat, Jetty), and starters (pre-configured, ready-to-use components) that make it easier to set up and run Spring applications with minimal configuration. It is the foundation of your Spring Boot project.
 
 ---
 
-### **2.4. Packaging**
+#### **2.4. Packaging**
 
 When generating a Spring Boot project, you can choose between two types of packaging:
 
@@ -450,13 +451,13 @@ When generating a Spring Boot project, you can choose between two types of packa
 
 ---
 
-### **2.5. Java Version**
+#### **2.5. Java Version**
 
   - **2.5.1. Java 17** (LTS)
 
 ---
 
-### **2.6. Spring Initializr in IDEs**
+#### **2.6. Spring Initializr in IDEs**
 
 Most popular IDEs support **Spring Initializr** for creating Spring Boot projects directly from the IDE. Here’s how you can use it in the most popular IDEs:
 
@@ -483,7 +484,7 @@ Most popular IDEs support **Spring Initializr** for creating Spring Boot project
 
 ---
 
-### **2.7. How Spring Initializr Works**
+#### **2.7. How Spring Initializr Works**
 
 When you configure your project and click **Generate**, Spring Initializr:
 
@@ -499,7 +500,7 @@ Spring Initializr also supports generating projects with specific versions of Sp
 
 ---
 
-## **2.8. References**
+#### **2.8. References**
 
 - [Spring Initializr Documentation](https://docs.spring.io/initializr/docs/current/reference/html/)
 - [Spring Boot Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/)
@@ -507,15 +508,15 @@ Spring Initializr also supports generating projects with specific versions of Sp
 
 ---
 
-## 3. SocketIO
+### 3. SocketIO
 
-### 3.1. What is Socket.IO?
+#### 3.1. What is Socket.IO?
 
 **Socket.IO** is a JavaScript library that enables real-time, bi-directional communication between web clients (such as browsers) and servers over **WebSockets** or other protocols. It's often used in applications that require real-time updates, such as messaging apps, live notifications, and multiplayer games.
 
 Socket.IO is built on top of **WebSockets**, but it offers additional features like automatic reconnection, fallback mechanisms (e.g., using long polling when WebSockets are unavailable), and broadcasting, which makes it more reliable and easier to work with compared to raw WebSocket connections.
 
-### 3.1.1. Key Features of Socket.IO:
+#### 3.1.1. Key Features of Socket.IO:
 
 3.1.1.1. **Real-time Communication**: Allows real-time, low-latency communication between the server and the client. For example, a message can be sent from the server to the client and vice versa in real-time.
 3.1.1.2. **Bi-directional Communication**: Both the client and server can send messages to each other, making it ideal for interactive applications like chat apps or live collaboration tools.
@@ -527,19 +528,19 @@ Socket.IO is built on top of **WebSockets**, but it offers additional features l
 
 ---
 
-## 3.2. Which version have we used in the application?
+#### 3.2. Which version have we used in the application?
 
-### **Socket.IO Version 2.0.12 Overview**
+#### **Socket.IO Version 2.0.12 Overview**
 
 Socket.IO **version 2.0.12** is a **patch version** of **Socket.IO 2.x**, released after version 2.0, which brought significant changes to Socket.IO’s core architecture, including improved performance, support for newer browser versions, and API changes.
 
-### 3.2.1 **Key Features and Updates in Socket.IO 2.0.12**
+#### 3.2.1 **Key Features and Updates in Socket.IO 2.0.12**
 
 While Socket.IO 2.x includes several important changes, version **2.0.12** (released in 2019) focused mainly on **bug fixes**, minor improvements, and ensuring compatibility with the latest platforms and environments.
 
 ---
 
-## Socket.IO Configuration in the Application
+#### Socket.IO Configuration in the Application
 
 ```java
 import com.corundumstudio.socketio.Configuration;
@@ -562,9 +563,9 @@ public class SocketIOConfig {
 }
 ```
 
-## 3.2.2. Explanation of Configuration Code in Detail
+#### 3.2.2. Explanation of Configuration Code in Detail
 
-### 3.2.2.1. **Package Imports** 
+#### 3.2.2.1. **Package Imports** 
 ```java
 
 import com.corundumstudio.socketio.Configuration; 
@@ -578,7 +579,7 @@ import org.springframework.context.annotation.Bean;
 - **com.corundumstudio.socketio.SocketIOServer**: This is the main class that represents the **Socket.IO server**. It is responsible for starting the server, managing connections, and handling events. 
 - **org.springframework.context.annotation.Bean**: The @Bean annotation from Spring is used to indicate that the method that follows should be treated as a **bean definition**. This allows Spring to manage the lifecycle of the SocketIOServer object and inject it into other parts of the application.
 
-### 3.2.2.2. **@Configuration Annotation** 
+#### 3.2.2.2. **@Configuration Annotation** 
 ```java
 @org.springframework.context.annotation.Configuration 
 
@@ -587,7 +588,7 @@ public class SocketIOConfig {
 - **@Configuration**: This annotation is used to define a **Spring configuration class**, which contains bean definitions for the Spring IoC (Inversion of Control) container. By marking the class with @Configuration, we tell Spring to treat it as a source of bean definitions, which are later injected where needed. 
 - **public class SocketIOConfig**: This is the class where we configure the Socket.IO server. The class is named `SocketIOConfig` to reflect that it holds the configuration for Socket.IO.
 
-### 3.2.2.3. **@Bean Method for Socket.IO Server** 
+#### 3.2.2.3. **@Bean Method for Socket.IO Server** 
 ```java
 @Bean 
 
@@ -611,7 +612,7 @@ public SocketIOServer socketIOServer() {
 
  
 
-## 3.3. **Creating and Configuring the Socket.IO Server:** 
+#### 3.3. **Creating and Configuring the Socket.IO Server:** 
 
 3.3.1. - **Configuration config = new Configuration();**: 
   - The `Configuration` class is used to hold the various configuration parameters for the Socket.IO server (such as hostname, port, and origins).
@@ -630,7 +631,7 @@ public SocketIOServer socketIOServer() {
 
 ---
 
-## 3.4. **Why is This Code Used?**
+#### 3.4. **Why is This Code Used?**
 
 This configuration is used to **initialize a Socket.IO server** within a Spring Boot application. The server is then capable of handling **real-time communication** with clients (e.g., web browsers, mobile apps). Socket.IO is used for applications that need low-latency, bidirectional communication, such as:
 
@@ -644,7 +645,7 @@ The `SocketIOServer` will listen for connections on the specified port (8080), h
 
 ---
 
-## 3.5 **How This Fits into the Spring Boot Application:** 
+#### 3.5 **How This Fits into the Spring Boot Application:** 
 
 3.5.1. **Spring Boot Integration:**
    - Spring Boot applications typically use `@Configuration` classes to define and configure beans. In this case, we define a `SocketIOServer` bean, which is then available for injection into other components of the application.
@@ -657,7 +658,7 @@ The `SocketIOServer` will listen for connections on the specified port (8080), h
 
 ---
 
-## 3.6 **Potential Use Case**
+#### 3.6 **Potential Use Case**
 
 In a typical scenario, after configuring the `SocketIOServer`:
 
@@ -683,20 +684,20 @@ socketIOServer.getBroadcastOperations().sendEvent("newMessage", data);
 - **Socket.IO Server**: A server that manages real-time communication using WebSockets or other protocols and is integrated into a Spring Boot application.
 - **Event-driven Architecture**: Using Socket.IO to send and receive events, enabling real-time bidirectional communication between server and client.
 
-## 3.7 **Conclusion**:
+#### 3.7 **Conclusion**:
 
 This configuration class sets up a **Socket.IO server** that listens for WebSocket connections on a Spring Boot backend. By doing so, it enables your application to support **real-time communication** with clients. Using **Spring's dependency injection** and **Socket.IO's real-time capabilities**, your app can handle events, broadcast updates, and communicate with clients instantly.
 
 ## 3.8 **Set up of Socket.IO using ReactJS (with Vite) on the Front End and Spring Boot on the Back End for Real-Time Communication**
 
-### **Overview**
+#### **Overview**
 
 - **Backend**: We'll use **Spring Boot** with **Socket.IO** for handling real-time connections.
 - **Frontend**: We'll use **ReactJS** (created using **Vite**) and the **Socket.IO client** to connect to the Spring Boot server for real-time communication.
 
-### 3.8.1 **Backend: Spring Boot + Socket.IO**
+#### 3.8.1 **Backend: Spring Boot + Socket.IO**
 
-## 3.8.1.1 **Step 1: Set up Spring Boot with Socket.IO** 
+#### 3.8.1.1 **Step 1: Set up Spring Boot with Socket.IO** 
 
 1. **Create a Spring Boot project** using Spring Initializr or your preferred IDE. 
    - Dependencies: 
@@ -727,9 +728,9 @@ This configuration class sets up a **Socket.IO server** that listens for WebSock
     </dependency>
 </dependencies>
 ```
-## **Step 3: Create `SocketIOConfig.java` to Configure the Socket.IO Server**
+#### **Step 3: Create `SocketIOConfig.java` to Configure the Socket.IO Server**
 
-### `SocketIOConfig.java`
+#### `SocketIOConfig.java`
 
 ```java
 import com.corundumstudio.socketio.Configuration;
@@ -775,11 +776,11 @@ public class SocketIOConfig {
 
 ---
 
-## **Step 4: Create `SocketController.java` (Optional)** to Expose an HTTP Endpoint
+#### **Step 4: Create `SocketController.java` (Optional)** to Expose an HTTP Endpoint
 
 If you need to expose additional HTTP endpoints along with the Socket.IO server, you can create a simple controller. Below is an optional example of a Spring Boot controller.
 
-### `SocketController.java`
+#### `SocketController.java`
 
 ```java
 import org.springframework.web.bind.annotation.GetMapping;
@@ -794,11 +795,11 @@ public class SocketController {
     }
 }
 ```
-## **Step 5: Run the Spring Boot Application** This starts a **Socket.IO server** on localhost:8080. 
+#### **Step 5: Run the Spring Boot Application** This starts a **Socket.IO server** on localhost:8080. 
 
-## 3.8.2 **Frontend: ReactJS + Vite + Socket.IO Client**
+#### 3.8.2 **Frontend: ReactJS + Vite + Socket.IO Client**
 
-### 3.8.2.1 **Step 2: Set up React with Vite and Socket.IO Client**
+#### 3.8.2.1 **Step 2: Set up React with Vite and Socket.IO Client**
 
 1. **Create a new React app** using **Vite**:
 
@@ -811,7 +812,7 @@ public class SocketController {
 
 ---
 
-### **Step 2: Install the required dependencies**
+#### **Step 2: Install the required dependencies**
 
 To enable real-time communication between the React frontend and the Socket.IO server, you need to install the **Socket.IO client**.
 
@@ -823,7 +824,7 @@ npm install socket.io-client
 
 ---
 
-### **Step 3: Create the ChatApp.js Component**
+#### **Step 3: Create the ChatApp.js Component**
 
 In this step, you will create a **ChatApp.js** component that allows the user to send and receive messages using **Socket.IO**.
 
@@ -884,7 +885,7 @@ export default ChatApp;
 
 ---
 
-### **Understanding Key Parts of the Code:**
+#### **Understanding Key Parts of the Code:**
 
 1. **Connecting to the Socket.IO Server**:
    - `socket = io("http://localhost:8080")`: 
@@ -903,7 +904,7 @@ export default ChatApp;
 
 ---
 
-### **Summary:**
+#### **Summary:**
 
 - The **Socket.IO client** in the React app connects to the backend, listens for incoming messages, and sends messages to the server using the `emit` and `on` methods.
 - This allows for **bidirectional, real-time communication** between the frontend (ReactJS) and the backend (Spring Boot with Socket.IO).
@@ -912,7 +913,7 @@ export default ChatApp;
 
 ---
 
-### 3.8.3 **Step 3: Update `App.js` to Use `ChatApp` Component**
+#### 3.8.3 **Step 3: Update `App.js` to Use `ChatApp` Component**
 
 In this step, you'll import the `ChatApp` component into the `App.js` file and render it inside the main application.
 
@@ -934,7 +935,7 @@ export default App;
 
 ---
 
-### 3.8.4 **Step 4: Run the React + Vite Application**
+#### 3.8.4 **Step 4: Run the React + Vite Application**
 
 #### **1. Start the React Development Server**:
 
@@ -946,7 +947,7 @@ npm run dev
 
 ---
 
-### 3.9 **How Socket.IO Works Here:**
+#### 3.9 **How Socket.IO Works Here:**
 
 #### 3.9.1. Backend (Spring Boot):**
 1. When a client sends a chat event (through `socket.emit("chat", message)`), the Spring Boot backend receives it via `server.addEventListener("chat", ...)`.
@@ -958,7 +959,7 @@ npm run dev
 
 ---
 
-### 3.10 **Summary of Communication Flow:**
+#### 3.10 **Summary of Communication Flow:**
 
 3.10.1. **User Interaction**: 
    - The user types a message in the React app and clicks the "Send" button.
@@ -974,7 +975,7 @@ npm run dev
 
 ---
 
-### 3.11 **Testing It:**
+#### 3.11 **Testing It:**
 
 3.11.1. Open **two browser windows** at [http://localhost:3000](http://localhost:3000).
 3.11.2. Send a message in one window, and you should see the message appear in real-time in the other window.
@@ -982,14 +983,14 @@ npm run dev
 
 ---
 
-### **Conclusion**
+#### **Conclusion**
 
 This setup demonstrates how to use **Socket.IO** for real-time communication between a **React frontend** and a **Spring Boot backend**. By combining the power of **Socket.IO** for event-driven, bi-directional communication with **Spring Boot** and **ReactJS**, you can easily build interactive real-time web applications.
 
 ---
-## 4. Configuration of application.properties
+### 4. Configuration of application.properties
 
-### 3.1. what is application.properties?
+#### 3.1. what is application.properties?
 In Spring Boot, `application.properties` is a configuration file that allows you to set various properties to customize the behavior of the application. It's the default file used to store configuration settings for different components of a Spring Boot application, such as the server, database, logging, security, and more.
 
 It can be used to configure properties related to:
@@ -1021,35 +1022,35 @@ spring.servlet.multipart.max-file-size=10MB
 spring.servlet.multipart.max-request-size=10MB
 ```
 
-## Explanation of `application.properties` Configuration
+#### Explanation of `application.properties` Configuration
 
 This configuration file is typically found in the `application.properties` file in a Spring Boot project. It's used to configure various properties for the Spring Boot application, such as server settings, data source (database) configurations, and file upload settings. Let's go through each line of this file to explain its significance.
 
-### 1. `spring.application.name=157-project1`
+#### 1. `spring.application.name=157-project1`
 - **Purpose**: This sets the name of the Spring Boot application. It's useful for identifying the application, especially when using tools like Spring Boot Admin or logging.
 - **Why it's necessary**: It helps give a human-readable name to the application, which is particularly useful when you have multiple services running.
 
-### 2. `server.port=3000`
+#### 2. `server.port=3000`
 - **Purpose**: This sets the port on which the embedded web server (e.g., Tomcat) will run. By default, Spring Boot runs on port 8080, but in this case, it's explicitly set to run on port 3000.
 - **Why it's necessary**: This is needed if you want to change the default port Spring Boot uses to a custom port (in this case, port 3000). You might need to change it to avoid port conflicts or for specific requirements in your environment.
 
-### 3. `spring.datasource.url=jdbc:MySql://localhost:3306/157task`
+#### 3. `spring.datasource.url=jdbc:MySql://localhost:3306/157task`
 - **Purpose**: This property configures the URL of the database Spring Boot will connect to. The `jdbc:mysql://localhost:3306/157task` URL specifies that the application should use MySQL as the database and connect to it via localhost (the local machine) on port 3306 (default MySQL port). The database name is `157task`.
 - **Why it's necessary**: This is needed to tell Spring Boot which database to connect to. Without this, the application won’t know where to find the database, and database operations would fail.
 
-### 4. `spring.datasource.username=root`
+#### 4. `spring.datasource.username=root`
 - **Purpose**: This specifies the username that Spring Boot will use to authenticate to the database. In this case, it is set to `root`, which is a default MySQL user.
 - **Why it's necessary**: The username is required to connect to the database. It tells the application what credentials to use for accessing the database.
 
-### 5. `spring.datasource.password=8446394639`
+#### 5. `spring.datasource.password=8446394639`
 - **Purpose**: This specifies the password corresponding to the username (`root` in this case). It's used for authenticating the connection to the MySQL database.
 - **Why it's necessary**: The password is essential for authenticating the user and establishing a secure connection to the database.
 
-### 6. `#spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver`
+#### 6. `#spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver`
 - **Purpose**: This is a commented-out line (due to the `#` symbol) that typically specifies the driver class for the MySQL database. The driver class is necessary for connecting Java to MySQL. However, Spring Boot automatically detects the correct driver when using the `spring-boot-starter-data-jpa` dependency, so you generally don’t need to specify this unless there are specific issues.
 - **Why it's necessary**: If you're using a database like MySQL, you would normally specify the driver class (`com.mysql.cj.jdbc.Driver`), but in most cases, Spring Boot can automatically detect it when the appropriate dependency (`spring-boot-starter-data-jpa`) is added. The commented-out line is simply a fallback or an optional setting.
 
-### 7. `spring.jpa.hibernate.ddl-auto=update`
+#### 7. `spring.jpa.hibernate.ddl-auto=update`
 - **Purpose**: This property tells Hibernate (the JPA implementation) how to handle database schema generation. The value `update` means that Hibernate will automatically update the database schema to match the entity classes each time the application is run.
     - Possible values:
         - `none`: No schema generation is performed.
@@ -1058,33 +1059,33 @@ This configuration file is typically found in the `application.properties` file 
         - `create-drop`: Same as `create`, but it also drops the schema when the session factory is closed (useful for testing).
 - **Why it's necessary**: This is important for automatic schema management. Setting it to `update` ensures that if your entity classes change, the database schema will automatically adjust accordingly.
 
-### 8. `spring.jpa.show-sql=true`
+#### 8. `spring.jpa.show-sql=true`
 - **Purpose**: This property enables SQL logging. When set to `true`, it will log the SQL statements executed by Hibernate (or any JPA provider).
 - **Why it's necessary**: It’s useful for debugging, as you can see the exact SQL queries that Hibernate is executing on the database. This helps when you want to verify the SQL that your entities are producing, especially during development.
 
-### 9. `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect`
+#### 9. `spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect`
 - **Purpose**: This property defines the Hibernate dialect to use. The dialect is a Hibernate configuration setting that ensures the correct SQL is generated for the underlying database. In this case, `MySQL8Dialect` tells Hibernate to generate SQL optimized for MySQL 8.
 - **Why it's necessary**: It's crucial to set the correct dialect so that Hibernate generates the right SQL syntax for your MySQL database. Without the proper dialect, Hibernate may produce SQL that’s not compatible with your database, leading to errors.
 
-### 10. `spring.servlet.multipart.enabled=true`
+#### 10. `spring.servlet.multipart.enabled=true`
 - **Purpose**: This property enables support for multipart file uploads in the application.
 - **Why it's necessary**: It’s needed if your application will handle file uploads. For example, if you have a feature that allows users to upload images or documents, this property enables Spring Boot to handle those files.
 
-### 11. `spring.servlet.multipart.max-file-size=10MB`
+#### 11. `spring.servlet.multipart.max-file-size=10MB`
 - **Purpose**: This specifies the maximum allowed file size for uploads. In this case, it’s set to `10MB`.
 - **Why it's necessary**: It defines a file size limit for uploads. This is useful to prevent users from uploading excessively large files that could impact server performance or stability. Without this, there would be no limit on the file sizes, which could be problematic.
 
-### 12. `spring.servlet.multipart.max-request-size=10MB`
+#### 12. `spring.servlet.multipart.max-request-size=10MB`
 - **Purpose**: This property sets the maximum size for an entire HTTP request, including the uploaded file(s). It’s also set to `10MB` in this case.
 - **Why it's necessary**: It’s essential to have a limit on the total size of the request to avoid issues when dealing with multiple or very large files. Without this, users could upload very large files, potentially affecting the server’s memory and performance.
 
 ---
 
-## 5. Back-End Code flow
+### 5. Back-End Code flow
 
-### 3.1. Add Employee
+#### 3.1. Add Employee
 
-####Main class
+#### Main class
 ```java
 package _7.project1;
 
@@ -1101,11 +1102,11 @@ public class Application {
 }
 ```
 Explantion of code:
-## Spring Boot Application: `Application.java`
+#### Spring Boot Application: `Application.java`
 
 This is the main entry point of a Spring Boot application. Let's break it down:
 
-### 1. **`@SpringBootApplication` Annotation:**
+#### 1. **`@SpringBootApplication` Annotation:**
    - **`@SpringBootApplication`** is a convenience annotation that combines the following:
      - **`@EnableAutoConfiguration`**: Tells Spring Boot to automatically configure your application based on the dependencies in the classpath.
      - **`@ComponentScan`**: Enables component scanning, so Spring can detect and register your beans (such as controllers, services, repositories, etc.) in the application context.
@@ -1113,21 +1114,21 @@ This is the main entry point of a Spring Boot application. Let's break it down:
    
    This annotation is typically placed on the main class of a Spring Boot application, as it kick-starts the auto-configuration and sets up the application context.
 
-### 2. **`public class Application`:**
+#### 2. **`public class Application`:**
    - This is the main class of the application. It's typically named `Application` or something similar, and it serves as the entry point for running the Spring Boot application.
 
-### 3. **`public static void main(String[] args)`:**
+#### 3. **`public static void main(String[] args)`:**
    - This is the main method that runs when the application starts.
    - **`String[] args`** allows command-line arguments to be passed when starting the application. These arguments are passed to `SpringApplication.run(...)`.
    
-### 4. **`SpringApplication.run(Application.class, args)`:**
+#### 4. **`SpringApplication.run(Application.class, args)`:**
    - **`SpringApplication.run(Application.class, args)`** is a method that launches the Spring Boot application.
      - **`Application.class`**: Refers to the class that contains the `@SpringBootApplication` annotation. It's the starting point of the Spring context.
      - **`args`**: These are the command-line arguments passed to the application.
 
    This method will initialize the Spring context and all the beans defined in the application, start the embedded web server (like Tomcat, Jetty, etc.), and handle HTTP requests (if your application is a web application). After calling this, the application starts running.
 
-### In Summary:
+#### In Summary:
 - **`@SpringBootApplication`** configures the Spring Boot application.
 - **`main()` method** is the entry point for the Java application.
 - **`SpringApplication.run()`** starts the Spring Boot application and the embedded web server.
@@ -1837,7 +1838,7 @@ public class Employee {
 
 ```
 Explanation of code
-## Employee Entity Class (JPA Model)
+### Employee Entity Class (JPA Model)
 
 This Java class represents an **Employee** entity in a database using **JPA (Java Persistence API)**. It is annotated with **Jakarta Persistence** annotations and **Lombok** annotations to simplify the code.
 
@@ -1850,7 +1851,7 @@ This Java class represents an **Employee** entity in a database using **JPA (Jav
 - **`@Column`**: Maps the class fields to corresponding columns in the database table. It allows specifying additional constraints like `nullable`, `unique`, etc.
 - **`@Lob`**: Indicates that the field should be stored as a large object (binary data like files or large text). This is used for `profile_image`, `document`, and `resume_file`.
 
-### 2. Fields (Attributes):
+#### 2. Fields (Attributes):
 The class has numerous fields, each representing a piece of information about an employee. The fields have various data types like `String`, `long`, `double`, and `byte[]` (for storing large binary objects). Here’s an overview of what each field represents:
 
 - **Basic Info**: `employee_Id`, `employeeName`, `userName`, `dateOfJoining`, `dateOfBirth`, `gender`, `maritalStatus`, etc.
@@ -1862,19 +1863,19 @@ The class has numerous fields, each representing a piece of information about an
 - **Social Media/Links**: `linkedInURl`, `faceBookURL`, `twitterURl`.
 - **Documents**: `profileImage`, `document`, `resumeFile` (stored as large binary objects using `@Lob`).
 
-### 3. Lombok Annotations:
+#### 3. Lombok Annotations:
 - **`@NoArgsConstructor`**: Automatically generates a no-argument constructor for the class. This is required by JPA for creating instances.
 - **`@AllArgsConstructor`**: Generates a constructor with parameters for all fields in the class. This allows creating objects with all properties at once.
 
-### 4. Other Attributes:
+#### 4. Other Attributes:
 - **Profile Image/Document/Resume**: These are stored as binary data (`byte[]`), and **`@Lob`** is used to indicate that they are large objects (e.g., images, PDFs).
 - **Login and Authority**: Fields like `loginStatus` and `editDeleteAuthority` control permissions and the user’s login status.
 - **Miscellaneous Fields**: Fields like `inductionComment`, `performanceIndicator`, and `teamLeaderMsg` are likely used to store feedback or comments related to the employee’s performance or other work-related aspects.
 
-### 5. Methods:
+#### 5. Methods:
 The class includes **getters and setters** for all fields. These methods are generated manually, but **Lombok** annotations (`@NoArgsConstructor` and `@AllArgsConstructor`) help reduce boilerplate code for constructors.
 
-### Summary of What's Happening:
+#### Summary of What's Happening:
 - The **Employee** class represents an entity in a relational database, capturing various details about an employee (personal, contact, job-related, etc.).
 - **JPA annotations** are used to map the class to a table and define column mappings, constraints (like primary key generation and unique constraints).
 - **Lombok annotations** reduce boilerplate code by automatically generating constructors.
@@ -1898,11 +1899,11 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 }
 ```
 Explanation of code:
-## Spring Boot Application: `Application.java`
+#### Spring Boot Application: `Application.java`
 
 This is the main entry point of a Spring Boot application. Let's break it down:
 
-### 1. **`@SpringBootApplication` Annotation:**
+#### 1. **`@SpringBootApplication` Annotation:**
    - **`@SpringBootApplication`** is a convenience annotation that combines the following:
      - **`@EnableAutoConfiguration`**: Tells Spring Boot to automatically configure your application based on the dependencies in the classpath.
      - **`@ComponentScan`**: Enables component scanning, so Spring can detect and register your beans (such as controllers, services, repositories, etc.) in the application context.
@@ -1910,21 +1911,21 @@ This is the main entry point of a Spring Boot application. Let's break it down:
    
    This annotation is typically placed on the main class of a Spring Boot application, as it kick-starts the auto-configuration and sets up the application context.
 
-### 2. **`public class Application`:**
+#### 2. **`public class Application`:**
    - This is the main class of the application. It's typically named `Application` or something similar, and it serves as the entry point for running the Spring Boot application.
 
-### 3. **`public static void main(String[] args)`:**
+#### 3. **`public static void main(String[] args)`:**
    - This is the main method that runs when the application starts.
    - **`String[] args`** allows command-line arguments to be passed when starting the application. These arguments are passed to `SpringApplication.run(...)`.
    
-### 4. **`SpringApplication.run(Application.class, args)`:**
+#### 4. **`SpringApplication.run(Application.class, args)`:**
    - **`SpringApplication.run(Application.class, args)`** is a method that launches the Spring Boot application.
      - **`Application.class`**: Refers to the class that contains the `@SpringBootApplication` annotation. It's the starting point of the Spring context.
      - **`args`**: These are the command-line arguments passed to the application.
 
    This method will initialize the Spring context and all the beans defined in the application, start the embedded web server (like Tomcat, Jetty, etc.), and handle HTTP requests (if your application is a web application). After calling this, the application starts running.
 
-### In Summary:
+#### In Summary:
 - **`@SpringBootApplication`** configures the Spring Boot application.
 - **`main()` method** is the entry point for the Java application.
 - **`SpringApplication.run()`** starts the Spring Boot application and the embedded web server.
@@ -2040,7 +2041,7 @@ Explanation of code:
 
 This code defines the `EmployeeService` class, which is part of a Spring Boot application. The purpose of this service is to manage `Employee` entities in the system. It handles adding and updating employee information and interacts with two repositories: `EmployeeRepository` (for managing employee data) and `CallingTrackerRepository` (although the latter is not used in this code).
 
-### 1. Annotations
+#### 1. Annotations
 
 #### `@Service`
 - **Purpose**: This annotation marks the class as a service component in Spring's service layer.
@@ -2050,7 +2051,7 @@ This code defines the `EmployeeService` class, which is part of a Spring Boot ap
 - **Purpose**: The `@Autowired` annotation is used to automatically inject dependencies.
 - **Functionality**: In this case, Spring will automatically provide instances of the `EmployeeRepository` and `CallingTrackerRepository` beans into the `EmployeeService` class. These repositories will be used to interact with the database.
 
-### 2. Instance Variables
+#### 2. Instance Variables
 
 #### `private EmployeeRepository employeeRepository`
 - **Purpose**: This is the repository interface for `Employee` entities. `EmployeeRepository` extends `JpaRepository`, so it provides basic CRUD operations such as `save()`, `findById()`, and `findByUserName()` out of the box, without the need to write custom SQL queries.
@@ -2058,7 +2059,7 @@ This code defines the `EmployeeService` class, which is part of a Spring Boot ap
 #### `private CallingTrackerRepository callingTrackerRepository`
 - **Purpose**: This is another repository that is injected, but it is not used in the current code. It might be useful for future features that track calls or actions related to employees (e.g., tracking communication or interactions).
 
-### 3. The `addEmployee` Method
+#### 3. The `addEmployee` Method
 
 This is the primary method in the service. It either updates an existing employee or adds a new one based on whether an employee with the given username already exists.
 
@@ -2067,18 +2068,18 @@ This is the primary method in the service. It either updates an existing employe
 public Employee addEmployee(Employee employee)
 
 ```
-### Purpose:
+#### Purpose:
 This method takes an Employee object as input and returns the saved Employee object. It handles both creating new employees and updating existing ones.
 
-### Logic:
-### Step 1. **Check if the Employee Already Exists:**
+#### Logic:
+#### Step 1. **Check if the Employee Already Exists:**
 ```java
 Optional<Employee> existingEmployee = employeeRepository.findByUserName(employee.getUserName());
 
 ```
 This line checks if an employee with the same `userName` already exists in the database by calling the `findByUserName` method in the `EmployeeRepository`. This method returns an `Optional<Employee>`, which may contain an `Employee` if one is found, or be empty if no employee with the provided username exists.
 
-### Step 2: If Employee Exists, Update Their Details
+#### Step 2: If Employee Exists, Update Their Details
 ```java
 if (existingEmployee.isPresent()) {
     Employee updatedEmployee = existingEmployee.get();
@@ -2094,7 +2095,7 @@ If an employee with the given username exists, we retrieve the existing employee
 Then, we update each field of the existing employee using the values from the `employee` object passed to the method. This allows us to modify specific details (like name, email, designation, etc.) without replacing the entire record.  
 After updating all fields, the method saves the updated employee back into the database using `employeeRepository.save(updatedEmployee)`. This persists the changes to the database.
 
-### Step 3: If Employee Does Not Exist, Save as a New Employee
+#### Step 3: If Employee Does Not Exist, Save as a New Employee
 ```java
 else {
     return employeeRepository.save(employee);
@@ -2105,16 +2106,16 @@ If no existing employee is found (i.e., the `existingEmployee` is empty), this b
 
 The `save()` method is provided by `JpaRepository` and performs the persistence operation, either inserting a new record or updating an existing one depending on the state of the `Employee` entity.
 
-### 4. The getEmployeeByUserName Method:
+#### 4. The getEmployeeByUserName Method:
 ```java
 public Optional<Employee> getEmployeeByUserName(String username)
 
 ```   
-### Purpose:
+#### Purpose:
 This method retrieves an `Employee` from the database by their username.  
 It uses the `findByUserName` method in the `EmployeeRepository` to fetch the employee. The return type is an `Optional<Employee>`, which is a safe way of handling potential null values. If no employee with the provided username exists, it returns `Optional.empty()`.
 
-### Key Points:
+#### Key Points:
 
 1. **Repository Layer**:  
    The `EmployeeRepository` is a Spring Data JPA repository that provides methods like `findByUserName()` and `save()`, allowing the service to interact with the database without writing custom SQL queries.
@@ -2131,7 +2132,7 @@ It uses the `findByUserName` method in the `EmployeeRepository` to fetch the emp
 5. **Spring's Dependency Injection**:  
    The `@Autowired` annotations indicate that Spring will manage the lifecycle of `EmployeeRepository` and `CallingTrackerRepository`, and automatically inject them into the `EmployeeService` class.
 
-### Summary:
+#### Summary:
 - The `EmployeeService` class is a Spring service component that handles the logic for adding or updating employee records.
 - The `addEmployee` method checks whether an employee with a specific username exists and either updates the existing record or creates a new one.
 - The `getEmployeeByUserName` method allows fetching an employee by their username.
@@ -2186,11 +2187,11 @@ public class EmployeeController {
 ```
 
 Explanation of code
-### This code defines a Spring Boot `EmployeeController` class that handles HTTP requests related to employee and calling tracker data. It serves as an interface between the frontend (or client) and the service layer, allowing clients to add employees and calling tracker data.
+#### This code defines a Spring Boot `EmployeeController` class that handles HTTP requests related to employee and calling tracker data. It serves as an interface between the frontend (or client) and the service layer, allowing clients to add employees and calling tracker data.
 
 #### Let’s break down the code in detail:
 
-### Code Breakdown
+#### Code Breakdown
 
 #### 1. Annotations
 
@@ -2248,21 +2249,21 @@ public ResponseEntity<Employee> addEmployee(@RequestBody Employee employee) {
 }
 
 ```
-### Purpose:
+#### Purpose:
 This method is responsible for adding a new employee to the system. It is mapped to the URL `/api/employee/add`.
 
-### Request:
+#### Request:
 The method expects an `Employee` object in the HTTP request body (annotated with `@RequestBody`).
 
-### Logic:
+#### Logic:
 - The employee data is passed to the `addEmployee` method of the `EmployeeService` class.
 - If the employee is successfully added, the method returns a `ResponseEntity` with a `HttpStatus.OK` (200) status and the employee data.
 - If any error occurs (e.g., a `RuntimeException`), it returns a `ResponseEntity` with a `HttpStatus.BAD_REQUEST` (400) status.
 
-### Return:
+#### Return:
 A `ResponseEntity<Employee>` is returned, containing the employee data and an HTTP status code indicating whether the operation was successful.
 
-### `addCallingTrackerWithLineUp` Method
+#### `addCallingTrackerWithLineUp` Method
 ```java
 @PostMapping("/add-with-lineup/{employee_Id}")
 public ResponseEntity<String> addCallingTrackerWithLineUp(@RequestBody CallingTrackerLineUpDto dto, @PathVariable Long employee_Id) {
@@ -2274,19 +2275,19 @@ public ResponseEntity<String> addCallingTrackerWithLineUp(@RequestBody CallingTr
 }
 
 ```
-### Purpose:
+#### Purpose:
 This method is responsible for adding a calling tracker and a lineup for an employee. It is mapped to the URL `/api/employee/add-with-lineup/{employee_Id}`.
 
-### Request:
+#### Request:
 - The method expects a `CallingTrackerLineUpDto` object in the request body (annotated with `@RequestBody`).
 - The `employee_Id` is extracted from the URL path (annotated with `@PathVariable`).
 
-### Logic:
+#### Logic:
 - First, a new `CallingTrackerLineUpDto` object is created, and the date is extracted from it.
 - The date is printed to the console for logging purposes.
 - The method then calls the `saveCallingTrackerWithLineUp` method of the `CallingTrackerService` to save the calling tracker and lineup data for the employee.
 
-### Return:
+#### Return:
 - The method returns a `ResponseEntity<String>` with a success message ("CallingTracker and LineUp saved successfully!") and a `HttpStatus.OK` (200) status.
 
 ---
@@ -2296,7 +2297,7 @@ This method is responsible for adding a calling tracker and a lineup for an empl
 
 ---
 
-### Summary of Endpoints
+#### Summary of Endpoints
 
 - **POST /api/employee/add**:
   - Adds a new employee.
@@ -2308,7 +2309,7 @@ This method is responsible for adding a calling tracker and a lineup for an empl
 
 ---
 
-### Key Points:
+#### Key Points:
 - `@RequestBody` is used for parsing the request body into Java objects.
 - `@PathVariable` allows extracting values from the URL path.
 - The controller communicates with the service layer (`EmployeeService` and `CallingTrackerService`) to perform business logic.
