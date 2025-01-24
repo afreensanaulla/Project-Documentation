@@ -975,7 +975,7 @@ npm install
 
 A `package.json` file is a fundamental component in Node.js projects. It serves as a metadata file for the project and contains important information about the project, including dependencies, scripts, and other configurations.
 
-### Key Uses of `package.json`
+#### Key Uses of `package.json`
 
 1. **Project Metadata:**
    - **Name:** The name of your project or application.
@@ -3242,6 +3242,21 @@ public class EmployeeService {
         }
     }
 
+// Get an Employee by ID
+    public Optional<Employee> getEmployeeById(Long empId) {
+        return employeeRepository.findById(empId);
+    }
+
+// Get All Employees
+    public Iterable<Employee> getAllEmployees() {
+        return employeeRepository.findAll();
+    }
+
+// Delete an Employee by ID
+    public void deleteEmployee(Long empId) {
+        employeeRepository.deleteById(empId);
+    }
+
     public Optional<Employee> getEmployeeByUserName(String username){
         return employeeRepository.findByUserName(username);
     }
@@ -3319,7 +3334,36 @@ If no existing employee is found (i.e., the `existingEmployee` is empty), this b
 
 The `save()` method is provided by `JpaRepository` and performs the persistence operation, either inserting a new record or updating an existing one depending on the state of the `Employee` entity.
 
-#### 4. The getEmployeeByUserName Method:
+#### step 4: Get Employee By ID
+```java
+public Optional<Employee> getEmployeeById(Long empId) {
+    return employeeRepository.findById(empId);
+}
+```
+This method allows you to retrieve an employee by their employee ID (empId).
+employeeRepository.findById(empId) returns an Optional<Employee>, which will contain the employee data if found, or be empty if no employee exists with that ID.
+
+#### step 5:Get All Employees
+```java
+public Iterable<Employee> getAllEmployees() {
+    return employeeRepository.findAll();
+}
+
+```
+This method retrieves all the employees in the database.
+employeeRepository.findAll() returns an Iterable of Employee objects, representing all the records in the Employee table.
+
+#### step 6: Delete Employee By ID
+```java
+public void deleteEmployee(Long empId) {
+    employeeRepository.deleteById(empId);
+}
+
+```
+This method deletes an employee by their ID.
+employeeRepository.deleteById(empId) deletes the employee record with the given empId from the database.
+
+#### step 7: The getEmployeeByUserName Method:
 ```java
 public Optional<Employee> getEmployeeByUserName(String username)
 
@@ -3328,26 +3372,41 @@ public Optional<Employee> getEmployeeByUserName(String username)
 This method retrieves an `Employee` from the database by their username.  
 It uses the `findByUserName` method in the `EmployeeRepository` to fetch the employee. The return type is an `Optional<Employee>`, which is a safe way of handling potential null values. If no employee with the provided username exists, it returns `Optional.empty()`.
 
-#### Key Points:
+#### **Key Points:**
 
-1. **Repository Layer**:  
-   The `EmployeeRepository` is a Spring Data JPA repository that provides methods like `findByUserName()` and `save()`, allowing the service to interact with the database without writing custom SQL queries.
+#### 1. **Repository Layer**:  
+The `EmployeeRepository` is a Spring Data JPA repository that provides methods like `findByUserName()` and `save()`. These methods allow the `EmployeeService` to interact with the database without the need to write custom SQL queries. The repository handles data access and provides an abstraction over the underlying database operations.
 
-2. **Updating an Employee**:  
-   The method provides a detailed way to update an employee’s record. Instead of replacing the entire entity, it updates individual fields of the existing employee. This gives more control and flexibility to update specific fields without modifying everything.
+#### 2. **Updating an Employee**:  
+The `addEmployee` method offers a detailed approach to updating an employee’s record. Instead of replacing the entire employee entity, it updates individual fields of the existing employee. This approach provides more control, as it allows you to update specific fields while leaving other fields unchanged. It prevents overwriting unnecessary data and ensures only relevant changes are made.
 
-3. **Use of Optional**:  
-   The `Optional<Employee>` return type from `findByUserName` is a good practice because it avoids the potential for `NullPointerExceptions`. It forces the caller to handle the case where the employee may not exist (e.g., `if (existingEmployee.isPresent())`).
+#### 3. **Use of Optional**:  
+The `Optional<Employee>` return type from methods like `findByUserName` is a good practice because it helps avoid potential `NullPointerExceptions`. By using `Optional`, the code forces the caller to explicitly handle the case where the employee might not exist. For example, the caller must check if the `Optional` contains a value using methods like `isPresent()` before accessing the actual employee data.
 
-4. **The Role of CallingTrackerRepository**:  
-   Although `CallingTrackerRepository` is injected, it is not used in this particular method. It might be used elsewhere in the application to track employee-related calls or actions.
+#### 4. **The Role of CallingTrackerRepository**:  
+Although `CallingTrackerRepository` is injected into the `EmployeeService`, it is not used within the current method. This repository might serve another purpose in the application, such as tracking employee-related calls, actions, or interactions elsewhere in the codebase. This is a placeholder for potential future use or another area of the application that deals with employee call tracking.
 
-5. **Spring's Dependency Injection**:  
-   The `@Autowired` annotations indicate that Spring will manage the lifecycle of `EmployeeRepository` and `CallingTrackerRepository`, and automatically inject them into the `EmployeeService` class.
+#### 5. **Spring's Dependency Injection**:  
+The `@Autowired` annotations are used to indicate that Spring will automatically inject dependencies into the `EmployeeService` class. In this case, Spring manages the lifecycle of `EmployeeRepository` and `CallingTrackerRepository`. The framework automatically wires these repositories into the service class, ensuring that the service can use them to interact with the database without manual setup.
+
+#### 6. **Get Employee by ID**:  
+The `getEmployeeById` method retrieves an employee using their unique **employee ID**. It calls `employeeRepository.findById(empId)`, which returns an `Optional<Employee>`. The use of `Optional` ensures that the method handles the possibility of the employee not being found in the database, preventing null pointer exceptions. The caller must check if the `Optional` contains an employee before attempting to access the data.
+
+#### 7. **Get All Employees**:  
+The `getAllEmployees` method fetches all employees from the database. It uses `employeeRepository.findAll()`, which returns all employee records stored in the database as an iterable collection. This method provides a way to access every employee in the system.
+
+#### 8. **Delete Employee by ID**:  
+The `deleteEmployee` method allows the deletion of an employee based on their unique **employee ID**. It calls `employeeRepository.deleteById(empId)` to remove the corresponding record from the database. This operation ensures that the employee's data is permanently removed from the system.
+
 
 #### Summary:
+
 - The `EmployeeService` class is a Spring service component that handles the logic for adding or updating employee records.
 - The `addEmployee` method checks whether an employee with a specific username exists and either updates the existing record or creates a new one.
+- The getEmployeeByUserName method allows fetching an employee by their username.
+- The getEmployeeById method fetches an employee by their ID.
+- The getAllEmployees method retrieves all employees stored in the database.
+- The deleteEmployee method deletes an employee record by their ID.
 - The `getEmployeeByUserName` method allows fetching an employee by their username.
 - This class acts as an intermediary between the controller layer (which handles HTTP requests) and the repository layer (which interacts with the database).
 
@@ -3387,13 +3446,41 @@ public class EmployeeController {
         }
     }
 
-    @PostMapping("/add-with-lineup/{employee_Id}")
-    public ResponseEntity<String> addCallingTrackerWithLineUp(@RequestBody CallingTrackerLineUpDto dto,@PathVariable Long employee_Id) {
-        CallingTrackerLineUpDto dto2 = new CallingTrackerLineUpDto();
-        LocalDate  date = dto2.getDate();
-        System.out.println(date+ "date");
-        callingTrackerService.saveCallingTrackerWithLineUp(dto, employee_Id);
-        return ResponseEntity.ok("CallingTracker and LineUp saved successfully!");
+   / Get an Employee by ID
+    @GetMapping("/{empId}")
+    public Optional<Employee> getEmployee(@PathVariable Long empId) {
+        return employeeService.getEmployeeById(empId);
+    }
+
+ // Get All Employees
+    @GetMapping
+    public Iterable<Employee> getAllEmployees() {
+        return employeeService.getAllEmployees();
+    }
+
+    // Delete an Employee by ID
+    @DeleteMapping("/{empId}")
+    public void deleteEmployee(@PathVariable Long empId) {
+        employeeService.deleteEmployee(empId);
+    }
+
+ // Update an Employee by ID
+    @PutMapping("/{empId}")
+    public Employee updateEmployee(@PathVariable Long empId, @RequestBody Employee employeeDetails) {
+        Optional<Employee> optionalEmployee = employeeService.getEmployeeById(empId);
+
+        if (optionalEmployee.isPresent()) {
+            Employee existingEmployee = optionalEmployee.get();
+            existingEmployee.setName(employeeDetails.getName());
+            existingEmployee.setDate(employeeDetails.getDate());
+            existingEmployee.setAddress(employeeDetails.getAddress());
+
+            return employeeService.saveEmployee(existingEmployee);
+        } else {
+            // Return null or throw an exception if employee not found
+            return null; // You can handle it as per your requirement
+        }
+    }
     }
 }
 
@@ -3476,34 +3563,135 @@ The method expects an `Employee` object in the HTTP request body (annotated with
 #### Return:
 A `ResponseEntity<Employee>` is returned, containing the employee data and an HTTP status code indicating whether the operation was successful.
 
-#### `addCallingTrackerWithLineUp` Method
+#### **`@GetMapping("/{empId}")` Method:** 
 ```java
-@PostMapping("/add-with-lineup/{employee_Id}")
-public ResponseEntity<String> addCallingTrackerWithLineUp(@RequestBody CallingTrackerLineUpDto dto, @PathVariable Long employee_Id) {
-    CallingTrackerLineUpDto dto2 = new CallingTrackerLineUpDto();
-    LocalDate date = dto2.getDate();
-    System.out.println(date + " date");
-    callingTrackerService.saveCallingTrackerWithLineUp(dto, employee_Id);
-    return ResponseEntity.ok("CallingTracker and LineUp saved successfully!");
+@GetMapping("/{empId}")
+public Optional<Employee> getEmployee(@PathVariable Long empId) {
+    return employeeService.getEmployeeById(empId);
+}
+```
+Certainly! Here's the explanation in Markdown format:
+
+---
+
+#### **Purpose:**
+This endpoint is designed to retrieve an employee’s details based on their unique employee ID.
+
+#### **@GetMapping("/{empId}")**:
+- This annotation maps HTTP GET requests to the method.
+- The `{empId}` part of the path is a path variable that will be substituted with the actual employee ID passed in the request URL.
+
+#### **@PathVariable Long empId**:
+- The `empId` parameter gets the value of the employee ID from the URL.
+
+#### **Method**:
+- It calls the `employeeService.getEmployeeById(empId)` method to fetch the employee data from the database using the service layer.
+
+#### **Return Type**:
+- The method returns an `Optional<Employee>`. This means that if an employee with the provided ID exists, the `Optional` will contain the employee object; if not, the `Optional` will be empty.
+
+#### **(@GetMapping) Method:**
+```java
+@GetMapping
+public Iterable<Employee> getAllEmployees() {
+    return employeeService.getAllEmployees();
 }
 
 ```
-#### Purpose:
-This method is responsible for adding a calling tracker and a lineup for an employee. It is mapped to the URL `/api/employee/add-with-lineup/{employee_Id}`.
-
-#### Request:
-- The method expects a `CallingTrackerLineUpDto` object in the request body (annotated with `@RequestBody`).
-- The `employee_Id` is extracted from the URL path (annotated with `@PathVariable`).
-
-#### Logic:
-- First, a new `CallingTrackerLineUpDto` object is created, and the date is extracted from it.
-- The date is printed to the console for logging purposes.
-- The method then calls the `saveCallingTrackerWithLineUp` method of the `CallingTrackerService` to save the calling tracker and lineup data for the employee.
-
-#### Return:
-- The method returns a `ResponseEntity<String>` with a success message ("CallingTracker and LineUp saved successfully!") and a `HttpStatus.OK` (200) status.
+Certainly! Here's the explanation in Markdown format:
 
 ---
+
+#### **Purpose:**
+This endpoint is designed to retrieve a list of all employees from the database.
+
+#### **@GetMapping:**
+- The method is mapped to the HTTP GET request for the `/employees` path (i.e., it will be triggered by a GET request without any specific employee ID).
+
+#### **Method:**
+- It calls the `employeeService.getAllEmployees()` method, which fetches all employee records from the database.
+
+#### **Return Type:**
+- The method returns an `Iterable<Employee>`, which is a collection of all employee records.
+
+####  **(@DeleteMapping("/{empId}")) Method:**
+```java
+@DeleteMapping("/{empId}")
+public void deleteEmployee(@PathVariable Long empId) {
+    employeeService.deleteEmployee(empId);
+}
+
+```
+Certainly! Here's the explanation in Markdown format:
+
+---
+
+#### **Purpose:**
+This endpoint is designed to delete an employee from the database using their employee ID.
+
+#### **@DeleteMapping("/{empId}")**:
+- The `@DeleteMapping` annotation maps the HTTP DELETE request to this method.
+- The `{empId}` part of the path is a path variable that will be replaced with the actual employee ID passed in the request URL.
+
+#### **@PathVariable Long empId**:
+- The `empId` is extracted from the URL and passed into the method to identify the employee to be deleted.
+
+#### **Method:**
+- It calls the `employeeService.deleteEmployee(empId)` method to delete the employee record with the specified ID from the database.
+
+#### **Return Type:**
+- This method does not return any data; it’s a `void` return type because the primary goal is to delete the employee.
+
+#### **(@PutMapping("/{empId}")) Method:**
+```java
+@PutMapping("/{empId}")
+public Employee updateEmployee(@PathVariable Long empId, @RequestBody Employee employeeDetails) {
+    Optional<Employee> optionalEmployee = employeeService.getEmployeeById(empId);
+
+    if (optionalEmployee.isPresent()) {
+        Employee existingEmployee = optionalEmployee.get();
+        existingEmployee.setName(employeeDetails.getName());
+        existingEmployee.setDate(employeeDetails.getDate());
+        existingEmployee.setAddress(employeeDetails.getAddress());
+
+        return employeeService.saveEmployee(existingEmployee);
+    } else {
+        // Return null or throw an exception if employee not found
+        return null; // You can handle it as per your requirement
+    }
+}
+
+```
+Certainly! Here's the explanation in Markdown format:
+
+---
+
+#### **Purpose:**
+This endpoint is designed to update an employee’s details by their employee ID. The employee data to be updated is sent in the request body.
+
+#### **@PutMapping("/{empId}")**:
+- The `@PutMapping` annotation maps HTTP PUT requests to this method.
+- The `{empId}` part of the URL is a path variable that represents the employee's unique ID.
+
+#### **@PathVariable Long empId**:
+- This gets the employee ID from the URL to identify the employee that is to be updated.
+
+#### **@RequestBody Employee employeeDetails**:
+- The employee data that needs to be updated is passed in the request body as a JSON object.
+- This annotation binds the incoming JSON data to the `employeeDetails` parameter.
+
+#### **Method:**
+1. The method first calls `employeeService.getEmployeeById(empId)` to check if the employee with the provided ID exists.
+2. If the employee exists (`optionalEmployee.isPresent()` is true):
+   - It retrieves the employee object and updates fields such as `name`, `date`, and `address` based on the `employeeDetails` provided in the request body.
+   - After updating the fields, the employee object is saved back to the database using `employeeService.saveEmployee(existingEmployee)`.
+   
+#### **Return Type:**
+- The method returns the updated `Employee` object, which will be sent back to the client as a response.
+
+#### **Handling Non-Existent Employee:**
+- If the employee with the provided ID doesn't exist (`optionalEmployee.isPresent()` is false), the method will return `null`.
+- You can modify this behavior to throw a specific exception (such as `EmployeeNotFoundException`) or handle it differently based on your requirements.
 
 #### 4. Exception Handling
 - In the `addEmployee` method, if a `RuntimeException` occurs while adding the employee, it is caught in the catch block, and a response with `HttpStatus.BAD_REQUEST` (400) is returned. This is basic error handling to inform the client that there was an issue with the request.
