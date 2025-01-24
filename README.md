@@ -55,8 +55,8 @@
     <tr>
       <td><b>Requirements</b></td>
       <td><a href = " ">ENV Variable, <a/><a href = " ">Front-End: Dependencies & Versions, <a/><a href = " ">Back-End: Dependencies & Versions, <a/><a href = " ">SocketIO<a/><a href = " ">Back-End: application.properties, <a/><a href = " ">Fron-End: pacakge.json file, <a/><a href = " ">Front-End: npm libraries<a/></td>
-      <td><a href = " ">Application Compatibility: Software/Hardware<a/></td>
-      <td><a href = " ">Application Compatibility: Software/Hardware<a/></td>
+      <td><a href = " ">Application Compatibility: Software/Hardware, <a/><a href = " ">Subscription<a/></td>
+      <td><a href = " ">Application Compatibility: Software/Hardware, <a/><a href = " ">Subscription<a/></td>
       <td><a href = " ">Technologies: Front-End, Back-End, Database, Cloud, Authentication, Version Control, Servers, <a/><a href = " ">ENV Variable, <a/><a href = " "><a/><a href = " ">Front-End: Dependencies & Versions, <a/><a href = " ">Back-End: Dependencies & Versions, <a/><a href = " ">SocketIO Server, <a/><a href = " ">Back-End: application.properties, <a/><a href = " ">Front-End: pacakge.json file, <a/><a href = " ">Front-End: npm libraries, <a/><a href = " ">Front-End: CSS, Tailwind<a/></td>
     </tr>
   </tbody>
