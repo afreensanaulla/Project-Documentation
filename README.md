@@ -1,4 +1,4 @@
-<h1>Recruiter's Gear Documentation</h1>
+<h1><a href="https://google.com" target="_blank"> Recruiter's Gear Documentation</a></h1>
 <Table>
   <thead>
     <tr>
