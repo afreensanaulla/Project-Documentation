@@ -1,4 +1,4 @@
-<h1><a href="https://google.com" target="blank"> Recruiter's Gear Documentation</a></h1>
+<h1><a href="http://rg.157careers.in/" target="_blank"> Recruiter's Gear Documentation</a></h1>
 <Table>
   <thead>
     <tr>
