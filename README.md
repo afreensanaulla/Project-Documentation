@@ -24,9 +24,9 @@
     <tr>
       <td><b>Target Audience</b></td>
       <td><a href = "#back-end-code-flow">Back-End: Code Structure, <a/><a href = "#front-end-code-flow ">Front-End: Code Structure<a/></td>
-      <td><a href = " ">Back-End: Code Structure, <a/></td>
+      <td><a href = " #back-end-code-flow">Back-End: Code Structure, <a/></td>
       <td><a href = " "><a/></td>
-      <td><a href = " ">Back-End: Code Structure, <a/><a href = " ">Front-End: Code Structure, <a/><a href = " "><a/><a href = " ">Front-End: API CRUD Operation, <a/><a href = " ">SocketIO, <a/><a href = " ">Back-End: CRUD Operation, <a/><a href = " ">Front-End: CRUD Operation<a/></td>
+      <td><a href = "#back-end-code-flow ">Back-End: Code Structure, <a/><a href = "#front-end-code-flow ">Front-End: Code Structure, <a/><a href = " "><a/><a href = " ">Front-End: API CRUD Operation, <a/><a href = " ">SocketIO, <a/><a href = " ">Back-End: CRUD Operation, <a/><a href = " ">Front-End: CRUD Operation<a/></td>
     </tr>
     <tr>
       <td><b>Level of Details</b></td>
@@ -44,7 +44,7 @@
     </tr>
     <tr>
       <td><b>Examples</b></td>
-      <td><a href = " ">Front-End: App.js Details<a/></td>
+      <td><a href = " ">Front-End: App.jsx Details<a/></td>
       <td><a href = " "><a/></td>
       <td><a href = " "><a/></td>
       <td><a href = " ">Back-End: How to Install?, <a/><a href " ">Back-End: How to Run?, </a><a href = " ">Front-End: How to Install?, <a/><a href " ">Front-End: How to Run?, </a><a href = " ">Front-End: App.js Details<a/></td>
