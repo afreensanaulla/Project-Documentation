@@ -55,8 +55,8 @@
     <tr>
       <td><b>Requirements</b></td>
       <td><a href = " ">ENV Variable, <a/><a href = " ">Front-End: Dependencies & Versions, <a/><a href = " ">Back-End: Dependencies & Versions, <a/><a href = " ">SocketIO<a/><a href = " ">Back-End: application.properties, <a/><a href = " ">Fron-End: pacakge.json file, <a/><a href = " ">Front-End: npm libraries<a/></td>
-      <td><a href = " "><a/></td>
-      <td><a href = " "><a/></td>
+      <td><a href = " ">Application Compatibility: Software/Hardware<a/></td>
+      <td><a href = " ">Application Compatibility: Software/Hardware<a/></td>
       <td><a href = " ">Technologies: Front-End, Back-End, Database, Cloud, Authentication, Version Control, Servers, <a/><a href = " ">ENV Variable, <a/><a href = " "><a/><a href = " ">Front-End: Dependencies & Versions, <a/><a href = " ">Back-End: Dependencies & Versions, <a/><a href = " ">SocketIO Server, <a/><a href = " ">Back-End: application.properties, <a/><a href = " ">Front-End: pacakge.json file, <a/><a href = " ">Front-End: npm libraries, <a/><a href = " ">Front-End: CSS, Tailwind<a/></td>
     </tr>
   </tbody>
@@ -1149,6 +1149,8 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 @Table(name = "employee", uniqueConstraints = {@UniqueConstraint(columnNames = "user_name")})
 public class Employee {
 
@@ -1339,501 +1341,7 @@ public class Employee {
     @Column(name = "login_status")
     private String loginStatus;
 
-    public Long getEmployee_Id() {
-        return employee_Id;
-    }
-
-    public void setEmployee_Id(Long employee_Id) {
-        this.employee_Id = employee_Id;
-    }
-
-    public String getEmployeeName() {
-        return employeeName;
-    }
-
-    public void setEmployeeName(String employeeName) {
-        this.employeeName = employeeName;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getDateOfJoining() {
-        return dateOfJoining;
-    }
-
-    public void setDateOfJoining(String dateOfJoining) {
-        this.dateOfJoining = dateOfJoining;
-    }
-
-    public String getDesignation() {
-        return designation;
-    }
-
-    public void setDesignation(String designation) {
-        this.designation = designation;
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public String getOfficialMail() {
-        return officialMail;
-    }
-
-    public void setOfficialMail(String officialMail) {
-        this.officialMail = officialMail;
-    }
-
-    public String getEmployeeEmail() {
-        return employeeEmail;
-    }
-
-    public void setEmployeeEmail(String employeeEmail) {
-        this.employeeEmail = employeeEmail;
-    }
-
-    public long getOfficialContactNumber() {
-        return officialContactNumber;
-    }
-
-    public void setOfficialContactNumber(long officialContactNumber) {
-        this.officialContactNumber = officialContactNumber;
-    }
-
-    public long getAlternateContactNo() {
-        return alternateContactNo;
-    }
-
-    public void setAlternateContactNo(long alternateContactNo) {
-        this.alternateContactNo = alternateContactNo;
-    }
-
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public long getCompanyMobileNumber() {
-        return companyMobileNumber;
-    }
-
-    public void setCompanyMobileNumber(long companyMobileNumber) {
-        this.companyMobileNumber = companyMobileNumber;
-    }
-
-    public long getWhatsAppNumber() {
-        return whatsAppNumber;
-    }
-
-    public void setWhatsAppNumber(long whatsAppNumber) {
-        this.whatsAppNumber = whatsAppNumber;
-    }
-
-    public String getEmergencyContactNumber() {
-        return emergencyContactNumber;
-    }
-
-    public void setEmergencyContactNumber(String emergencyContactNumber) {
-        this.emergencyContactNumber = emergencyContactNumber;
-    }
-
-    public String getEmergencyPersonRelation() {
-        return emergencyPersonRelation;
-    }
-
-    public void setEmergencyPersonRelation(String emergencyPersonRelation) {
-        this.emergencyPersonRelation = emergencyPersonRelation;
-    }
-
-    public String getEmployeePresentAddress() {
-        return employeePresentAddress;
-    }
-
-    public void setEmployeePresentAddress(String employeePresentAddress) {
-        this.employeePresentAddress = employeePresentAddress;
-    }
-
-    public String getEmployeeExperience() {
-        return employeeExperience;
-    }
-
-    public void setEmployeeExperience(String employeeExperience) {
-        this.employeeExperience = employeeExperience;
-    }
-
-    public String getPerks() {
-        return perks;
-    }
-
-    public void setPerks(String perks) {
-        this.perks = perks;
-    }
-
-    public String getMaritalStatus() {
-        return maritalStatus;
-    }
-
-    public void setMaritalStatus(String maritalStatus) {
-        this.maritalStatus = maritalStatus;
-    }
-
-    public String getAnniversaryDate() {
-        return anniversaryDate;
-    }
-
-    public void setAnniversaryDate(String anniversaryDate) {
-        this.anniversaryDate = anniversaryDate;
-    }
-
-    public String getTshirtSize() {
-        return tshirtSize;
-    }
-
-    public void setTshirtSize(String tshirtSize) {
-        this.tshirtSize = tshirtSize;
-    }
-
-    public String getLastCompany() {
-        return lastCompany;
-    }
-
-    public void setLastCompany(String lastCompany) {
-        this.lastCompany = lastCompany;
-    }
-
-    public String getWorkLocation() {
-        return workLocation;
-    }
-
-    public void setWorkLocation(String workLocation) {
-        this.workLocation = workLocation;
-    }
-
-    public String getEntrySource() {
-        return entrySource;
-    }
-
-    public void setEntrySource(String entrySource) {
-        this.entrySource = entrySource;
-    }
-
-    public String getEmployeeStatus() {
-        return employeeStatus;
-    }
-
-    public void setEmployeeStatus(String employeeStatus) {
-        this.employeeStatus = employeeStatus;
-    }
-
-    public String getLastWorkingDate() {
-        return lastWorkingDate;
-    }
-
-    public void setLastWorkingDate(String lastWorkingDate) {
-        this.lastWorkingDate = lastWorkingDate;
-    }
-
-    public String getReasonForLeaving() {
-        return reasonForLeaving;
-    }
-
-    public void setReasonForLeaving(String reasonForLeaving) {
-        this.reasonForLeaving = reasonForLeaving;
-    }
-
-    public String getInductionYesOrNo() {
-        return inductionYesOrNo;
-    }
-
-    public void setInductionYesOrNo(String inductionYesOrNo) {
-        this.inductionYesOrNo = inductionYesOrNo;
-    }
-
-    public String getInductionComment() {
-        return inductionComment;
-    }
-
-    public void setInductionComment(String inductionComment) {
-        this.inductionComment = inductionComment;
-    }
-
-    public String getTrainingSource() {
-        return trainingSource;
-    }
-
-    public void setTrainingSource(String trainingSource) {
-        this.trainingSource = trainingSource;
-    }
-
-    public String getTrainingCompletedYesOrNo() {
-        return trainingCompletedYesOrNo;
-    }
-
-    public void setTrainingCompletedYesOrNo(String trainingCompletedYesOrNo) {
-        this.trainingCompletedYesOrNo = trainingCompletedYesOrNo;
-    }
-
-    public int getTrainingTakenCount() {
-        return trainingTakenCount;
-    }
-
-    public void setTrainingTakenCount(int trainingTakenCount) {
-        this.trainingTakenCount = trainingTakenCount;
-    }
-
-    public String getRoundsOfInterview() {
-        return roundsOfInterview;
-    }
-
-    public void setRoundsOfInterview(String roundsOfInterview) {
-        this.roundsOfInterview = roundsOfInterview;
-    }
-
-    public String getInterviewTakenPerson() {
-        return interviewTakenPerson;
-    }
-
-    public void setInterviewTakenPerson(String interviewTakenPerson) {
-        this.interviewTakenPerson = interviewTakenPerson;
-    }
-
-    public String getWarningComments() {
-        return warningComments;
-    }
-
-    public void setWarningComments(String warningComments) {
-        this.warningComments = warningComments;
-    }
-
-    public String getPerformanceIndicator() {
-        return performanceIndicator;
-    }
-
-    public void setPerformanceIndicator(String performanceIndicator) {
-        this.performanceIndicator = performanceIndicator;
-    }
-
-    public String getTeamLeaderMsg() {
-        return teamLeaderMsg;
-    }
-
-    public void setTeamLeaderMsg(String teamLeaderMsg) {
-        this.teamLeaderMsg = teamLeaderMsg;
-    }
-
-    public String getEditDeleteAuthority() {
-        return editDeleteAuthority;
-    }
-
-    public void setEditDeleteAuthority(String editDeleteAuthority) {
-        this.editDeleteAuthority = editDeleteAuthority;
-    }
-
-    public String getLinkedInURl() {
-        return linkedInURl;
-    }
-
-    public void setLinkedInURl(String linkedInURl) {
-        this.linkedInURl = linkedInURl;
-    }
-
-    public String getFaceBookURL() {
-        return faceBookURL;
-    }
-
-    public void setFaceBookURL(String faceBookURL) {
-        this.faceBookURL = faceBookURL;
-    }
-
-    public String getTwitterURl() {
-        return twitterURl;
-    }
-
-    public void setTwitterURl(String twitterURl) {
-        this.twitterURl = twitterURl;
-    }
-
-    public String getEmployeeAddress() {
-        return employeeAddress;
-    }
-
-    public void setEmployeeAddress(String employeeAddress) {
-        this.employeeAddress = employeeAddress;
-    }
-
-    public String getBloodGroup() {
-        return bloodGroup;
-    }
-
-    public void setBloodGroup(String bloodGroup) {
-        this.bloodGroup = bloodGroup;
-    }
-
-    public long getAadhaarNo() {
-        return aadhaarNo;
-    }
-
-    public void setAadhaarNo(long aadhaarNo) {
-        this.aadhaarNo = aadhaarNo;
-    }
-
-    public String getPanNo() {
-        return panNo;
-    }
-
-    public void setPanNo(String panNo) {
-        this.panNo = panNo;
-    }
-
-    public String getEducationalQualification() {
-        return educationalQualification;
-    }
-
-    public void setEducationalQualification(String educationalQualification) {
-        this.educationalQualification = educationalQualification;
-    }
-
-    public double getOfferedSalary() {
-        return offeredSalary;
-    }
-
-    public void setOfferedSalary(double offeredSalary) {
-        this.offeredSalary = offeredSalary;
-    }
-
-    public String getJobRole() {
-        return jobRole;
-    }
-
-    public void setJobRole(String jobRole) {
-        this.jobRole = jobRole;
-    }
-
-    public long getProfessionalPtNo() {
-        return professionalPtNo;
-    }
-
-    public void setProfessionalPtNo(long professionalPtNo) {
-        this.professionalPtNo = professionalPtNo;
-    }
-
-    public long getEsIcNo() {
-        return esIcNo;
-    }
-
-    public void setEsIcNo(long esIcNo) {
-        this.esIcNo = esIcNo;
-    }
-
-    public long getPfNo() {
-        return pfNo;
-    }
-
-    public void setPfNo(long pfNo) {
-        this.pfNo = pfNo;
-    }
-
-    public long getInsuranceNumber() {
-        return insuranceNumber;
-    }
-
-    public void setInsuranceNumber(long insuranceNumber) {
-        this.insuranceNumber = insuranceNumber;
-    }
-
-    public String getReportingMangerName() {
-        return reportingMangerName;
-    }
-
-    public void setReportingMangerName(String reportingMangerName) {
-        this.reportingMangerName = reportingMangerName;
-    }
-
-    public String getReportingMangerDesignation() {
-        return reportingMangerDesignation;
-    }
-
-    public void setReportingMangerDesignation(String reportingMangerDesignation) {
-        this.reportingMangerDesignation = reportingMangerDesignation;
-    }
-
-    public String getEmployeePassword() {
-        return employeePassword;
-    }
-
-    public void setEmployeePassword(String employeePassword) {
-        this.employeePassword = employeePassword;
-    }
-
-    public String getConfirmPassword() {
-        return confirmPassword;
-    }
-
-    public void setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
-    }
-
-    public byte[] getProfileImage() {
-        return profileImage;
-    }
-
-    public void setProfileImage(byte[] profileImage) {
-        this.profileImage = profileImage;
-    }
-
-    public byte[] getDocument() {
-        return document;
-    }
-
-    public void setDocument(byte[] document) {
-        this.document = document;
-    }
-
-    public byte[] getResumeFile() {
-        return resumeFile;
-    }
-
-    public void setResumeFile(byte[] resumeFile) {
-        this.resumeFile = resumeFile;
-    }
-
-    public int getOldTeamLeaderId() {
-        return oldTeamLeaderId;
-    }
-
-    public void setOldTeamLeaderId(int oldTeamLeaderId) {
-        this.oldTeamLeaderId = oldTeamLeaderId;
-    }
-
-    public String getLoginStatus() {
-        return loginStatus;
-    }
-
-    public void setLoginStatus(String loginStatus) {
-        this.loginStatus = loginStatus;
-    }
+    
 }
 
 ```
@@ -2381,3 +1889,153 @@ The application's colour display is dependent on the resolution of your laptop o
 #### Conclusion
 
 To summarize, the application is compatible with desktop devices and does not rely on any specific operating system. It is designed to work with commonly used browsers and requires a stable internet connection and certain hardware specifications for optimal performance.
+
+---
+
+### Purpose
+
+#### Application Purpose Overview
+
+This document outlines the key challenges faced by organizations and the solutions our application offers to resolve these issues. Our application is designed to address critical pain areas such as system performance, integration, user experience, support, cost management, and more.
+
+---
+
+#### 1. System Performance Issues
+
+#### Description:
+Clients often face challenges with system speed, responsiveness, and overall performance. These issues can negatively impact user productivity and operational efficiency.
+
+#### Pain Areas:
+- **Slow Processing:** Systems may lag or take too long to process requests or data.
+- **Downtime:** Frequent outages or unavailability of services disrupt business continuity.
+- **Scalability:** Difficulty in scaling systems to meet growing demands or increased loads.
+
+#### Our Solutions:
+- **Optimized Code and Infrastructure:** Our application leverages optimized code and efficient infrastructure design to ensure fast processing and high responsiveness.
+- **Performance Monitoring Tools:** We integrate performance monitoring tools that allow you to track and address potential issues proactively, minimizing downtime and ensuring smooth operation.
+- **Scalable Architecture:** Our cloud-based solution is designed with scalability in mind, making it easy to upgrade resources and accommodate increased workloads without any service disruption.
+
+---
+
+#### 2. Integration Challenges
+
+#### Description:
+Organizations often struggle to integrate new technologies with existing systems. Our application is designed to simplify these integrations and eliminate compatibility barriers.
+
+#### Pain Areas:
+- **Compatibility Issues:** Ensuring smooth integration between different systems and platforms.
+- **Data Silos:** Fragmented data stored across multiple systems, leading to inefficiencies.
+- **Complex Integration Processes:** Complex, time-consuming integration processes that delay the adoption of new technologies.
+
+#### Our Solutions:
+- **Middleware for Seamless Integration:** Our application offers built-in middleware to facilitate smooth communication between various systems and platforms.
+- **Custom Integration Services:** We provide tailored integration services to ensure compatibility with your existing infrastructure and minimize the risk of system conflicts.
+- **Data Synchronization Framework:** Our solution ensures consistent data synchronization, helping you break down data silos and improve data integrity across all systems.
+
+---
+
+#### 3. User Experience (UX) Problems
+
+#### Description:
+User experience plays a crucial role in system adoption and productivity. We prioritize intuitive design and optimized interfaces in our application to ensure ease of use and satisfaction.
+
+#### Pain Areas:
+- **Complex Interfaces:** Difficult-to-navigate or non-intuitive user interfaces hinder user adoption.
+- **Lack of Customization:** Systems that do not meet specific user needs or preferences lead to poor engagement.
+- **Poor Performance:** Unresponsive or slow user interfaces can lead to frustration.
+
+#### Our Solutions:
+- **Intuitive Interface Design:** We conduct extensive user research and usability testing to deliver a clean, easy-to-navigate interface.
+- **Customization Options:** Our application allows users to tailor settings and features according to their specific preferences, improving user satisfaction.
+- **Optimized UI/UX for Speed:** We focus on providing a seamless experience by optimizing user interfaces for speed, ensuring responsiveness even under heavy use.
+
+---
+
+## 4. Support and Maintenance
+
+#### Description:
+Ongoing support and maintenance are critical for ensuring the continuous availability and reliability of IT systems. Our application is designed with support and easy maintenance in mind.
+
+#### Pain Areas:
+- **Inadequate Support:** Delays or inadequate support can lead to operational disruptions.
+- **Lack of Documentation:** Poor or outdated documentation can make troubleshooting and system management difficult.
+- **High Maintenance Costs:** Expensive or time-consuming maintenance can strain resources.
+
+#### Our Solutions:
+- **Comprehensive Support Services:** We offer responsive, multi-channel customer support to resolve issues quickly and minimize downtime.
+- **Up-to-date Documentation:** We provide detailed, up-to-date documentation, making it easier for users to understand and manage the system.
+- **Cost-Effective Maintenance:** Regular updates and proactive system checks help minimize maintenance costs by ensuring the application runs smoothly without requiring constant attention.
+
+---
+
+#### 5. Cost Management
+
+#### Description:
+Organizations often struggle with the cost-effectiveness of IT solutions. Our application provides flexible pricing options and cost-control features to help manage budgets effectively.
+
+#### Pain Areas:
+- **High Costs:** Expensive upfront costs and ongoing operational expenses.
+- **ROI Concerns:** Uncertainty regarding the return on investment for IT solutions.
+- **Unpredictable Expenses:** Unexpected costs due to system failures or upgrades.
+
+#### Our Solutions:
+- **Flexible Pricing Models:** We offer subscription-based or pay-as-you-go pricing models to provide flexibility and control over your budget.
+- **Transparent Cost-Benefit Analysis:** Our application includes built-in tools that provide clear cost-benefit analyses, helping you assess the ROI and long-term value of the system.
+- **Budgeting Tools:** We provide tools to monitor usage and track spending, allowing you to manage costs proactively and avoid unexpected expenses.
+
+---
+
+#### 6. Training and Adoption
+
+#### Description:
+Training and adoption of new technologies can be a significant barrier. Our application includes built-in training resources and adoption support to ensure smooth transitions.
+
+#### Pain Areas:
+- **Lack of Training:** Insufficient training leads to poor utilization of systems.
+- **Resistance to Change:** Employees may be hesitant to adopt new technologies.
+- **Implementation Difficulties:** Challenges integrating new technologies into existing workflows.
+
+#### Our Solutions:
+- **Comprehensive Training Resources:** We offer detailed user guides, tutorials, and training programs to ensure your team is proficient in using the system.
+- **Change Management Support:** We implement strategies to facilitate smooth adoption, addressing resistance and ensuring users are confident in using the new system.
+- **Seamless Integration:** Our application is designed for easy integration into existing workflows, ensuring minimal disruption during implementation.
+
+---
+
+#### 7. Customization Needs
+
+#### Description:
+Organizations often require custom features or modifications to meet specific needs. Our application is highly customizable to address these requirements efficiently.
+
+#### Pain Areas:
+- **Limited Flexibility:** Off-the-shelf solutions may not meet unique business needs.
+- **High Customization Costs:** Custom features can be expensive and complex to develop.
+- **Long Development Times:** Custom development may take extended periods, delaying implementation.
+
+#### Our Solutions:
+- **Highly Customizable Features:** Our application offers a modular design with customizable options to meet specific business requirements.
+- **Consulting and Custom Development:** We provide expert consulting services to understand your needs and deliver tailored solutions that fit seamlessly with your business.
+- **Agile Development Process:** We employ agile methodologies to expedite the customization process, ensuring that custom features are delivered within your desired timeframe.
+
+---
+
+#### 8. Data Security and Compliance
+
+#### Description:
+With increasing concerns about data security and regulatory compliance, we prioritize safeguarding your data and ensuring compliance with industry standards.
+
+#### Pain Areas:
+- **Data Breaches:** The risk of unauthorized access to sensitive data.
+- **Compliance Issues:** Difficulty in adhering to industry-specific regulations such as GDPR, HIPAA, etc.
+- **Inadequate Security Measures:** Weak security protocols or outdated encryption can leave systems vulnerable.
+
+#### Our Solutions:
+- **Robust Security Features:** We implement industry-standard security measures such as encryption, multi-factor authentication, and role-based access control to protect your data.
+- **Regular Security Updates:** Our application is regularly updated to address vulnerabilities and ensure compliance with the latest security standards.
+- **Compliance Consulting:** We offer compliance consulting services to help you meet industry regulations and maintain a secure, compliant environment.
+
+---
+
+#### Conclusion
+
+Our application is built to address the most common IT challenges, providing solutions that improve performance, streamline integration, enhance user experience, and reduce costs. By utilizing our features, you can overcome key pain points and ensure smooth, secure, and efficient system operations.
