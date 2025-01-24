@@ -14,7 +14,7 @@
   <tbody>
     <tr>
       <td><b>Purpose</b></td>
-      <td> - [PURPOSE](#purpose) </td>
+       - [COM](#purpose)
       <td>[Comprehensive Solutions](#purpose)</td>
       <td>[Comprehensive Solutions](#purpose)</td>
       <td>[Comprehensive Solutions](#purpose)</td>
@@ -3752,7 +3752,7 @@ Certainly! Here's the explanation in Markdown format:
 
 ---
 
-#### **Purpose:**
+## **Purpose:**
 This endpoint is designed to delete an employee from the database using their employee ID.
 
 #### **@DeleteMapping("/{empId}")**:
@@ -4262,7 +4262,7 @@ To summarize, the application is compatible with desktop devices and does not re
 
 ---
 
-### Purpose
+## Purpose
 
 #### Application Purpose Overview
 
