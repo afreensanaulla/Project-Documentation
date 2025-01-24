@@ -1,4 +1,6 @@
 <h1><a href="http://rg.157careers.in/" target="_blank"> Recruiter's Gear Documentation</a></h1>
+
+- [JDK](#jdk)
 <Table>
   <thead>
     <tr>
@@ -323,7 +325,7 @@ This command launches the development server, which watches for changes to your 
 
 ### Back-End:
 
-### 1. JDK
+## JDK
 
 #### 1.1: What is JDK?
 
@@ -4123,6 +4125,76 @@ To provide a clear overview of the database schema, a tabular format is used to 
 | date_of_joining  | DATE            | -                           | CURRENT_DATE       | Date when the employee joined |
 | address          | TEXT            | -                           | NULL               | Residential address          |
 | dept_id          | INT             | FOREIGN KEY (`dept_id`) REFERENCES `department(dept_id)` | - | Links employee to their department |
+
+#### MySQL Query Guidelines:
+
+```sql
+-- 1. Create Table
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    email VARCHAR(100),
+    department VARCHAR(50),
+    hire_date DATE
+);
+
+-- 2. Insert Data
+INSERT INTO employees (first_name, last_name, email, department, hire_date)
+VALUES
+    ('John', 'Doe', 'john.doe@example.com', 'Engineering', '2023-03-01'),
+    ('Jane', 'Smith', 'jane.smith@example.com', 'Marketing', '2022-08-15'),
+    ('Mark', 'Johnson', 'mark.johnson@example.com', 'HR', '2021-11-30');
+
+-- 3. Select All Data
+SELECT * FROM employees;
+
+-- 4. Select Specific Data
+SELECT first_name, last_name, email FROM employees WHERE department = 'Engineering';
+
+-- 5. Update Data
+UPDATE employees
+SET email = 'john.doe@company.com'
+WHERE id = 1;
+
+-- 6. Delete Data
+DELETE FROM employees WHERE id = 3;
+
+-- 7. Join Tables
+SELECT e.first_name, e.last_name, d.department_name
+FROM employees e
+JOIN departments d ON e.department = d.department_id;
+
+-- 8. Group By
+SELECT department, COUNT(*) AS num_employees
+FROM employees
+GROUP BY department;
+
+-- 9. Order By
+SELECT * FROM employees ORDER BY last_name;
+
+-- 10. Limit Results
+SELECT * FROM employees LIMIT 5;
+
+-- 11. Using LIKE
+SELECT * FROM employees WHERE first_name LIKE 'J%';
+
+-- 12. Create Index
+CREATE INDEX idx_email ON employees(email);
+
+-- 13. Drop Index
+DROP INDEX idx_email ON employees;
+
+-- 14. Create View
+CREATE VIEW employee_department_view AS
+SELECT e.first_name, e.last_name, d.department_name
+FROM employees e
+JOIN departments d ON e.department = d.department_id;
+
+-- 15. Select from View
+SELECT * FROM employee_department_view;
+
+```
 
 ---
 
