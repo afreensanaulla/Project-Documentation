@@ -1951,7 +1951,7 @@ Note: While com.sun.mail is a common implementation of the JavaMail API, other i
 
 ---
 
-### 3. SocketIO
+### SocketIO
 
 #### 3.1. What is Socket.IO?
 
@@ -2531,7 +2531,7 @@ This configuration file is typically found in the `application.properties` file 
 
 ---
 
-### Development Workflow: Full-Stack
+### Development Workflow Full-Stack
 
 #### Front-End Interaction:
 
