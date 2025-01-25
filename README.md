@@ -3908,7 +3908,9 @@ Certainly! Below is the **summary of endpoints** and **key points** in markdown 
 
 ---
 
-Complete front end, summary of workflow of both frontend and backend
+### Full-Stack Development flowchart:
+
+![Full Stack development](https://github.com/user-attachments/assets/451a6d7c-9d12-441e-b83f-a2bd8f189ddc)
 
 ---
 
@@ -3916,7 +3918,7 @@ Complete front end, summary of workflow of both frontend and backend
 
 #### Recruiters Gear Database Documentation
 
-#### 📦 Introduction to the Database:
+#### Introduction to the Database:
 The **Recruiters Gear** project uses **MySQL** as its database management system to store, manage, and retrieve structured data efficiently. MySQL is a widely adopted relational database that is reliable, robust, and scalable, making it an ideal choice for web applications like Recruiters Gear.
 
 In this project, MySQL is utilized to handle critical data such as:
@@ -3929,7 +3931,7 @@ In this project, MySQL is utilized to handle critical data such as:
 #### Version of MySQL used in Recruiter's Gear:
 This project uses **MySQL version 8.4.3**, the latest stable release as of **October 15, 2024**. MySQL 8.4.3 brings significant performance improvements, enhanced security features, and expanded support for JSON functions, making it a robust and reliable choice for database management in modern applications.
 
-#### 🔑 Why MySQL is Ideal for This Project:
+#### Why MySQL is Ideal for This Project:
 
 1. **Open-Source and Cost-Effective**  
    MySQL is open-source, meaning it is free to use and provides all the essential features for database management without licensing costs. It is supported by a large community, ensuring continuous improvements and 
@@ -3986,7 +3988,7 @@ This project uses **MySQL version 8.4.3**, the latest stable release as of **Oct
 - **Ease of Backup and Restoration**: Regular backups are simple with MySQL, ensuring the safety of critical data.
 - **Future Scalability**: As Recruiters Gear grows, MySQL's ability to handle more users, more data, and more transactions ensures that it remains a robust choice.
 
-#### 🏛️ **MySQL Database Architecture**
+#### MySQL Database Architecture
 
 #### 1) Database Design
 - **Schema Overview**: The MySQL database is organized into multiple schemas representing different modules of the application (e.g., users, orders, transactions, products).
@@ -4115,8 +4117,8 @@ public class DatabaseConnectionTest {
 }
 ```
 
-### 📊 Data Types and Constraints Used in MySQL:
-#### 📝 Tabular Format (Recommended):
+### Data Types and Constraints Used in MySQL:
+####  Tabular Format (Recommended):
 To provide a clear overview of the database schema, a tabular format is used to detail the columns, their data types, constraints, and descriptions for each table in the database. This structure helps developers quickly understand the database design and relationships between tables.
 
 #### Table: `employee`
@@ -4567,6 +4569,26 @@ For billing-related support, please contact our customer service team at **billi
 #### Conclusion
 
 Our subscription-based ATS offers flexible plans to suit businesses of all sizes. Whether you're a small startup or a large enterprise, you can choose the plan that meets your needs. Enjoy all the features you need for efficient recruitment and candidate management, with transparent pricing, easy subscription management, and dedicated support.
+
+---
+
+### Application flowcharts:
+
+#### Recruiter' Gear application flowchart:
+
+![Regruiter's Gear](https://github.com/user-attachments/assets/a942fdef-8940-47a2-84b5-9d977ab621ff)
+
+#### Manager's flowchart:
+
+![Manager](https://github.com/user-attachments/assets/90046df8-5d83-4e89-b0ed-6b2a1df99610)
+
+#### Team Lead's flowchart:
+
+![Team Leader](https://github.com/user-attachments/assets/31ff2a35-b6e0-41b1-8bbb-2d77469db8b4)
+
+#### Recruiter's flowchart:
+
+![Recruiter](https://github.com/user-attachments/assets/7ab81931-1552-49b7-bc3a-5e5377d894a0)
 
 ---
 
