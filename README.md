@@ -18,22 +18,22 @@
       <td><b>Purpose</b></td>
         <td><a href = "#comprehensive-solutions">Comprehensive Solutions</a></td>
         <td><a href = "#comprehensive-solutions">Comprehensive Solutions</a></td>
-	<td><a href = "#comprehensive-solutions ">Comprehensive Solutions</a></td>
-        <td><a href = "#comprehensive-solutions ">Comprehensive Solutions</a></td>
+	<td><a href = "#comprehensive-solutions">Comprehensive Solutions</a></td>
+        <td><a href = "#comprehensive-solutions">Comprehensive Solutions</a></td>
     </tr>
     <tr>
       <td><b>Target Audience</b></td>
-      <td><a href = "#back-end-code-flow">Back-End: Code Structure, <a/><a href = "#front-end-code-flow ">Front-End: Code Structure<a/></td>
+      <td><a href = "#back-end-code-flow">Back-End: Code Structure, <a/><a href = "#front-end-code-flow">Front-End: Code Structure<a/></td>
       <td><a href = " #back-end-code-flow">Back-End: Code Structure, <a/></td>
       <td><a href = " "><a/></td>
-      <td><a href = "#back-end-code-flow ">Back-End: Code Structure, <a/><a href = "#front-end-code-flow ">Front-End: Code Structure, <a/><a href = " "><a/><a href = " ">Front-End: API CRUD Operation, <a/><a href = " ">SocketIO, <a/><a href = " ">Back-End: CRUD Operation, <a/><a href = " ">Front-End: CRUD Operation<a/></td>
+      <td><a href = "#back-end-code-flow">Back-End: Code Structure, <a/><a href = "#front-end-code-flow">Front-End: Code Structure, <a/><a href = " "><a/><a href = "#api-fetching-in-react">Front-End: API CRUD Operation, <a/><a href = "#socketio">SocketIO, <a/><a href = " ">Back-End: CRUD Operation, <a/><a href = " ">Front-End: CRUD Operation<a/></td>
     </tr>
     <tr>
       <td><b>Level of Details</b></td>
       <td><a href = " ">Code Convention<a/></td>
-      <td><a href = " ">Front-End: Development workflow, <a/><a href = " ">Front-End: Development workflow<a/></td>
-      <td><a href = " ">Back-End: Flow Chart, <a/><a href = " ">Front-End: Logic Flow Chart, <a/><a href = " ">Back-End: Logic Flow Chart, <a/><a href = " ">Front-End: Development workflow<a/></td>
-      <td><a href = " ">Code Convention, <a/><a href = " ">Front-End: Development workflow<a/></td>
+      <td><a href = "#development-workflow-fullstack">Front-End: Development workflow, <a/><a href = "#development-workflow-fullstack">Back-End: Development workflow<a/></td>
+      <td><a href = " ">Back-End: Flow Chart, <a/><a href = " ">Front-End: Logic Flow Chart, <a/><a href = " ">Back-End: Logic Flow Chart, <a/><a href = "#development-workflow-fullstack">Front-End: Development workflow<a/></td>
+      <td><a href = " ">Code Convention, <a/><a href = "#development-workflow-fullstack">Back-End: Development workflow<a/></td>
     </tr>
     <tr>
       <td><b>Focus Area</b></td>
@@ -44,24 +44,24 @@
     </tr>
     <tr>
       <td><b>Examples</b></td>
-      <td><a href = " ">Front-End: App.jsx Details<a/></td>
+      <td><a href = "#app-jsx">Front-End: App.jsx Details<a/></td>
       <td><a href = " "><a/></td>
       <td><a href = " "><a/></td>
-      <td><a href = " ">Back-End: How to Install?, <a/><a href " ">Back-End: How to Run?, </a><a href = " ">Front-End: How to Install?, <a/><a href " ">Front-End: How to Run?, </a><a href = " ">Front-End: App.js Details<a/></td>
+      <td><a href = "#back-end">Back-End: How to Install?, <a/><a href= "#back-end">Back-End: How to Run?, </a><a href = "#front-end">Front-End: How to Install?, <a/><a href = "#front-end">Front-End: How to Run?, </a><a href = "#app-jsx">Front-End: App.jsx Details<a/></td>
     </tr>
     <tr>
       <td><b>Format</b></td>
-      <td><a href = " ">Back-End: End-Points, <a/><a href = " ">Types of Controller, <a/><a href = " ">Back-End: Project Structure, <a/><a href = " ">Front-End: Project Structure<a/></td>
-      <td><a href = " ">Back-End: End-Points, <a/><a href = " ">Types of Controllers, <a/><a href = " ">Back-End: Project Structure, <a/><a href = " ">Front-End: Project Structure<a/></td>
+      <td><a href = " ">Back-End: End-Points, <a/><a href = " ">Types of Controller, <a/><a href = "#back-end-project-structure">Back-End: Project Structure, <a/><a href = "#front-end-project-structure">Front-End: Project Structure<a/></td>
+      <td><a href = " ">Back-End: End-Points, <a/><a href = " ">Types of Controllers, <a/><a href = "#back-end-project-structure">Back-End: Project Structure, <a/><a href = "#front-end-project-structure">Front-End: Project Structure<a/></td>
       <td><a href = " ">Back-End: End-Points, <a/><a href = " "><a/></td>
-      <td><a href = " ">Back-End: End-Points, <a/><a href = " ">Types of Controllers, <a/><a href = " ">Back-End: Project Structure, <a/><a href = " ">Front-End: Project Structure<a/></td>
+      <td><a href = " ">Back-End: End-Points, <a/><a href = " ">Types of Controllers, <a/><a href = "#back-end-project-structure">Back-End: Project Structure, <a/><a href = "#front-end-project-structure">Front-End: Project Structure<a/></td>
     </tr>
     <tr>
       <td><b>Requirements</b></td>
-      <td><a href = " ">ENV Variable, <a/><a href = " ">Front-End: Dependencies & Versions, <a/><a href = " ">Back-End: Dependencies & Versions, <a/><a href = " ">SocketIO<a/><a href = " ">Back-End: application.properties, <a/><a href = " ">Fron-End: pacakge.json file, <a/><a href = " ">Front-End: npm libraries<a/></td>
-      <td><a href = " ">Application Compatibility: Software/Hardware, <a/><a href = " ">Subscription<a/></td>
-      <td><a href = " ">Application Compatibility: Software/Hardware, <a/><a href = " ">Subscription<a/></td>
-      <td><a href = " ">Technologies: Front-End, Back-End, Database, Cloud, Authentication, Version Control, Servers, <a/><a href = " ">ENV Variable, <a/><a href = " "><a/><a href = " ">Front-End: Dependencies & Versions, <a/><a href = " ">Back-End: Dependencies & Versions, <a/><a href = " ">SocketIO Server, <a/><a href = " ">Back-End: application.properties, <a/><a href = " ">Front-End: pacakge.json file, <a/><a href = " ">Front-End: npm libraries, <a/><a href = " ">Front-End: CSS, Tailwind<a/></td>
+      <td><a href = "#how-to-set-the-path-of-the-environment-variable">ENV Variable, <a/><a href = "#front-end-dependencies">Front-End: Dependencies & Versions, <a/><a href = "#back-end-dependencies">Back-End: Dependencies & Versions, <a/><a href = "#socketio">SocketIO<a/><a href = "#configuration-of-application-properties">Back-End: application.properties, <a/><a href = "#about-package-json">Fron-End: pacakge.json file, <a/><a href = " ">Front-End: npm libraries<a/></td>
+      <td><a href = "#compatibility-software-hardware">Application Compatibility: Software/Hardware, <a/><a href = "#subscription">Subscription<a/></td>
+      <td><a href = "#compatibility-software-hardware">Application Compatibility: Software/Hardware, <a/><a href = "#subscription">Subscription<a/></td>
+      <td><a href = "#technologies">Technologies: Front-End, Back-End, Database, Cloud, Authentication, Version Control, Servers, <a/><a href = "#how-to-set-the-path-of-the-environment-variable">ENV Variable, <a/><a href = " "><a/><a href = "#front-end-dependencies">Front-End: Dependencies & Versions, <a/><a href = "#back-end-dependencies">Back-End: Dependencies & Versions, <a/><a href = "#socketio">SocketIO Server, <a/><a href = "#configuration-of-application-properties">Back-End: application.properties, <a/><a href = "#about-package-json">Front-End: pacakge.json file, <a/><a href = " ">Front-End: npm libraries, <a/><a href = "#css-tailwind-bootstrap">Front-End: CSS, Tailwind<a/></td>
     </tr>
   </tbody>
 </Table>
