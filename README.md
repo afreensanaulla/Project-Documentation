@@ -24,16 +24,16 @@
     <tr>
       <td><b>Target Audience</b></td>
       <td><a href = "#back-end-code-flow">Back-End: Code Structure, <a/><a href = "#front-end-code-flow">Front-End: Code Structure<a/></td>
-      <td><a href = "#back-end-code-flow">Back-End: Code Structure, <a/></td>
+      <td><a href = "#back-end-code-flow">Back-End: Code Structure<a/></td>
       <td><a href = " "><a/></td>
       <td><a href = "#back-end-code-flow">Back-End: Code Structure, <a/><a href = "#front-end-code-flow">Front-End: Code Structure, <a/><a href = " "><a/><a href = "#api-fetching-in-react">Front-End: API CRUD Operation, <a/><a href = "#socketio">SocketIO, <a/><a href = " ">Back-End: CRUD Operation, <a/><a href = " ">Front-End: CRUD Operation<a/></td>
     </tr>
     <tr>
       <td><b>Level of Details</b></td>
       <td><a href = " ">Code Convention<a/></td>
-      <td><a href = "#development-workflow-fullstack">Front-End: Development workflow, <a/><a href = "#development-workflow-fullstack">Back-End: Development workflow<a/></td>
-      <td><a href = " ">Back-End: Flow Chart, <a/><a href = " ">Front-End: Logic Flow Chart, <a/><a href = " ">Back-End: Logic Flow Chart, <a/><a href = "#development-workflow-fullstack">Front-End: Development workflow<a/></td>
-      <td><a href = " ">Code Convention, <a/><a href = "#development-workflow-fullstack">Back-End: Development workflow<a/></td>
+      <td><a href = "#development-workflow-full-stack">Front-End: Development workflow, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow<a/></td>
+      <td><a href = " ">Back-End: Flow Chart, <a/><a href = " ">Front-End: Logic Flow Chart, <a/><a href = " ">Back-End: Logic Flow Chart, <a/><a href = "#development-workflow-full-stack">Front-End: Development workflow<a/></td>
+      <td><a href = " ">Code Convention, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow<a/></td>
     </tr>
     <tr>
       <td><b>Focus Area</b></td>
