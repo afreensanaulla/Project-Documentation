@@ -59,8 +59,8 @@
     <tr>
       <td><b>Requirements</b></td>
       <td><a href = "#how-to-set-the-path-of-the-environment-variable">ENV Variable, <a/><a href = "#front-end-dependencies">Front-End: Dependencies & Versions, <a/><a href = "#back-end-dependencies">Back-End: Dependencies & Versions, <a/><a href = "#socketio">SocketIO<a/><a href = "#configuration-of-application-dot-properties">Back-End: application.properties, <a/><a href = "#about-package-dot-json">Fron-End: pacakge.json file, <a/><a href = " ">Front-End: npm libraries<a/></td>
-      <td><a href = "#software-hardware-compatibility">Application Compatibility: Software/Hardware, <a/><a href = "#subscription">Subscription<a/></td>
-      <td><a href = "#software-hardware-compatibility">Application Compatibility: Software/Hardware, <a/><a href = "#subscription">Subscription<a/></td>
+      <td><a href = "#software-and-hardware-compatibility">Application Compatibility: Software/Hardware, <a/><a href = "#subscription">Subscription<a/></td>
+      <td><a href = "#software-and-hardware-compatibility">Application Compatibility: Software/Hardware, <a/><a href = "#subscription">Subscription<a/></td>
       <td><a href = "#technologies">Technologies: Front-End, Back-End, Database, Cloud, Authentication, Version Control, Servers, <a/><a href = "#how-to-set-the-path-of-the-environment-variable">ENV Variable, <a/><a href = " "><a/><a href = "#front-end-dependencies">Front-End: Dependencies & Versions, <a/><a href = "#back-end-dependencies">Back-End: Dependencies & Versions, <a/><a href = "#socketio">SocketIO Server, <a/><a href = "#configuration-of-application-dot-properties">Back-End: application.properties, <a/><a href = "#about-package-dot-json">Front-End: pacakge.json file, <a/><a href = " ">Front-End: npm libraries, <a/><a href = "#css-tailwind-bootstrap">Front-End: CSS, Tailwind<a/></td>
     </tr>
   </tbody>
