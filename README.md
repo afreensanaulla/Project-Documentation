@@ -24,7 +24,7 @@
     <tr>
       <td><b>Target Audience</b></td>
       <td><a href = "#back-end-code-flow">Back-End: Code Structure, <a/><a href = "#front-end-code-flow">Front-End: Code Structure<a/></td>
-      <td><a href = " #back-end-code-flow">Back-End: Code Structure, <a/></td>
+      <td><a href = "#back-end-code-flow">Back-End: Code Structure, <a/></td>
       <td><a href = " "><a/></td>
       <td><a href = "#back-end-code-flow">Back-End: Code Structure, <a/><a href = "#front-end-code-flow">Front-End: Code Structure, <a/><a href = " "><a/><a href = "#api-fetching-in-react">Front-End: API CRUD Operation, <a/><a href = "#socketio">SocketIO, <a/><a href = " ">Back-End: CRUD Operation, <a/><a href = " ">Front-End: CRUD Operation<a/></td>
     </tr>
@@ -4200,7 +4200,7 @@ SELECT * FROM employee_department_view;
 
 ---
 
-### **Compatibility: Software/Hardware**
+### Software and Hardware Compatibility 
 
 #### Application Compatibility
 
