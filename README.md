@@ -47,7 +47,7 @@
       <td><a href = "#app-jsx">Front-End: App.jsx Details<a/></td>
       <td><a href = " "><a/></td>
       <td><a href = " "><a/></td>
-      <td><a href = "#back-end">Back-End: How to Install?, <a/><a href= "#back-end">Back-End: How to Run?, </a><a href = "#front-end">Front-End: How to Install?, <a/><a href = "#front-end">Front-End: How to Run?, </a><a href = "#app-jsx">Front-End: App.jsx Details<a/></td>
+      <td><a href = "#back-end">Back-End: How to Install?, <a/><a href= "#back-end">Back-End: How to Run?, </a><a href = "#front-end">Front-End: How to Install?, <a/><a href = "#front-end">Front-End: How to Run?, </a><a href = "#details-about-app-dot-jsx">Front-End: App.jsx Details<a/></td>
     </tr>
     <tr>
       <td><b>Format</b></td>
@@ -58,10 +58,10 @@
     </tr>
     <tr>
       <td><b>Requirements</b></td>
-      <td><a href = "#how-to-set-the-path-of-the-environment-variable">ENV Variable, <a/><a href = "#front-end-dependencies">Front-End: Dependencies & Versions, <a/><a href = "#back-end-dependencies">Back-End: Dependencies & Versions, <a/><a href = "#socketio">SocketIO<a/><a href = "#configuration-of-application-properties">Back-End: application.properties, <a/><a href = "#about-package-json">Fron-End: pacakge.json file, <a/><a href = " ">Front-End: npm libraries<a/></td>
-      <td><a href = "#compatibility-software-hardware">Application Compatibility: Software/Hardware, <a/><a href = "#subscription">Subscription<a/></td>
-      <td><a href = "#compatibility-software-hardware">Application Compatibility: Software/Hardware, <a/><a href = "#subscription">Subscription<a/></td>
-      <td><a href = "#technologies">Technologies: Front-End, Back-End, Database, Cloud, Authentication, Version Control, Servers, <a/><a href = "#how-to-set-the-path-of-the-environment-variable">ENV Variable, <a/><a href = " "><a/><a href = "#front-end-dependencies">Front-End: Dependencies & Versions, <a/><a href = "#back-end-dependencies">Back-End: Dependencies & Versions, <a/><a href = "#socketio">SocketIO Server, <a/><a href = "#configuration-of-application-properties">Back-End: application.properties, <a/><a href = "#about-package-json">Front-End: pacakge.json file, <a/><a href = " ">Front-End: npm libraries, <a/><a href = "#css-tailwind-bootstrap">Front-End: CSS, Tailwind<a/></td>
+      <td><a href = "#how-to-set-the-path-of-the-environment-variable">ENV Variable, <a/><a href = "#front-end-dependencies">Front-End: Dependencies & Versions, <a/><a href = "#back-end-dependencies">Back-End: Dependencies & Versions, <a/><a href = "#socketio">SocketIO<a/><a href = "#configuration-of-application-dot-properties">Back-End: application.properties, <a/><a href = "#about-package-dot-json">Fron-End: pacakge.json file, <a/><a href = " ">Front-End: npm libraries<a/></td>
+      <td><a href = "#software-hardware-compatibility">Application Compatibility: Software/Hardware, <a/><a href = "#subscription">Subscription<a/></td>
+      <td><a href = "#software-hardware-compatibility">Application Compatibility: Software/Hardware, <a/><a href = "#subscription">Subscription<a/></td>
+      <td><a href = "#technologies">Technologies: Front-End, Back-End, Database, Cloud, Authentication, Version Control, Servers, <a/><a href = "#how-to-set-the-path-of-the-environment-variable">ENV Variable, <a/><a href = " "><a/><a href = "#front-end-dependencies">Front-End: Dependencies & Versions, <a/><a href = "#back-end-dependencies">Back-End: Dependencies & Versions, <a/><a href = "#socketio">SocketIO Server, <a/><a href = "#configuration-of-application-dot-properties">Back-End: application.properties, <a/><a href = "#about-package-dot-json">Front-End: pacakge.json file, <a/><a href = " ">Front-End: npm libraries, <a/><a href = "#css-tailwind-bootstrap">Front-End: CSS, Tailwind<a/></td>
     </tr>
   </tbody>
 </Table>
@@ -975,7 +975,7 @@ npm install
 
 ---
 
-### About `package.json`:
+### About package dot json:
 
 A `package.json` file is a fundamental component in Node.js projects. It serves as a metadata file for the project and contains important information about the project, including dependencies, scripts, and other configurations.
 
@@ -1033,7 +1033,7 @@ This command launches the development server, which watches for changes to your 
 
 ---
 
-### CSS - Tailwind, Bootstrap
+### CSS-Tailwind and Bootstrap
 
 #### 7.1 Tailwind CSS
 <a href="https://tailwindcss.com/" target="_blank" >Tailwind</a> CSS offers a utility-first approach to styling, which can greatly speed up the development process. It allows you to apply styles directly in your JSX, reducing the need to switch between CSS and JavaScript files.
@@ -1125,7 +1125,7 @@ export default App;
 
 ---
 
-### App.jsx 
+### Details about App dot jsx 
 
 In a React application, `App.jsx` is a central component file that typically serves as the entry point for rendering the main application. It acts as the root component of your React app and often contains the core structure and layout of the application.
 
@@ -2436,7 +2436,7 @@ This setup demonstrates how to use **Socket.IO** for real-time communication bet
 
 ---
 
-### 4. Configuration of application.properties
+### Configuration of application dot properties
 
 #### 3.1. what is application.properties?
 In Spring Boot, `application.properties` is a configuration file that allows you to set various properties to customize the behavior of the application. It's the default file used to store configuration settings for different components of a Spring Boot application, such as the server, database, logging, security, and more.
