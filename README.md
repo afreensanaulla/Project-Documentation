@@ -30,14 +30,14 @@
     </tr>
     <tr>
       <td><b>Level of Details</b></td>
-      <td><a href = " ">Code Convention<a/><a href = "#database">Database<a/><a href = "#testing-reports"><a/></td>
+      <td><a href = "#best-practices">Code Convention<a/><a href = "#database">Database<a/><a href = "#testing-reports"><a/></td>
       <td><a href = "#development-workflow-full-stack">Front-End: Development workflow, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow<a/></td>
       <td><a href = " ">Back-End: Flow Chart, <a/><a href = " ">Front-End: Logic Flow Chart, <a/><a href = " ">Back-End: Logic Flow Chart, <a/><a href = "#development-workflow-full-stack">Front-End: Development workflow<a/></td>
-      <td><a href = " ">Code Convention, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow<a/><a href = "#database">Database<a/><a href = "#testing-reports"><a/></td>
+      <td><a href = "#best-practices">Code Convention, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow<a/><a href = "#database">Database<a/><a href = "#testing-reports"><a/></td>
     </tr>
     <tr>
       <td><b>Focus Area</b></td>
-      <td><a href = " ">Error Handling<a/></td>
+      <td><a href = "#error-handling">Error Handling<a/></td>
       <td><a href = " "><a/></td>
       <td><a href = " "><a/></td>
       <td><a href = "#error-handling">Error Handling<a/></td>
