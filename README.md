@@ -1,6 +1,10 @@
 <h1><a href="http://rg.157careers.in/" target="_blank"> Recruiter's Gear Documentation</a></h1>
 
 
+ #### **Note:** While third party links in this application may open in the same tab by default, users can easily open them in a new tab by using the following keyboard shortcuts:
+       - **Windows/Linux:** Hold the `CTRL` key and click the link.
+       - **MacOS:** Hold the `CMD` key and click the link.
+       These shortcuts allow users to open links in a new tab, providing greater flexibility in navigating the application.
 
   
 <Table>
@@ -2433,6 +2437,8 @@ npm run dev
 #### **Conclusion**
 
 This setup demonstrates how to use **Socket.IO** for real-time communication between a **React frontend** and a **Spring Boot backend**. By combining the power of **Socket.IO** for event-driven, bi-directional communication with **Spring Boot** and **ReactJS**, you can easily build interactive real-time web applications.
+
+#### **Note**: The backend API and SocketIO operate independently and do not rely on each other.
 
 ---
 
