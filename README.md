@@ -34,10 +34,10 @@
     </tr>
     <tr>
       <td><b>Level of Details</b></td>
-      <td><a href = "#best-practices">Code Convention, <a/><a href = "#database">Database, <a/><a href = "#testing-reports">Testing Reports<a/></td>
-      <td><a href = "#development-workflow-full-stack">Front-End: Development workflow, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow<a/></td>
+      <td><a href = "#best-practices">Code Convention, <a/><a href = "#database">Database, <a/><a href = "#testing-reports">Testing Reports, <a/></td>
+      <td><a href = "#development-workflow-full-stack">Front-End: Development workflow, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow, <a/><a href = "#deployment">Deployment, <a/><a href = "#deployment-process">Deployment Process<a/></td>
       <td><a href = "#full-stack-development-flowchart">Back-End: Flow Chart, <a/><a href = "#full-stack-development-flowchart">Front-End: Logic Flow Chart, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow, <a/><a href = "#development-workflow-full-stack">Front-End: Development workflow<a/></td>
-      <td><a href = "#best-practices">Code Convention, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow, <a/><a href = "#database">Database, <a/><a href = "#testing-reports">Testing Reports<a/></td>
+      <td><a href = "#best-practices">Code Convention, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow, <a/><a href = "#database">Database, <a/><a href = "#testing-reports">Testing Reports, <a/><a href = "#deployment">Deployment<a/><a href = "#deployment-process">Deployment Process<a/></td>
     </tr>
     <tr>
       <td><b>Focus Area</b></td>
@@ -2747,9 +2747,6 @@ The server removes the employee's data from the system.
 **Request:**  
 It makes a GET request to a URL that includes the `employeeId` of the employee whose details are to be fetched.  
 
-```
-
-```
 #### Fetch Employee Team Details with `useEffect`
 
 This code demonstrates how to use the `useEffect` hook in React to fetch employee team details from a backend API whenever certain state variables (`currentPage` or `pageSize`) change.
@@ -2810,8 +2807,6 @@ The `useEffect` hook takes **two arguments**:
 - **Dependency Changes**: It re-runs whenever a value in the dependency array changes.
 - **No Dependencies**: If the array is empty (`[]`), the effect runs only once, after the component mounts.
 
-```
-```
 #### API Response: Employee Data
 
 This document explains the structure and details of the API response for fetching employee data.
@@ -3545,7 +3540,7 @@ The `deleteEmployee` method allows the deletion of an employee based on their un
 
 ---
 
-#### **Controller Class code: **
+#### **Controller Class code:**
 ```java
 package _7.project1.Controller;
 
@@ -3755,8 +3750,6 @@ public void deleteEmployee(@PathVariable Long empId) {
 }
 
 ```
-Certainly! Here's the explanation in Markdown format:
-
 ---
 
 #### **Purpose:**
@@ -3795,7 +3788,6 @@ public Employee updateEmployee(@PathVariable Long empId, @RequestBody Employee e
 }
 
 ```
-Certainly! Here's the explanation in Markdown format:
 
 ---
 
@@ -3830,8 +3822,6 @@ This endpoint is designed to update an employee’s details by their employee ID
 - In the `addEmployee` method, if a `RuntimeException` occurs while adding the employee, it is caught in the catch block, and a response with `HttpStatus.BAD_REQUEST` (400) is returned. This is basic error handling to inform the client that there was an issue with the request.
 
 ---
-
-Certainly! Below is the **summary of endpoints** and **key points** in markdown format:
 
 ---
 
@@ -3975,7 +3965,7 @@ This project uses **MySQL version 8.4.3**, the latest stable release as of **Oct
 10. **Community and Support**  
     MySQL has a massive developer community and excellent documentation, ensuring that support is readily available for troubleshooting and enhancements.
 
-#### 🔍 How MySQL Excels Compared to Other Databases:
+#### How MySQL Excels Compared to Other Databases:
 
 | Features        | MySQL          | Other Databases       |
 |-----------------|----------------|----------------|
@@ -4050,7 +4040,7 @@ This project uses **MySQL version 8.4.3**, the latest stable release as of **Oct
 - **APIs**: The MySQL database is integrated with **REST APIs**, allowing other systems to interact with the data (e.g., mobile applications, admin dashboards).
 - **Third-party Tools**: The system integrates with reporting tools like **Tableau** and **Power BI** for real-time analytics.
 
-#### 🗃️ **Database Connection Information**
+#### **Database Connection Information**
 
 #### 1) Database Host:
 - **Host**: `localhost` or the IP address of the server hosting the database.
@@ -4636,7 +4626,7 @@ In short, **manual testing** is a critical quality assurance process that ensure
 
 ![WhatsApp Image 2025-01-24 at 2 27 09 PM](https://github.com/user-attachments/assets/0d90a2d2-a8e8-45c3-9519-bc18c0955b6e)
 
-#### **Structure of a Manual Test Case: **
+#### **Structure of a Manual Test Case:**
 
 Test Case ID: A unique identifier for the test case (e.g., TC001). 
 
@@ -5174,14 +5164,14 @@ Let's dive deeper into how to handle errors effectively in ReactJS.
 
 React Error Boundaries are a way to catch JavaScript errors in the component tree and display a fallback UI rather than letting the entire app crash. Error boundaries only catch errors in their child components, **not event handlers**, **asynchronous code**, or **errors thrown in the constructor**.
 
-## How Error Boundaries Work:
+#### How Error Boundaries Work:
 
 Error boundaries are **class components** that implement either or both of the following methods:
 
 - **`getDerivedStateFromError()`**: This static method is used to update the component’s state based on the error that occurred.
 - **`componentDidCatch()`**: This lifecycle method is used to log the error details and to provide additional context about the error.
 
-## Example of an Error Boundary:
+#### Example of an Error Boundary:
 
 ```jsx
 import React, { Component } from 'react';
@@ -5232,7 +5222,7 @@ export default ErrorBoundary;
 
 In React, most asynchronous errors occur when making API calls or performing other async operations (like fetching data). You need to manage these errors gracefully by using `try-catch` blocks within async functions.
 
-### Handling Errors with `fetch()`:
+#### Handling Errors with `fetch()`:
 
 ```jsx
 import React, { useState, useEffect } from 'react';
@@ -5695,11 +5685,11 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
 
 #### This will return a 403 Forbidden response when the user tries to access a resource they are not authorized to.
 
-### 5. Handling Database Errors
+#### 5. Handling Database Errors
 
 Spring Data JPA and other database-related exceptions can be handled using the same approach as application-level errors. For example, a `DataIntegrityViolationException` can be caught and translated into a user-friendly error message.
 
-### Example of Handling Database Errors:
+#### Example of Handling Database Errors:
 
 ```java
 @ExceptionHandler(DataIntegrityViolationException.class)
@@ -5726,7 +5716,7 @@ Error handling in MySQL is crucial to ensure data integrity, application stabili
 
 Here's an overview of how to handle errors in MySQL in different areas:
 
-# Error Handling in Detail for MySQL
+#### Error Handling in Detail for MySQL
 
 Error handling in MySQL is crucial to ensure data integrity, application stability, and proper error reporting. MySQL provides various error codes and mechanisms to handle issues like constraint violations, deadlocks, connection problems, etc. When working with MySQL, the goal is to handle errors gracefully by:
 
@@ -5898,7 +5888,7 @@ COMMIT;
 -- If an error occurs, rollback to ensure data consistency and no partial updates
 ROLLBACK;
 ```
-### 5. Handling Deadlocks
+#### 5. Handling Deadlocks
 
 Deadlocks occur when two or more transactions are blocked, waiting for each other to release locks, resulting in a situation where no transaction can proceed. In highly concurrent environments, deadlocks are a common issue and need to be handled gracefully to ensure that transactions are retried automatically and the system continues to function smoothly.
 
@@ -5958,7 +5948,7 @@ CREATE TABLE employees (
 
 MySQL can sometimes throw errors or degrade in performance if queries are not optimized. Key areas to optimize:
 
-## Common Query Optimization Practices
+#### Common Query Optimization Practices
 
 - **Indexes**: Use appropriate indexes on columns frequently used in `WHERE`, `JOIN`, and `ORDER BY` clauses.
 - **Avoiding N+1 Queries**: Always use `JOIN` instead of multiple separate queries in a loop.
