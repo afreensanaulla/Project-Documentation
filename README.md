@@ -5027,4 +5027,125 @@ Details on how the scan was configured:
 - **Authentication used** (if applicable)
 - **Types of tests performed** (active scan, passive scan, etc.)
 
+---
 
+### Code Convention
+
+#### **Best Coding Practices for ReactJS**
+
+#### 1. Component Design
+- **Small, Reusable Components**: Create small, reusable components to improve maintainability and testability. Each component should ideally do one thing.
+- **Functional Components**: Prefer using functional components with hooks (`useState`, `useEffect`, etc.) over class components.
+- **Avoid Large Components**: If a component becomes too large, break it down into smaller, more manageable ones.
+
+#### 2. State Management
+- **Local State**: Use `useState` for managing local state within a component.
+- **Global State**: For shared state, use Context API for simpler use cases or Redux for more complex state management needs.
+- **Avoid Overusing Redux**: Don't use Redux for simple state management. The Context API or just React's state management may suffice.
+
+#### 3. Performance Optimization
+- **React.memo()**: Use `React.memo()` to prevent unnecessary re-renders of functional components.
+- **Lazy Loading**: Use `React.lazy()` and `Suspense` to load components only when necessary (code splitting).
+- **useMemo and useCallback**: Use these hooks to memoize values and functions, avoiding unnecessary recalculations and re-renders.
+
+#### 4. Error Handling
+- **Error Boundaries**: Use error boundaries to catch JavaScript errors in your component tree and display a fallback UI instead of crashing the whole app.
+- **Proper Async Handling**: Handle asynchronous code (e.g., API calls) with proper error handling, using `try-catch` blocks.
+
+#### 5. Code Organization
+- **Folder Structure**: Organize your code into clear folders for components, hooks, pages, services, and utilities:
+
+    ```bash
+    src/
+      components/
+      pages/
+      services/
+      hooks/
+      utils/
+    ```
+
+- **Separation of Concerns**: Separate business logic from UI components. Place data-fetching and API calls in services or custom hooks.
+
+#### 6. Styling
+- **CSS-in-JS**: Consider using styled-components or Emotion for scoped CSS inside your components.
+- **Avoid Inline Styles**: Minimize inline styles as they may cause re-renders and performance issues.
+
+#### 7. Code Quality
+- **Linting**: Use ESLint to enforce coding standards and maintain consistency across your codebase.
+- **Code Formatting**: Use Prettier for automatic code formatting to keep the codebase clean.
+- **Consistent Naming Conventions**: Use consistent and descriptive naming for variables, functions, and components.
+
+---
+
+#### Best Coding Practices for Spring Boot
+
+#### 1. Project Structure
+- **Layered Architecture**: Follow a layered architecture with clear separation between the controller, service, and repository layers. This improves testability and maintainability.
+    - **Controller Layer**: Handles HTTP requests.
+    - **Service Layer**: Contains business logic.
+    - **Repository Layer**: Manages data access.
+- **DTO (Data Transfer Object)**: Use DTOs for communication between layers, especially for API responses, instead of returning entities directly.
+
+#### 2. Configuration Management
+- **Externalized Configuration**: Store configuration values (e.g., database credentials) in `application.properties` or `application.yml` files, and externalize them for different environments (e.g., development, production).
+- **Profile-based Configuration**: Use Spring Profiles (`@Profile`) to differentiate configurations for different environments.
+
+#### 3. Database and Persistence
+- **Spring Data JPA**: Use Spring Data JPA for data access. Avoid writing custom queries when the built-in methods are sufficient.
+- **Avoid N+1 Query Problem**: Use `@EntityGraph` or fetch join queries to avoid unnecessary database queries.
+- **Pagination**: Use pagination for large datasets to reduce memory consumption and improve performance.
+
+#### 4. Security
+- **Spring Security**: Always secure your APIs using Spring Security. Use JWT or OAuth for stateless authentication in modern web applications.
+- **Role-based Access Control**: Use role-based access control (RBAC) to assign appropriate permissions to users based on their roles.
+- **Principle of Least Privilege**: Restrict access rights to the minimum necessary for the functioning of each user or process.
+
+#### 5. Exception Handling
+- **Global Exception Handling**: Use `@ControllerAdvice` for global exception handling, making it easier to handle errors consistently across the application.
+- **Custom Error Messages**: Provide meaningful error messages in your responses to make it easier for clients to diagnose issues.
+
+#### 6. Performance Optimization
+- **Caching**: Use Spring Cache with providers like Redis or EhCache to cache frequently used data and reduce database load.
+- **Asynchronous Processing**: Use `@Async` for tasks that can run in the background without blocking the main thread (e.g., sending emails, generating reports).
+- **Database Connection Pooling**: Use connection pooling (HikariCP, which is the default in Spring Boot) for efficient database connections.
+
+#### 7. Testing
+- **Unit Tests**: Write unit tests for service and utility methods using JUnit and Mockito.
+- **Integration Tests**: Use `@SpringBootTest` for integration tests to ensure that different layers of the application are working together as expected.
+- **Test Coverage**: Aim for high test coverage, but avoid testing trivial code. Use tools like JaCoCo to track test coverage.
+
+---
+
+#### Best Coding Practices for MySQL
+
+### 1. Database Design
+- **Normalization**: Follow the rules of database normalization (up to 3NF) to eliminate data redundancy and ensure data integrity.
+- **Use Primary Keys**: Always use primary keys to uniquely identify records in a table.
+- **Indexing**: Create indexes on frequently queried columns (e.g., foreign keys, columns used in WHERE clauses) to improve query performance.
+
+### 2. Query Optimization
+- **Avoid SELECT ***: Instead of using `SELECT *`, explicitly list the columns you need to avoid unnecessary data retrieval.
+- **Use Joins Wisely**: Use `INNER JOIN` and `LEFT JOIN` appropriately. Be mindful of the performance impact of complex joins.
+- **Limit Query Results**: Always limit the number of rows returned using `LIMIT` or pagination for queries that fetch large datasets.
+- **Avoid N+1 Queries**: Use `JOIN` or `IN` to fetch related data in a single query rather than multiple separate queries.
+
+### 3. Transaction Management
+- **ACID Compliance**: Ensure that your transactions follow the ACID properties (Atomicity, Consistency, Isolation, Durability) to maintain database integrity.
+- **Use Proper Isolation Levels**: Set appropriate isolation levels for transactions based on business requirements to avoid issues like dirty reads and lost updates.
+- **Commit and Rollback**: Always use proper commit and rollback handling to ensure that database operations are either fully completed or fully reverted in case of an error.
+
+### 4. Data Integrity
+- **Foreign Keys**: Use foreign keys to enforce relationships between tables and maintain referential integrity.
+- **Avoid Storing Business Logic in Database**: Avoid using triggers and stored procedures for business logic; it is better to handle this logic in the application layer.
+
+### 5. Database Backup and Recovery
+- **Regular Backups**: Schedule regular backups (daily, weekly) to ensure that data is recoverable in case of system failure.
+- **Use Replication for High Availability**: Set up master-slave replication for high availability and disaster recovery purposes.
+
+### 6. Security
+- **Use Prepared Statements**: Always use prepared statements or ORM frameworks like Hibernate to prevent SQL injection attacks.
+- **Limit Database Access**: Restrict database access to authorized applications and users only, and use the principle of least privilege.
+
+### 7. Database Monitoring
+- **Slow Query Log**: Enable MySQL's slow query log to identify queries that take a long time to execute. Optimize these queries.
+- **Database Monitoring Tools**: Use tools like Percona Monitoring and Management (PMM) or MySQL Enterprise Monitor for real-time database performance monitoring.
