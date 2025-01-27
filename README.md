@@ -134,7 +134,7 @@
 - **6.2.3. Distributed Nature**: Git's distributed model enables every developer to have their own local copy of the repository, which improves speed and offline work.
 
 
-## Topic: How to Install / Run?
+### Topic: How to Install / Run?
 
 ### Front-End:
 
@@ -327,7 +327,7 @@ This command launches the development server, which watches for changes to your 
 
 ### Back-End:
 
-## JDK
+### JDK
 
 #### 1.1: What is JDK?
 
@@ -708,7 +708,7 @@ Spring Initializr also supports generating projects with specific versions of Sp
 
 ---
 
-## **Project Structure**
+### **Project Structure**
 
 ### **Front-End Project Structure:**
 
@@ -2455,7 +2455,7 @@ You can use `application.properties` to configure your Spring Boot application i
 
 ---
 
-##How has the application.properties file been configured in the application?
+#### How has the application.properties file been configured in the application?
 ```java
 spring.application.name=157-project1
 server.port=3000
@@ -2806,14 +2806,13 @@ The `useEffect` hook takes **two arguments**:
 
 ```
 ```
-# API Response: Employee Data
+#### API Response: Employee Data
 
 This document explains the structure and details of the API response for fetching employee data.
 
 ```
-```
 
-## Sample JSON Response
+#### Sample JSON Response
 
 ```json
 {
@@ -3754,7 +3753,7 @@ Certainly! Here's the explanation in Markdown format:
 
 ---
 
-## **Purpose:**
+#### **Purpose:**
 This endpoint is designed to delete an employee from the database using their employee ID.
 
 #### **@DeleteMapping("/{empId}")**:
@@ -3830,7 +3829,7 @@ Certainly! Below is the **summary of endpoints** and **key points** in markdown 
 
 ---
 
-## **Summary of Endpoints**
+#### **Summary of Endpoints**
 
 #### **1. GET /api/employee/{empId}** - Get an Employee by ID
 
@@ -4117,7 +4116,8 @@ public class DatabaseConnectionTest {
 }
 ```
 
-### Data Types and Constraints Used in MySQL:
+#### Data Types and Constraints Used in MySQL:
+
 ####  Tabular Format (Recommended):
 To provide a clear overview of the database schema, a tabular format is used to detail the columns, their data types, constraints, and descriptions for each table in the database. This structure helps developers quickly understand the database design and relationships between tables.
 
