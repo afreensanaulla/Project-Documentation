@@ -30,17 +30,17 @@
     </tr>
     <tr>
       <td><b>Level of Details</b></td>
-      <td><a href = " ">Code Convention<a/></td>
+      <td><a href = " ">Code Convention<a/><a href = "#database">Database<a/><a href = "#testing-reports"><a/></td>
       <td><a href = "#development-workflow-full-stack">Front-End: Development workflow, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow<a/></td>
       <td><a href = " ">Back-End: Flow Chart, <a/><a href = " ">Front-End: Logic Flow Chart, <a/><a href = " ">Back-End: Logic Flow Chart, <a/><a href = "#development-workflow-full-stack">Front-End: Development workflow<a/></td>
-      <td><a href = " ">Code Convention, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow<a/></td>
+      <td><a href = " ">Code Convention, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow<a/><a href = "#database">Database<a/><a href = "#testing-reports"><a/></td>
     </tr>
     <tr>
       <td><b>Focus Area</b></td>
       <td><a href = " ">Error Handling<a/></td>
       <td><a href = " "><a/></td>
       <td><a href = " "><a/></td>
-      <td><a href = " ">Error Handling<a/></td>
+      <td><a href = "#error-handling">Error Handling<a/></td>
     </tr>
     <tr>
       <td><b>Examples</b></td>
@@ -51,10 +51,10 @@
     </tr>
     <tr>
       <td><b>Format</b></td>
-      <td><a href = " ">Back-End: End-Points, <a/><a href = " ">Types of Controller, <a/><a href = "#back-end-project-structure">Back-End: Project Structure, <a/><a href = "#front-end-project-structure">Front-End: Project Structure<a/></td>
-      <td><a href = " ">Back-End: End-Points, <a/><a href = " ">Types of Controllers, <a/><a href = "#back-end-project-structure">Back-End: Project Structure, <a/><a href = "#front-end-project-structure">Front-End: Project Structure<a/></td>
-      <td><a href = " ">Back-End: End-Points, <a/><a href = " "><a/></td>
-      <td><a href = " ">Back-End: End-Points, <a/><a href = " ">Types of Controllers, <a/><a href = "#back-end-project-structure">Back-End: Project Structure, <a/><a href = "#front-end-project-structure">Front-End: Project Structure<a/></td>
+      <td><a href = "#understanding-endpoints">Back-End: End-Points, <a/><a href = " ">Types of Controller, <a/><a href = "#back-end-project-structure">Back-End: Project Structure, <a/><a href = "#front-end-project-structure">Front-End: Project Structure<a/></td>
+      <td><a href = "#understanding-endpoints">Back-End: End-Points, <a/><a href = " ">Types of Controllers, <a/><a href = "#back-end-project-structure">Back-End: Project Structure, <a/><a href = "#front-end-project-structure">Front-End: Project Structure<a/></td>
+      <td><a href = "#understanding-endpoints">Back-End: End-Points, <a/><a href = " "><a/></td>
+      <td><a href = "#understanding-endpoints">Back-End: End-Points, <a/><a href = " ">Types of Controllers, <a/><a href = "#back-end-project-structure">Back-End: Project Structure, <a/><a href = "#front-end-project-structure">Front-End: Project Structure<a/></td>
     </tr>
     <tr>
       <td><b>Requirements</b></td>
