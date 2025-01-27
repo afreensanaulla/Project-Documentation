@@ -4578,6 +4578,10 @@ Our subscription-based ATS offers flexible plans to suit businesses of all sizes
 
 ![Regruiter's Gear](https://github.com/user-attachments/assets/a942fdef-8940-47a2-84b5-9d977ab621ff)
 
+#### Super User's flowchart:
+
+![SUPER USER](https://github.com/user-attachments/assets/878cc6bd-0745-45f9-8fa5-b15960a31d49)
+
 #### Manager's flowchart:
 
 ![Manager](https://github.com/user-attachments/assets/90046df8-5d83-4e89-b0ed-6b2a1df99610)
