@@ -33,7 +33,7 @@
       <td><a href = "#best-practices">Code Convention, <a/><a href = "#database">Database, <a/><a href = "#testing-reports">Testing Reports<a/></td>
       <td><a href = "#development-workflow-full-stack">Front-End: Development workflow, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow<a/></td>
       <td><a href = "#full-stack-development-flowchart">Back-End: Flow Chart, <a/><a href = "#full-stack-development-flowchart">Front-End: Logic Flow Chart, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow, <a/><a href = "#development-workflow-full-stack">Front-End: Development workflow<a/></td>
-      <td><a href = "#best-practices">Code Convention, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow<a/><a href = "#database">Database<a/><a href = "#testing-reports">Testing Reports<a/></td>
+      <td><a href = "#best-practices">Code Convention, <a/><a href = "#development-workflow-full-stack">Back-End: Development workflow, <a/><a href = "#database">Database, <a/><a href = "#testing-reports">Testing Reports<a/></td>
     </tr>
     <tr>
       <td><b>Focus Area</b></td>
