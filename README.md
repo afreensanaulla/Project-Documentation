@@ -6143,3 +6143,853 @@ To ensure backward compatibility, it's important to version your APIs. This allo
 Deep nesting of resources (e.g., `/api/users/{id}/posts/{id}/comments/{id}`) can lead to complex and hard-to-read URLs. Instead, use pagination and filtering mechanisms for better scalability.
 
 ---
+
+### Deployment
+
+#### What is NGINX?
+
+NGINX (pronounced "Engine-X") is an open-source, high-performance web server and reverse proxy. It also acts as a load balancer, HTTP cache, and supports SSL/TLS termination. NGINX is known for its scalability, low resource usage, and ability to handle high volumes of traffic, making it a go-to solution for serving static content, distributing load, and handling real-time applications.
+
+#### Key Features of NGINX
+
+- **Web Server**: NGINX serves static content (HTML, images, CSS, JavaScript) at high speed. It's optimized for delivering static files with minimal resource consumption.
+- **Reverse Proxy**: It routes incoming client requests to one or more backend servers. This is commonly used to balance the load across multiple servers, improve security, and cache content.
+- **Load Balancer**: NGINX distributes traffic to multiple servers using various algorithms like round-robin, least connections, IP hash, etc.
+- **HTTP Cache**: It can cache responses from backend servers, reducing the load on upstream services and improving response times.
+- **SSL/TLS Termination**: NGINX can handle encrypted HTTPS traffic, decrypting it and forwarding unencrypted traffic to the backend. This reduces the CPU load on backend servers.
+- **Asynchronous & Event-Driven Architecture**: Unlike traditional web servers (e.g., Apache) that use a process or thread per request, NGINX uses a non-blocking, event-driven model, allowing it to handle thousands of simultaneous connections with minimal resources.
+
+#### Why Use NGINX?
+
+- **Performance**: NGINX is highly efficient, especially for static content and as a reverse proxy. Its event-driven architecture allows it to handle large numbers of simultaneous connections with low resource consumption.
+- **Scalability**: It can scale easily, handling millions of concurrent connections and distributing load across backend servers. This makes it ideal for high-traffic websites and applications.
+- **Flexibility**: NGINX is incredibly flexible, capable of acting as a reverse proxy, load balancer, web server, and more. It can be integrated into complex architectures (e.g., microservices, Kubernetes).
+- **Reliability**: Known for being robust and stable, NGINX has been proven to work reliably in some of the busiest sites in the world (e.g., Netflix, GitHub, Airbnb).
+- **Security**: NGINX provides strong security features such as rate limiting, access controls, and SSL/TLS termination, allowing you to protect your backend services from attacks like DDoS and unauthorized access.
+
+#### NGINX vs Other Competitors
+
+#### NGINX vs Apache HTTP Server
+
+- **Architecture**: NGINX uses an event-driven, non-blocking model, while Apache uses a thread- or process-based approach. NGINX is more efficient in handling many simultaneous connections.
+- **Performance**: NGINX performs better in handling static content and high traffic due to its asynchronous architecture. Apache, being process-based, has higher overhead for each connection.
+- **Dynamic Content Handling**: Apache excels at serving dynamic content (via mod_php, mod_perl, etc.), while NGINX relies on backend services (like PHP-FPM or a Node.js server) for dynamic content. However, NGINX is highly effective at forwarding dynamic requests to these services.
+- **Configuration**: Apache's `.htaccess` system allows for per-directory configurations, which can be more flexible but also slower. NGINX has centralized configuration files that are often simpler and faster but less flexible in some situations.
+- **Resource Usage**: NGINX is more efficient in terms of CPU and memory usage when handling many simultaneous requests.
+
+#### NGINX vs LiteSpeed
+
+- **Speed**: LiteSpeed claims to outperform NGINX in terms of serving dynamic content (e.g., PHP), while NGINX is faster with static content.
+- **Caching**: LiteSpeed has built-in caching mechanisms (like LSCache) that work out of the box for dynamic content. NGINX's caching can be configured manually or with additional modules.
+- **Cost**: NGINX is open-source and free, while LiteSpeed offers both a free and paid version (with more advanced features in the paid version).
+- **Ease of Use**: LiteSpeed offers a more user-friendly control panel for managing configurations, whereas NGINX requires manual editing of configuration files.
+
+#### NGINX vs Caddy
+
+- **SSL/TLS**: Caddy is known for automatically handling SSL certificates via Let's Encrypt, while NGINX requires manual configuration for SSL certificates.
+- **Ease of Use**: Caddy’s configuration is simpler and uses a declarative style (Caddyfile), whereas NGINX uses a more complex configuration syntax (nginx.conf).
+- **Performance**: NGINX tends to outperform Caddy in handling large-scale, high-traffic websites due to its event-driven architecture.
+
+### **NGINX’s Dynamically Write Feature**
+
+In NGINX, the **dynamically write feature** primarily refers to its ability to dynamically adjust, configure, and serve content based on **runtime changes** or **dynamic configurations**. This flexibility allows NGINX to adapt to varying traffic conditions, add or remove modules, change configurations, and more—all without requiring a complete restart. 
+
+NGINX’s dynamic features are enabled mainly by its **modular architecture** and **configuration flexibility**, which allows for on-the-fly changes to how it handles requests. Let's explore this in detail.
+
+---
+
+#### **1. Dynamic Module Loading**
+
+One of NGINX's most powerful dynamic features is the ability to **dynamically load modules**. 
+
+When compiling NGINX, you can build it with support for **dynamic modules**, which means that you can load or unload modules as needed without having to restart the NGINX server. This feature provides significant flexibility, especially in production environments, where you may need to add new functionality or remove unnecessary modules without causing downtime.
+
+#### **How It Works**
+- **Dynamic modules** are compiled separately from the core NGINX code.
+- These modules are loaded during runtime via the `load_module` directive in the NGINX configuration file (`nginx.conf`).
+  
+Example:
+```nginx
+# Dynamically load the ngx_http_rewrite_module
+load_module modules/ngx_http_rewrite_module.so;
+```
+
+Once a dynamic module is loaded, its functionality becomes available to NGINX without needing to restart the server. This is especially useful for adding features like SSL/TLS support, new logging formats, or caching strategies without interrupting service.
+
+#### **Benefits of Dynamic Module Loading**:
+- **No Downtime**: You don’t need to restart NGINX when adding or removing modules, allowing for zero-downtime configuration updates.
+- **Flexibility**: You can enable or disable modules as needed without recompiling NGINX. This is especially useful in environments where the needs change frequently.
+- **Easier Upgrades**: When upgrading NGINX, new modules can be loaded dynamically, while old modules can be removed or replaced.
+
+---
+
+#### **2. Dynamic Load Balancing**
+
+NGINX can dynamically adjust its load balancing strategy based on **server health** or **traffic conditions**. For example, NGINX can modify how it distributes traffic across upstream servers without requiring a restart.
+
+#### **How It Works**
+- NGINX uses an `upstream` block to define backend servers and can dynamically modify the traffic distribution among them based on specific criteria like the number of active connections, server health, or response time.
+- The `server` directive in the `upstream` block can be used to mark servers as `down` or `backup` to dynamically remove or add them from the load balancing pool.
+
+Example:
+```nginx
+upstream backend {
+    server backend1.example.com;
+    server backend2.example.com backup;
+}
+
+server {
+    location / {
+        proxy_pass http://backend;
+    }
+}
+```
+
+In this example, `backend2.example.com` is marked as a **backup** server, which only handles requests if `backend1.example.com` goes down.
+
+#### **Dynamic Server Removal and Addition**
+- NGINX can detect if a backend server is down (using health checks or failure thresholds) and automatically remove it from the load balancing pool.
+- New servers can be added dynamically by simply modifying the NGINX configuration and reloading NGINX without a restart.
+
+Example of removing a server dynamically:
+```nginx
+upstream backend {
+    server backend1.example.com;
+    # Remove backend2 dynamically (no restart needed)
+    server backend3.example.com;
+}
+```
+
+---
+
+#### **3. Dynamic Configuration Changes**
+
+NGINX allows **dynamic changes to configurations** at runtime, which means that you can modify certain directives without needing to restart the entire service. This is essential in production environments, where uptime is critical.
+
+#### **How It Works**
+- NGINX has a **signal mechanism** that allows for a **graceful reload** of configurations. When you make changes to the configuration file (e.g., adding a new `server` block, changing the port, etc.), you can reload NGINX with minimal impact.
+  
+Example:
+```bash
+# Reload NGINX to apply changes without downtime
+sudo nginx -s reload
+```
+
+This reloads the NGINX configuration by sending a signal to the running process, causing it to apply changes **without fully restarting** the server. The current worker processes will continue to handle ongoing connections while the new worker processes are spawned with the updated configuration.
+
+#### **Dynamic Features with Config Changes**:
+- **Adding Server Blocks**: You can dynamically add new virtual hosts (`server` blocks) for new websites or services.
+- **Changing Resource Limits**: You can modify worker processes, connection limits, or buffer sizes dynamically.
+- **Changing Load Balancing Algorithms**: If you’re using a round-robin or least-connections strategy for load balancing, you can adjust it dynamically without service interruption.
+  
+Example of changing worker settings dynamically:
+```nginx
+worker_processes 4;   # Change the number of worker processes to 4
+worker_connections 1024;  # Adjust the number of connections per worker
+```
+
+By reloading the configuration (`nginx -s reload`), NGINX will adopt the new settings without dropping active connections.
+
+---
+
+#### **4. Dynamic Content Handling**
+
+NGINX itself is a **high-performance web server** primarily designed for static content, but it can also dynamically handle content by **proxying requests** to backend servers or by using **external modules** (such as PHP-FPM or uWSGI) to process dynamic content.
+
+#### **How It Works**:
+- NGINX can **proxy dynamic requests** (e.g., PHP scripts or API calls) to backend servers that handle the logic and data processing, while NGINX handles traffic routing, load balancing, and caching.
+  
+Example for **PHP-FPM**:
+```nginx
+server {
+    location ~ \.php$ {
+        fastcgi_pass 127.0.0.1:9000;  # Send the request to PHP-FPM
+        fastcgi_param SCRIPT_FILENAME /var/www/html$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}
+```
+
+- You can also use **reverse proxy** features to **dynamically route** requests to different services based on URL patterns, headers, or even load balancing strategies.
+  
+Example of dynamic URL routing:
+```nginx
+location /api/ {
+    proxy_pass http://api_backend;
+}
+
+location /static/ {
+    root /var/www/static;
+}
+```
+
+This dynamically serves **static content** directly from the file system, while proxying API requests to a backend service.
+
+---
+
+#### **5. Dynamic Logging**
+
+Another dynamic feature of NGINX is its ability to adjust **logging behavior** at runtime. While static configuration settings define where logs go, you can dynamically change things like **log format**, **log rotation**, or **log verbosity** without restarting NGINX.
+
+#### **How It Works**
+- You can modify logging levels (e.g., `error_log` and `access_log`) or rotate logs dynamically by adjusting log file paths and configuration.
+
+Example:
+```nginx
+# Change error log level dynamically
+error_log /var/log/nginx/error.log warn;
+```
+
+To apply the new logging settings, you can reload the NGINX configuration:
+```bash
+sudo nginx -s reload
+```
+
+---
+
+#### **6. Dynamically Adjusting Resource Limits**
+
+NGINX allows dynamic changes to server resource management to improve performance, especially under high loads. This includes adjusting worker processes, connection limits, buffer sizes, and more.
+
+#### **How It Works**:
+- For example, you can increase the **worker connections** or **worker processes** dynamically based on traffic levels without restarting NGINX.
+
+Example:
+```nginx
+worker_processes auto;      # Automatically adjust number of worker processes
+worker_connections 1024;     # Adjust number of allowed connections per worker
+```
+
+After making changes to these settings, a **graceful reload** can be performed to apply the new configuration while ensuring ongoing requests are not interrupted.
+
+---
+
+#### NGINX with Socket.IO
+
+Socket.IO enables real-time, bidirectional communication between the client (typically browsers) and the server. NGINX is commonly used in real-time applications to handle WebSocket connections, which Socket.IO relies on.
+
+#### How NGINX Works with Socket.IO:
+
+- **WebSocket Proxying**: NGINX can forward WebSocket connections from clients to backend servers running Socket.IO. WebSocket uses HTTP for the initial handshake but upgrades the connection to a full-duplex communication channel. NGINX can pass this upgrade request to the backend server.
+  
+- **Sticky Sessions**: For WebSocket connections, NGINX can ensure that the same client is consistently routed to the same backend server throughout the duration of the WebSocket connection, which is important for session persistence.
+  
+- **Load Balancing**: If you have multiple backend servers, NGINX can load balance WebSocket connections to these servers, ensuring high availability and redundancy.
+
+#### Example Configuration for Socket.IO with NGINX:
+
+```nginx
+location /socket.io/ {
+    proxy_pass http://backend_socket_server;  # Backend server running Socket.IO
+    proxy_http_version 1.1;                   # Ensure HTTP 1.1 is used for WebSocket support
+    proxy_set_header Upgrade $http_upgrade;  # Handle the WebSocket upgrade request
+    proxy_set_header Connection 'upgrade';   # Maintain connection for WebSocket communication
+    proxy_set_header Host $host;              # Pass the host header to backend
+    proxy_cache_bypass $http_upgrade;         # Ensure WebSocket traffic bypasses any caching
+}
+```
+
+#### Explanation:
+
+- **`proxy_pass`**: Directs NGINX to forward the request to the backend server running Socket.IO.
+- **`proxy_http_version 1.1`**: Ensures WebSocket connections are handled with HTTP/1.1, required for the WebSocket protocol.
+- **`proxy_set_header Upgrade $http_upgrade`**: Passes the WebSocket upgrade header to the backend server.
+- **`proxy_set_header Connection 'upgrade'`**: Maintains the WebSocket connection throughout the session.
+- **`proxy_set_header Host $host`**: Forwards the original host header to the backend server.
+- **`proxy_cache_bypass $http_upgrade`**: Ensures that WebSocket traffic bypasses caching mechanisms.
+
+This configuration ensures that NGINX can handle WebSocket connections, which are crucial for real-time applications like those using Socket.IO.
+
+
+#### **What Are Build Logs in NGINX?**
+
+**Build logs** in NGINX refer to the log files generated during the **compilation process** of NGINX from source code. These logs capture detailed information about the build process, including:
+
+1. **Configuration Steps**: It records the configuration options you selected (e.g., enabling SSL, adding specific modules) when you compiled NGINX.
+
+2. **Compilation Process**: The logs document the actual steps of compiling the NGINX source code, including which modules were compiled, any dependencies checked, and whether there were any issues.
+
+3. **Warnings and Errors**: If there are any missing libraries, configuration issues, or errors in the code, the build logs will capture these and make troubleshooting easier.
+
+4. **Installation Process**: They also track the installation of NGINX after the code has been successfully compiled, including file paths, libraries, and system configurations that are set up.
+
+#### **Why Are Build Logs Important?**
+
+1. **Troubleshooting**: Build logs provide crucial information if something goes wrong during the compilation or installation process. If NGINX doesn’t compile correctly, or if modules are not enabled as expected, the logs help identify the cause.
+
+2. **Configuration Validation**: The logs show exactly which options were passed to the `./configure` script when NGINX was built. This helps you verify that the right modules and features were enabled.
+
+3. **Detailed Output**: It provides a step-by-step record of the entire build process, including any problems with dependencies, missing libraries, or conflicts between components.
+
+#### **Where Are Build Logs Stored?**
+
+The location of NGINX build logs depends on where and how you compiled NGINX. If you compiled NGINX manually from source, you typically find the logs in the directory where you ran the `make` command.
+
+- **Source Directory**: The build logs might be in the same directory as the NGINX source code (e.g., `/usr/local/src/nginx` or `/opt/nginx`), or in a dedicated **build directory** you created.
+
+- **Common Locations**:
+
+  - `/var/log/nginx_build/`
+
+  - `/usr/local/src/nginx/`
+
+  - `/tmp/` (temporary directory if you used a non-persistent path)
+
+- **Log File Names**: Log files typically have names like `build.log`, `make.log`, or `install.log`.
+
+#### **Contents of a Build Log**
+
+A build log typically contains the following types of information:
+
+#### 1. **Configuration Output**:
+
+Before the actual compilation process, NGINX runs a `./configure` script where various options (e.g., enabling SSL, setting up paths, etc.) are specified. The log will capture the configuration output, detailing which modules are being enabled or disabled.
+
+Example:
+
+```
+
+checking for the OpenSSL library... found
+
+checking for pcre.h... yes
+
+checking for zlib... yes
+
+...
+
+```
+
+#### 2. **Compilation Messages**:
+
+During the compilation process, the log will show messages about what files are being compiled, which source files are processed, and any errors or warnings encountered.
+
+Example:
+
+```
+
+gcc -c -o objs/ngx_http_module.o src/http/ngx_http_module.c
+
+...
+
+```
+
+#### 3. **Error and Warning Messages**:
+
+If there are missing dependencies, configuration mistakes, or compilation errors, the log will contain **error messages** that help you pinpoint issues that need fixing before the build can succeed.
+
+Example:
+
+```
+
+error: 'pcre' not found. Please install the PCRE development libraries.
+
+```
+#### 4. **Installation Details**:
+
+Once NGINX is compiled, the installation steps (copying binaries to the correct locations, setting up configuration files, etc.) are also logged. This provides a record of exactly where files were placed on the system.
+
+Example:
+
+```
+
+install -m 755 objs/nginx /usr/local/nginx/sbin/
+
+```
+
+#### **When Do Build Logs Get Created?**
+
+Build logs are created during the **compilation process** when you install NGINX from source. This typically happens when you follow these steps:
+
+1. **Download NGINX Source Code**: You download the NGINX source code from the official website or a repository. 
+
+2. **Run the `./configure` Command**: This command prepares the system and configures NGINX with specified modules, libraries, and other options. The build log captures this configuration process.
+
+3. **Run `make`**: This command actually compiles the NGINX source code. The build log will document the compilation of the source files.
+
+4. **Run `make install`**: This final step installs the compiled NGINX binaries and configuration files. The build log will document this as well.
+
+#### **Example Build Log**
+
+Here’s an example of what the output in the build log might look like:
+
+```
+
+Checking for system libraries...
+
+  - PCRE:         yes (2.9.6)
+
+  - OpenSSL:      yes (1.1.1)
+
+  - zlib:         yes (1.2.11)
+
+  - HTTP2:        yes
+
+  - SSL support:  yes
+
+Configuring NGINX...
+
+  - Enable SSL module: yes
+
+  - Enable HTTP2 module: yes
+
+Compiling NGINX...
+
+  - gcc -c -o objs/ngx_http_ssl_module.o src/http/ngx_http_ssl_module.c
+
+  - gcc -c -o objs/ngx_http_v2_module.o src/http/ngx_http_v2_module.c
+
+Installation...
+
+  - Installing NGINX binary to /usr/local/nginx/sbin/nginx
+
+  - Installing configuration files to /usr/local/nginx/conf/
+
+NGINX build finished successfully.
+
+```
+
+### **Issues in Build Logs**
+
+During the build process, you might encounter issues that will be captured in the logs. Common issues include:
+
+- **Missing Dependencies**: If a required library (e.g., OpenSSL or PCRE) isn’t found, the build log will flag this as an error.
+
+- **Permissions Issues**: Sometimes, NGINX might not have permission to write files to certain directories (e.g., `/usr/local/nginx`).
+
+- **Out of Memory**: If the server doesn’t have enough resources (memory or CPU), the log might contain messages indicating that the process was terminated unexpectedly.
+
+#### **Managing NGINX Build Logs**
+
+#### **Why You Need to Clear Build Logs**
+
+When you compile or install NGINX from source, the **build logs** are generated to record the progress, errors, warnings, and configuration settings used during the compilation process. These logs can include a lot of detailed information, and while they are useful during troubleshooting or initial setup, they are generally not needed once the installation is complete. If left unchecked, these logs can take up significant disk space over time, especially if you’re compiling or updating NGINX frequently.
+
+**Here’s why it’s important to clear build logs periodically:**
+1. **Disk Space Consumption**: Build logs can grow large, especially if you’ve built NGINX multiple times or compiled with verbose logging options. If the logs are not cleaned up, they can fill up disk space, which can eventually lead to **storage exhaustion** and server performance degradation.
+   
+2. **Clutter**: Over time, old build logs accumulate and can make it harder to troubleshoot current builds or installations. Keeping logs organized is important for maintaining an efficient environment.
+
+3. **Compilation and Redundancy**: If build logs are kept in directories that are also used for future builds or updates, old logs may be recompiled or accessed unnecessarily, leading to **redundant log data** or potential issues with file storage management.
+
+4. **Security**: Sometimes, build logs contain sensitive information about your server environment, configurations, or dependencies. If these logs are not deleted, they can inadvertently expose system details or paths that could be leveraged by attackers.
+
+#### **How to Clean Up Build Logs**
+
+#### **1. Delete Build Logs After Installation**
+After you’ve successfully compiled and installed NGINX, you can safely remove the build logs to free up space. For example, if you compiled NGINX from source, the logs are typically stored in the directory where the build process took place (often `/usr/local/src/nginx/` or a similar location).
+
+To remove the build logs:
+```bash
+cd /path/to/nginx-source-directory
+rm -rf *log*
+```
+This will delete all files with "log" in the name. Be cautious when doing this to avoid accidentally deleting necessary files.
+
+#### **2. Periodic Log Cleanup via Cron Jobs**
+If you perform frequent builds or updates (e.g., automated CI/CD pipelines), you can automate the cleanup process using a **cron job**.
+
+For example, set up a cron job that cleans the build log directory every week or month:
+
+```bash
+# Edit the crontab
+crontab -e
+
+# Add the following line to remove logs older than 30 days
+0 0 * * 0 find /path/to/nginx/logs -type f -name "*.log" -mtime +30 -exec rm -f {} \;
+```
+This cron job will delete all `.log` files in the specified directory that are older than 30 days.
+
+#### **3. Log Rotation**
+You can set up **log rotation** to limit the size of the log files generated during builds. This ensures that the logs don’t grow too large and consume all available space.
+
+For example, configure a simple log rotation rule for build logs using `logrotate`:
+
+1. **Create a new logrotate configuration**:
+   ```bash
+   sudo nano /etc/logrotate.d/nginx_build_logs
+   ```
+
+2. **Add log rotation settings**:
+   ```text
+   /path/to/nginx/build_logs/*.log {
+       daily
+       rotate 7
+       compress
+       missingok
+       notifempty
+       create 0644 root root
+   }
+   ```
+
+   This configuration ensures that build logs are rotated daily, keeping the last 7 days’ worth of logs, and compressing old logs to save space.
+
+#### **4. Monitor Log Growth**
+Regularly check the size of your build logs to ensure they are not consuming too much disk space. You can monitor log file sizes with the following command:
+```bash
+du -sh /path/to/nginx/build_logs/
+```
+This will give you a quick overview of how much disk space the build logs are using.
+
+---
+
+#### **Conclusion**
+
+While **NGINX** is a powerful tool for handling high-traffic applications, **build logs** generated during installation or compilation can accumulate and take up valuable disk space. It's important to periodically **clear** or **rotate** these logs to prevent them from consuming server resources and to ensure your server runs efficiently. Implementing automated log rotation or periodic cleanup via cron jobs will help you keep things tidy and avoid unnecessary server bloat.
+
+### Deployment Process:
+
+#### **1. Development** (Local Development with ReactJS and Spring Boot)
+
+During development, you typically have two separate projects:
+
+- **ReactJS frontend**: A **JavaScript** framework that manages the user interface (UI) and communicates with the backend via API calls.
+- **Spring Boot backend**: A **Java-based framework** that handles the business logic, API endpoints, and interacts with the database (like MySQL).
+
+**Local Development Setup**:
+- **ReactJS**: You use **npm (Node Package Manager)** to manage dependencies and run the development server (usually on port 3000).
+- **Spring Boot**: You run the backend using mvn spring-boot:run (if using Maven) or ./gradlew bootRun (if using Gradle), which typically runs on port 8080.
+
+This is your local development setup, where you are actively building and testing your frontend and backend.
+
+#### **2. Version Control** (Using GitHub)
+
+Once you’ve made changes or added features, you **commit** your code and **push** it to a **Git repository** (e.g., GitHub, GitLab, or Bitbucket). Version control is essential for managing code revisions, collaborating with teams, and keeping track of changes over time.
+
+#### **Steps in Version Control**:
+- **Commit changes**: After writing code, use git commit to save changes locally.
+  
+```bash
+  git commit -m "Added login feature"
+```
+- **Push changes**: Send your commits to the remote GitHub repository.
+  
+```bash
+  git push origin main
+```
+- **Collaborate**: Your team members can pull the latest code, create branches for new features, and push their changes as well.
+
+Once your code is pushed to GitHub, the next step is to **deploy** it to a server.
+
+#### **3. Server Setup on Ubuntu** (Preparing the Production Server)
+
+You need a **server** to host your application. Let’s assume you’re using **Ubuntu 24.04** on a **VPS** provided by **Hostinger**. You need to install and configure the necessary tools to run the application.
+
+#### **1. Prepare the Server for Deployment**
+
+Before we begin deploying the app, you need to set up your **Ubuntu server** with the necessary software.
+
+#### **What needs to be installed on Ubuntu**:
+1. **Java (for Spring Boot)**:
+   - Install **OpenJDK 11** (since Spring Boot requires Java):
+     
+```bash
+     sudo apt update
+     sudo apt install openjdk-11-jdk
+```
+
+   - Verify Java installation:
+     
+```bash
+     java -version
+```
+
+2. **Node.js and npm (for ReactJS)**:
+   - Install Node.js and npm (which ReactJS uses):
+     
+```bash
+     sudo apt install nodejs npm
+```
+
+   - Verify Node.js installation:
+     
+```bash
+     node -v
+     npm -v
+```
+
+3. **MySQL (for database)**:
+   - Install MySQL server:
+     
+```bash
+     sudo apt install mysql-server
+ ``` 
+   - Secure the MySQL installation:
+   
+```bash
+     sudo mysql_secure_installation
+```
+
+   - Verify MySQL is running:
+     
+```bash
+     sudo systemctl status mysql
+```
+
+4. **Nginx (to serve the frontend and reverse proxy requests to the backend)**:
+   - Install Nginx:
+     
+```bash
+     sudo apt install nginx
+```
+
+   - Verify Nginx is running:
+     
+```bash
+     sudo systemctl status nginx
+```
+
+5. **Git (to pull your repositories)**:
+   - Install Git:
+     
+```bash
+     sudo apt install git
+```
+
+---
+
+#### **2. Deploy the Spring Boot Backend**
+
+Now we will focus on deploying the **Spring Boot backend** first. This is critical because the **ReactJS frontend** will likely depend on the backend's API endpoints, so having the backend ready before the frontend is a good approach.
+
+#### **Steps for deploying Spring Boot**:
+
+#### a. **Build the Spring Boot JAR File Locally**:
+
+1. Navigate to your **Spring Boot project directory**:
+   
+```bash
+   cd /path/to/spring-boot-app
+```
+
+2. **Package the Spring Boot application** into a JAR file:
+   - If you're using **Maven**, run:
+     
+```bash
+     mvn clean package
+```
+
+   - If you're using **Gradle**, run:
+     
+```bash
+     ./gradlew build
+```
+
+   This will create a target/your-app.jar file (or in build/libs/ if using Gradle).
+
+#### b. **Transfer the JAR File to the Server**:
+
+Transfer the generated JAR file to your **Ubuntu server** using **SCP** or **FTP**:
+bash
+scp target/your-app.jar username@your-server-ip:/opt/your-app/
+
+(If you used Gradle, the path will be build/libs/your-app.jar.)
+
+#### c. **Run the Spring Boot Application**:
+
+1. SSH into the server:
+   
+```bash
+   ssh username@your-server-ip
+```
+
+2. Start the Spring Boot application with:
+   
+```bash
+   java -jar /opt/your-app/your-app.jar
+```
+   By default, the Spring Boot app will run on port **8080**.
+
+3. To run the application in the background, you can use **nohup**:
+   
+```bash
+   nohup java -jar /opt/your-app/your-app.jar > /dev/null 2>&1 &
+```
+
+#### d. **Verify the Spring Boot Application**:
+
+Make sure your Spring Boot app is running correctly by checking if it's accessible via:
+```bash
+http://your-server-ip:8080
+```
+
+---
+
+#### **3. Configure Nginx to Proxy Requests to Spring Boot**
+
+At this point, your backend (Spring Boot) is running, and Nginx is the next key component. You'll configure Nginx to reverse proxy API requests to Spring Boot and prepare for the ReactJS frontend.
+
+#### **Steps for configuring Nginx**:
+1. **Edit Nginx Configuration**:
+   Create or modify an Nginx config file for your app.
+   
+```bash
+   sudo nano /etc/nginx/sites-available/your-app
+```
+
+2. Add the following configuration to **serve your Spring Boot API** on the /api/ route:
+   
+```nginx
+   server {
+       listen 80;
+       server_name your-domain.com;
+
+       # Reverse proxy to Spring Boot
+       location /api/ {
+           proxy_pass http://localhost:8080/;
+           proxy_set_header Host $host;
+           proxy_set_header X-Real-IP $remote_addr;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+           proxy_set_header X-Forwarded-Proto $scheme;
+       }
+   }
+```
+
+   This setup ensures that all requests to your-domain.com/api/ will be forwarded to the Spring Boot app running locally on port 8080.
+
+3. **Enable the site**:
+   Create a symbolic link to the Nginx config file:
+   
+```bash
+   sudo ln -s /etc/nginx/sites-available/your-app /etc/nginx/sites-enabled/
+```
+
+4. **Test Nginx Configuration**:
+   Before applying changes, test the Nginx configuration:
+   
+```bash
+   sudo nginx -t
+```
+
+5. **Reload Nginx**:
+   After testing the config, reload Nginx to apply changes:
+   
+```bash
+   sudo systemctl reload nginx
+```
+
+Your Spring Boot backend should now be accessible through the domain at http://your-domain.com/api/.
+
+---
+
+#### **4. Deploy the ReactJS Frontend**
+
+Once the Spring Boot backend is deployed and working, we can now focus on deploying the **ReactJS frontend**.
+
+#### **Steps for deploying ReactJS**:
+
+#### a. **Build the ReactJS Application Locally**:
+1. Navigate to your **ReactJS project** directory:
+   
+```bash
+   cd /path/to/react-app
+```
+
+2. **Install the dependencies** (if not done already):
+   
+```bash
+   npm install
+```
+
+3. **Build the ReactJS app** for production:
+   
+```bash
+   npm run build
+```
+   This will create a build/ directory with optimized static files.
+
+#### b. **Transfer the Build Files to the Server**:
+You need to copy the contents of the build/ directory to your server.
+
+- Use **SCP** to transfer files to the server:
+   
+```bash
+   scp -r build/ username@your-server-ip:/var/www/your-app/
+```
+
+#### c. **Configure Nginx to Serve ReactJS Static Files**:
+1. **Edit Nginx Configuration** again to serve the ReactJS files:
+   
+```bash
+   sudo nano /etc/nginx/sites-available/your-app
+```
+
+2. Add this configuration to serve static files for the frontend:
+   
+```nginx
+   server {
+       listen 80;
+       server_name your-domain.com;
+
+       root /var/www/your-app;
+       index index.html;
+
+       location / {
+           try_files $uri $uri/ /index.html;
+       }
+
+       location /api/ {
+           proxy_pass http://localhost:8080/;
+           proxy_set_header Host $host;
+           proxy_set_header X-Real-IP $remote_addr;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+           proxy_set_header X-Forwarded-Proto $scheme;
+       }
+   }
+
+```
+   - The / location block will serve the static files (HTML, JS, CSS) generated by the ReactJS build.
+   - The /api/ location block will forward API requests to the Spring Boot backend running on port 8080.
+
+3. **Enable the Site and Reload Nginx**:
+   If you haven’t already enabled the site and reloaded Nginx, follow the previous steps:
+   
+```bash
+   sudo ln -s /etc/nginx/sites-available/your-app /etc/nginx/sites-enabled/
+   sudo nginx -t
+   sudo systemctl reload nginx
+```
+
+Your ReactJS frontend should now be served at http://your-domain.com, and it will be able to make API requests to the Spring Boot backend at http://your-domain.com/api/.
+
+---
+
+#### **5. Domain Configuration and SSL (Optional but Recommended)**
+
+To make your app accessible via a custom domain and **secure it with HTTPS**, follow these steps:
+
+#### **DNS Setup**:
+1. **DNS**: Point your **domain name** (e.g., your-domain.com) to the **IP address** of your server through your Hostinger DNS settings.
+
+#### **SSL Configuration with Let's Encrypt**:
+1. Install **Certbot** and **Let's Encrypt** for automatic SSL certificate management:
+   
+```bash
+   sudo apt install certbot python3-certbot-nginx
+```
+
+2. Obtain an SSL certificate for your domain:
+   
+```bash
+   sudo certbot --nginx
+```
+
+   Certbot will automatically configure Nginx for SSL and redirect HTTP traffic to HTTPS.
+
+---
+
+#### **6. Final Steps**
+
+- **Monitor Logs**: Use journalctl to monitor logs for both **Nginx** and the **Spring Boot application**.
+- **Test the App**: Visit http://your-domain.com to check if the frontend is served correctly and interacts with the backend. Make sure HTTPS works if you set it up.
+
+---
+#### **Summary of the Deployment Process**:
+
+1. **Development**: You work locally on your ReactJS frontend and Spring Boot backend.
+2. **Version Control**: Use Git to push your code to GitHub.
+3. **Server Setup**: Install required tools on your Ubuntu server (Java, Node.js, MySQL, Nginx, Git).
+4. **App Deployment**:
+   - Build and deploy the ReactJS frontend to Nginx.
+   - Package and deploy the Spring Boot backend as a JAR file, and run it.
+   - Configure Nginx as a reverse proxy to handle frontend and API requests.
+5. **Access**: Make your app accessible via a custom domain and secure it with SSL (through Hostinger).
