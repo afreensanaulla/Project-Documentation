@@ -4625,6 +4625,25 @@ In short, **manual testing** is a critical quality assurance process that ensure
 
 ![WhatsApp Image 2025-01-24 at 2 27 09 PM](https://github.com/user-attachments/assets/0d90a2d2-a8e8-45c3-9519-bc18c0955b6e)
 
+#### **Structure of a Manual Test Case: **
+
+Test Case ID: A unique identifier for the test case (e.g., TC001). 
+
+Test Case Name: A short and descriptive title (e.g., "Verify Login Functionality"). 
+
+Preconditions: Any setup or prerequisites required before executing the test case (e.g., "User should be registered"). 
+
+Test Steps: Detailed steps to execute the test case. 
+
+Test Data: Data inputs required for the test (if applicable). 
+
+Expected Result: The desired outcome if the system behaves correctly. 
+
+Actual Result: The result observed after execution (filled in during testing). 
+
+Pass/Fail: The status of the test case based on comparison between expected and actual results. 
+
+Comments: Any additional observations or notes 
 
 #### **Automation Testing:**
 ---
@@ -4686,6 +4705,57 @@ In summary, an **automation report** from Selenium provides valuable insights in
 
 ![Image 1-24-25 at 12 40 PM](https://github.com/user-attachments/assets/0920a4eb-3407-4adc-bc06-b698a271770d)
 
+An automation test report is a detailed document generated after running automated test scripts to validate the functionality, performance, and reliability of a software application. 
+
+#### Here’s a breakdown of key elements in an automation test report: 
+
+#### Test Execution Summary:  
+
+1.Overview of the number of tests run, passed, failed, skipped, or blocked. 
+
+2. It also include the duration of the test execution. 
+
+     2.   Test Status: 
+
+          - Status of individual test cases (e.g., passed, failed, skipped, or in progress). 
+
+     3. Test Case Details: 
+
+          - Each test case's execution result is included, along with any relevant information, such                         as: 
+
+            - Test case ID 
+
+            - Description 
+
+            - Expected vs. actual results 
+
+            - Steps executed 
+
+            - Pass/fail status 
+
+            - Errors or exceptions encountered 
+
+            - Screenshots or logs (if configured). 
+
+4. Error/Failure Details: 
+
+   - A detailed report of failed tests, including the error message, stack trace, or logs associated with the failure. 
+
+   - It helps to diagnose issues and identify potential bugs or inconsistencies in the application. 
+
+5. Test Coverage: 
+
+   - Information on which features or functionalities were covered during the test execution. 
+
+6. Test Run Environment: 
+
+   - Details about the test environment, such as: 
+
+   - Operating system 
+
+   - Browser version 
+
+Test cases are step-by-step instructions used to verify that a specific functionality of a system works as expected. These are executed manually by a tester without the use of automation tools. Here's a general structure for writing manual test cases: 
 
 #### **Performance Testing:**
 ---
@@ -4790,6 +4860,62 @@ In summary, an **automation report** from Selenium provides valuable insights in
 
 ![Image 1-24-25 at 12 49 PM](https://github.com/user-attachments/assets/5253c313-d8fd-44ed-8461-41de0ef2323e)
 
+#### **Analyzing JMeter Test Results**
+
+Analyzing JMeter test results is crucial to understanding the performance of your application and identifying bottlenecks. JMeter provides several listeners to help analyze data. Here's a step-by-step guide to analyze results effectively:
+
+#### 1. Key Metrics to Analyze
+
+When analyzing results, focus on the following metrics:
+
+| Metric        | Description                                                                 |
+|---------------|-----------------------------------------------------------------------------|
+| **Response Time** | Time taken for a request to be processed. Look at Min, Max, and Average response times. |
+| **Throughput**    | Number of requests handled by the server per second. Higher throughput is generally better. |
+| **Error Rate**    | Percentage of failed requests. High error rates indicate server instability or misconfiguration. |
+| **Latency**       | Time taken to send the request to the server and receive the first byte of the response. |
+| **Concurrency**   | Number of users being served simultaneously. |
+
+#### 2. Using Listeners
+
+JMeter provides different listeners to visualize and analyze results. Here are some commonly used ones:
+
+#### a. View Results Tree
+
+- Shows the details of each request and response (raw data).
+- Useful for debugging and verifying request data and responses.
+
+#### b. Summary Report
+
+Provides a tabular view of key metrics:
+
+| Metric       | Description                                                       |
+|--------------|-------------------------------------------------------------------|
+| **Sample**   | Total number of requests.                                         |
+| **Average**  | Average response time.                                            |
+| **Min / Max**| Minimum and maximum response times.                               |
+| **Error %**  | Percentage of failed requests.                                    |
+| **Throughput**| Requests per second.                                              |
+| **KB/sec**   | Amount of data processed per second.                              |
+
+#### Example Analysis
+
+- **Users**: 75
+- **Ramp-Up Period**: 1 second
+- **Loop Count**: 1
+
+| Metric                | Value         |
+|-----------------------|---------------|
+| **Response Time (Avg)** | 350ms         |
+| **Throughput**         | 0.90 requests/sec |
+| **Error %**            | 14.67 %       |
+| **90th Percentile Time** | 40599 ms     |
+
+#### Observations:
+
+- Response times are within SLA.
+- Throughput is stable at 0.90 requests/sec.
+- Error percentage is high, indicating the system did not handle the load well.
 
 #### **Security Testing:**
 ---
@@ -4854,5 +4980,41 @@ Both **OWASP ZAP** and **Burp Suite** are essential tools in security testing fo
 
 ![Image 1-24-25 at 6 04 PM](https://github.com/user-attachments/assets/092f2ee3-10c2-4ace-b32b-026cdcb722e7)
 
+#### **Sections of a ZAP Security Report**
+
+#### 1. Executive Summary
+
+- Provides an overview of the security assessment.
+- Highlights the total number of alerts, their severity levels (High, Medium, Low, and Informational), and key findings.
+
+#### 2. Target Information
+
+Includes details about the target system or application that was scanned:
+
+- **URL(s) scanned**
+- **Date and time of the scan**
+- **Scanner version**
+
+#### 3. Vulnerability Findings
+
+A categorized list of discovered vulnerabilities, including:
+
+| **Field**        | **Description**                                                                 |
+|------------------|---------------------------------------------------------------------------------|
+| **Alert Title**  | Name of the vulnerability (e.g., "SQL Injection", "Cross-Site Scripting").       |
+| **Risk Level**   | Severity of the vulnerability (High, Medium, Low, Informational).               |
+| **Description**  | Explains the issue and its potential impact.                                     |
+| **URLs Affected**| List of endpoints where the vulnerability exists.                               |
+| **Instances**    | Number of occurrences for the specific vulnerability.                           |
+| **Evidence**     | Proof that the vulnerability exists, such as HTTP requests and responses.       |
+| **Recommendation**| Remediation steps to fix the vulnerability.                                     |
+
+#### 4. Scan Progress and Settings
+
+Details on how the scan was configured:
+
+- **Spidering depth**
+- **Authentication used** (if applicable)
+- **Types of tests performed** (active scan, passive scan, etc.)
 
 
