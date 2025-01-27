@@ -4595,6 +4595,7 @@ Our subscription-based ATS offers flexible plans to suit businesses of all sizes
 ### Testing Report
 
 #### **Manual Testing:**
+
 ---
 
 #### **Manual Testing** is the process of manually executing test cases without the use of automation tools to ensure that software behaves as expected. It involves a tester following a set of predefined test scenarios to identify bugs or issues in the software.
@@ -4645,7 +4646,10 @@ Pass/Fail: The status of the test case based on comparison between expected and 
 
 Comments: Any additional observations or notes 
 
+---
+
 #### **Automation Testing:**
+
 ---
 
 An **Automation Report** generated from tests run using **Selenium** provides detailed insights into the outcomes of automated test executions. Selenium is an open-source tool for automating web applications across different browsers. After running tests, an automation report summarizes key information such as test success, failure, and errors, which helps in tracking the quality of the application.
@@ -4757,7 +4761,10 @@ An automation test report is a detailed document generated after running automat
 
 Test cases are step-by-step instructions used to verify that a specific functionality of a system works as expected. These are executed manually by a tester without the use of automation tools. Here's a general structure for writing manual test cases: 
 
+---
+
 #### **Performance Testing:**
+
 ---
 
 **Performance Testing** using **Apache JMeter** is a widely-used approach for testing the performance, scalability, and stability of web applications and services. JMeter is an open-source tool designed for load testing and measuring the performance of various services, including web servers, databases, and applications.
@@ -4917,7 +4924,10 @@ Provides a tabular view of key metrics:
 - Throughput is stable at 0.90 requests/sec.
 - Error percentage is high, indicating the system did not handle the load well.
 
+---
+
 #### **Security Testing:**
+
 ---
 
 **Security Testing** with tools like **OWASP ZAP (Zed Attack Proxy)** and **Burp Suite** helps identify vulnerabilities in web applications, ensuring they are secure from potential attacks like SQL injection, cross-site scripting (XSS), and more.
